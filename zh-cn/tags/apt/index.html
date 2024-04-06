@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>CVE-2023-32315 Openfire 身份认证绕过漏洞分析 - chestnut&#39;s blog</title>
+    <title>APT - chestnut&#39;s blog</title>
 
     
     <link href="/css/nucleus.css?1712424309" rel="stylesheet">
@@ -54,7 +54,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/zh-cn/vulnerability/cve-2023-32315-openfire-auth-bypass/">
+  <body class="" data-url="/zh-cn/tags/apt/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -824,7 +824,7 @@
   
     
     <li data-nav-id="/zh-cn/vulnerability/" title="漏洞分析" class="dd-item
-        parent
+        
         
         
         ">
@@ -1396,7 +1396,7 @@
  
   
     
-      <li data-nav-id="/zh-cn/vulnerability/cve-2023-32315-openfire-auth-bypass/" title="CVE-2023-32315 Openfire 身份认证绕过漏洞分析" class="dd-item active">
+      <li data-nav-id="/zh-cn/vulnerability/cve-2023-32315-openfire-auth-bypass/" title="CVE-2023-32315 Openfire 身份认证绕过漏洞分析" class="dd-item ">
         <a href="/zh-cn/vulnerability/cve-2023-32315-openfire-auth-bypass/">
         CVE-2023-32315 Openfire 身份认证绕过漏洞分析
         <i class="fas fa-check read-icon"></i>
@@ -2304,7 +2304,7 @@
                   
                     
                     
-                      <option id="zh-cn" value="https://www.ch35tnut.com/zh-cn/vulnerability/cve-2023-32315-openfire-auth-bypass/" selected>简体中文</option>
+                      <option id="zh-cn" value="https://www.ch35tnut.com/zh-cn/tags/apt/" selected>简体中文</option>
                     
                   
               
@@ -2385,7 +2385,7 @@
             
           
           
-            <a href='/zh-cn/'>首页</a> > <a href='/zh-cn/vulnerability/'>漏洞分析</a> > CVE-2023-32315 Openfire 身份认证绕过漏洞分析
+            <a href='/zh-cn/'>首页</a> > <a href='/zh-cn/tags/'>Tags</a> > APT
           
         
           
@@ -2398,18 +2398,7 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li><a href="#基本信息">基本信息</a></li>
-        <li><a href="#影响版本">影响版本</a></li>
-        <li><a href="#环境搭建">环境搭建</a></li>
-        <li><a href="#技术分析调试">技术分析&amp;调试</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
+<nav id="TableOfContents"></nav>
     </div>
 </div>
 
@@ -2419,133 +2408,35 @@
             
         <div id="head-tags">
         
-<div class="tags">
-
-  <a class="tag-link" href="/zh-cn/tags/%E6%BC%8F%E6%B4%9E%E5%88%86%E6%9E%90">漏洞分析</a>
-
-</div>
-
         </div>
         
         <div id="body-inner">
           
             <h1>
               
-              CVE-2023-32315 Openfire 身份认证绕过漏洞分析
+                tag ::
+              
+              APT
             </h1>
           
 
         
 
-<div class="progress">
-    <div class="wrapper">
-
-    </div>
-</div>
-
-<nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li><a href="#基本信息">基本信息</a></li>
-        <li><a href="#影响版本">影响版本</a></li>
-        <li><a href="#环境搭建">环境搭建</a></li>
-        <li><a href="#技术分析调试">技术分析&amp;调试</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
-<h3 id="基本信息">基本信息</h3>
-<p>Openfire中存在目录遍历漏洞，通过使用UTF-16编码的<code>../</code>，可以绕过身份验证，访问一些敏感接口，通过这些接口可以新建管理员，上传插件，进一步造成代码执行</p>
-<h3 id="影响版本">影响版本</h3>
-<p>3.10.0 &lt;= Openfire &lt; 4.6.8
-4.7.0 &lt;= Openfire &lt; 4.7.5</p>
-<h3 id="环境搭建">环境搭建</h3>
-<p>直接下载对应的exe安装即可</p>
-<h3 id="技术分析调试">技术分析&amp;调试</h3>
-<p>在Openfire中，<code>/setup/setup-*</code>开头的url由AuthCheckFilter处理，并且访问该url无需经过身份验证（白名单），这个Filter定义在<code>xmppserver/src/main/java/org/jivesoftware/admin/AuthCheckFilter.java</code>中。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#f92672">&lt;filter&gt;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;filter-name&gt;</span>AuthCheck<span style="color:#f92672">&lt;/filter-name&gt;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;filter-class&gt;</span>org.jivesoftware.admin.AuthCheckFilter<span style="color:#f92672">&lt;/filter-class&gt;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;init-param&gt;</span>
-</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;param-name&gt;</span>excludes<span style="color:#f92672">&lt;/param-name&gt;</span>
-</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;param-value&gt;</span>
-</span></span><span style="display:flex;"><span>                login.jsp,index.jsp?logout=true,setup/index.jsp,setup/setup-*,.gif,.png,error-serverdown.jsp,loginToken.jsp
-</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;/param-value&gt;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;/init-param&gt;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;/filter&gt;</span>
-</span></span></code></pre></div><p>在<code>xmppserver/src/main/java/org/jivesoftware/admin/AuthCheckFilter.java</code>中通过以下代码判断是否存在目录穿越</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">testURLPassesExclude</span>(String url, String exclude) {
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// If the exclude rule includes a &#34;?&#34; character, the url must exactly match the exclude rule.</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// If the exclude rule does not contain the &#34;?&#34; character, we chop off everything starting at the first &#34;?&#34;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// in the URL and then the resulting url must exactly match the exclude rule. If the exclude ends with a &#34;*&#34;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// character then the URL is allowed if it exactly matches everything before the * and there are no &#34;..&#34;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// characters after the &#34;*&#34;. All data in the URL before</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (exclude.<span style="color:#a6e22e">endsWith</span>(<span style="color:#e6db74">&#34;*&#34;</span>)) {
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> (url.<span style="color:#a6e22e">startsWith</span>(exclude.<span style="color:#a6e22e">substring</span>(0, exclude.<span style="color:#a6e22e">length</span>()<span style="color:#f92672">-</span>1))) {
-</span></span><span style="display:flex;"><span>                <span style="color:#75715e">// Now make sure that there are no &#34;..&#34; characters in the rest of the URL.</span>
-</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>url.<span style="color:#a6e22e">contains</span>(<span style="color:#e6db74">&#34;..&#34;</span>) <span style="color:#f92672">&amp;&amp;</span> <span style="color:#f92672">!</span>url.<span style="color:#a6e22e">toLowerCase</span>().<span style="color:#a6e22e">contains</span>(<span style="color:#e6db74">&#34;%2e&#34;</span>)) {
-</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>;
-</span></span><span style="display:flex;"><span>                }
-</span></span><span style="display:flex;"><span>            }
-</span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (exclude.<span style="color:#a6e22e">contains</span>(<span style="color:#e6db74">&#34;?&#34;</span>)) {
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> (url.<span style="color:#a6e22e">equals</span>(exclude)) {
-</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>;
-</span></span><span style="display:flex;"><span>            }
-</span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span> {
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">int</span> paramIndex <span style="color:#f92672">=</span> url.<span style="color:#a6e22e">indexOf</span>(<span style="color:#e6db74">&#34;?&#34;</span>);
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> (paramIndex <span style="color:#f92672">!=</span> <span style="color:#f92672">-</span>1) {
-</span></span><span style="display:flex;"><span>                url <span style="color:#f92672">=</span> url.<span style="color:#a6e22e">substring</span>(0, paramIndex);
-</span></span><span style="display:flex;"><span>            }
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> (url.<span style="color:#a6e22e">equals</span>(exclude)) {
-</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>;
-</span></span><span style="display:flex;"><span>            }
-</span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>;
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p>   </p>
-<p>但该代码没有考虑到其他形式的UNICODE编码，而后端却可以解析该url，导致可以使用UTF-16编码绕过目录穿越检查，并且由于可以匹配<code>/setup/setup-</code>*，也无需身份验证，即攻击者可以利用该漏洞绕过身份验证，任意访问后台。</p>
-<p>攻击者可以利用该漏洞添加管理员，而后通过管理员身份上传恶意插件，造成代码执行。</p>
-<p><strong>结果</strong></p>
-<p>通过该漏洞添加管理员账户</p>
-<p>
-<img alt="" src="/images/vulnerability/CVE-2023-32315-Openfire-auth-bypass.zh-cn.assets/1.png" />
-
-<img alt="" src="/images/vulnerability/CVE-2023-32315-Openfire-auth-bypass.zh-cn.assets/2.png" /></p>
-<p><strong>参考链接</strong></p>
-<blockquote>
-<p>
-<a href="https://github.com/igniterealtime/Openfire/security/advisories/GHSA-gw42-f939-fhvm" target="_blank">https://github.com/igniterealtime/Openfire/security/advisories/GHSA-gw42-f939-fhvm</a></p>
-</blockquote>
-<p><strong>Created at 2023-06-20T17:42:33+08:00</strong></p>
 
 
 
-<div class="last_mod">
-	创建于:Tuesday, June 20,2023
-</div>
 
-<div class="last_mod">
-	最后修改于: Wednesday, November 29,2023
-</div>
-<div class="article-container"></div>
-<script src="https://utteranc.es/client.js"
-        repo="CppXL/blog_comment"
-        issue-term="pathname"
-        theme="github-light"
-        crossorigin="anonymous"
-        async>
-</script>
-</div>
+<ul>
+	
+		<li><a href="/zh-cn/vulnerability/cve-2024-3094-what-can-we-learn-from-xz-backdoor/">CVE-2024-3094 What Can We Learn From Xz Backdoor</a></li>
+	
+</ul>
 
-<div id="comments">
 
-</div>
-<footer class="footline">
+<footer class=" footline" >
 	
 </footer>
+
         
         </div>
         
@@ -2962,7 +2853,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -2977,9 +2867,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -3381,7 +3268,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -3397,9 +3283,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -3928,10 +3811,8 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/zh-cn/vulnerability/cve-2023-3519-cirtix-gateway-rce/" title="CVE-2023-3519 Cirtix Gateway RCE分析"> <i class="fa fa-chevron-left"></i></a>
 		
-		
-			<a class="nav nav-next" href="/zh-cn/vulnerability/smartbi-rce/" title="Smartbi RCE 分析" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/zh-cn/research/" title="安全研究" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -3971,6 +3852,3 @@
 </script>
   </body>
 </html>
-
-
-
