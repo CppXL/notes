@@ -286,7 +286,7 @@
 &lt;tr&gt;
 &lt;td style=&#34;text-align:center&#34;&gt;22&lt;/td&gt;
 &lt;td style=&#34;text-align:center&#34;&gt;
-&lt;a href=&#34;./CVE-2023-4863-libwebp-rce.zh-cn&#34;&gt;libwebp 远程代码执行漏洞&lt;/a&gt;&lt;/td&gt;
+&lt;a href=&#34;https://www.ch35tnut.com/zh-cn/vulnerability/cve-2023-4863-libwebp-rce/&#34;&gt;libwebp 远程代码执行漏洞&lt;/a&gt;&lt;/td&gt;
 &lt;td style=&#34;text-align:center&#34;&gt;CVE-2023-4863&lt;/td&gt;
 &lt;td style=&#34;text-align:center&#34;&gt;代码执行&lt;/td&gt;
 &lt;td style=&#34;text-align:center&#34;&gt;✗&lt;/td&gt;

