@@ -22,7 +22,7 @@
 &lt;h4 id=&#34;什么是ifunc&#34;&gt;什么是IFUNC&lt;/h4&gt;
 &lt;p&gt;根据解释，通过IFUNC，使得应用程序可以在运行时对函数进行重定向，通过编写解析器函数，在运行时通过解析器函数动态选择函数并执行、&lt;/p&gt;
 &lt;p&gt;
-&lt;img alt=&#34;&#34; src=&#34;https://www.ch35tnut.com/images/vulnerability/CVE-2024-3094-what-can-we-learn-from-xz-backdoor/part-1-script.zh-cn.assets/1.png&#34; /&gt;&lt;/p&gt;
+&lt;img alt=&#34;&#34; src=&#34;https://www.ch35tnut.com/images/vulnerability/CVE-2024-3094-what-can-we-learn-from-xz-backdoor/part-1-script.zh-cn.assets/4.png&#34; /&gt;&lt;/p&gt;
 &lt;h4 id=&#34;攻击流程&#34;&gt;攻击流程&lt;/h4&gt;
 &lt;p&gt;
 &lt;img alt=&#34;&#34; src=&#34;https://www.ch35tnut.com/images/vulnerability/CVE-2024-3094-what-can-we-learn-from-xz-backdoor/part-1-script.zh-cn.assets/XZ-infographic.png&#34; /&gt;&lt;/p&gt;
