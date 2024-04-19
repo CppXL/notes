@@ -530,9 +530,16 @@
 <description>&lt;h3 id=&#34;关于我&#34;&gt;关于我&lt;/h3&gt;
 &lt;p&gt; 21年毕业，目前在某安全厂商工作，主要研究二进制，做一些应急响应方面的东西，业余也会看看web侧的一些简单漏洞，这个博客记录了我分析的一些漏洞和一些安全研究的文章。&lt;/p&gt;
 &lt;p&gt; 从小时候在电视上看到黑客在网络上上天入地无所不能，如今已入安全行业，希望能够长久保持对网络安全的好奇心，不会被消磨自己的好奇心，能够给世界留下一点属于自己的东西。&lt;/p&gt;
-&lt;p&gt;GitHub地址
-
-&lt;a href=&#34;https://github.com/Chestnuts4&#34; target=&#34;_blank&#34;&gt;Chestnuts4&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Github:
+&lt;a href=&#34;https://github.com/Chestnuts4&#34; target=&#34;_blank&#34;&gt;@Chestnuts4&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;X:
+&lt;a href=&#34;https://twitter.com/ch35tnut_&#34; target=&#34;_blank&#34;&gt;@ch35tnut_&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;希望可以跟教主说的那样坚持下去&lt;/p&gt;
 &lt;p&gt;
 &lt;img alt=&#34;&#34; src=&#34;https://www.ch35tnut.com/images/about.zh-cn.assets/4.jpg&#34; /&gt;&lt;/p&gt;
@@ -543,6 +550,8 @@
 &lt;img alt=&#34;&#34; src=&#34;https://www.ch35tnut.com/images/about.zh-cn.assets/2.jpg&#34; /&gt;
 
 &lt;img alt=&#34;&#34; src=&#34;https://www.ch35tnut.com/images/about.zh-cn.assets/3.jpg&#34; /&gt;&lt;/p&gt;
+&lt;h4 id=&#34;some-of-my-bugs&#34;&gt;Some of my bugs&lt;/h4&gt;
+&lt;p&gt;CNVD-2024-15043&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;&lt;strong&gt;黑客精神：Open, Share, Free&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
 </description>
 
