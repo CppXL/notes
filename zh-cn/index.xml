@@ -150,10 +150,11 @@
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style=&#34;text-align:center&#34;&gt;39&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;
+&lt;a href=&#34;https://www.ch35tnut.com/zh-cn/vulnerability/cve-2024-3094-what-can-we-learn-from-xz-backdoor/&#34;&gt;xz backdoor 分析&lt;/a&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;CVE-2024-3094&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;代码执行、身份认证绕过&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;✓&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style=&#34;text-align:center&#34;&gt;38&lt;/td&gt;
