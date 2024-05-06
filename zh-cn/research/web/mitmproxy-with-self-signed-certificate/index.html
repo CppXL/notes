@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Suid - chestnut&#39;s blog</title>
+    <title>Mitmproxy解密自签名证书加密流量 - chestnut&#39;s blog</title>
 
     
     <link href="/css/nucleus.css?1714999340" rel="stylesheet">
@@ -54,7 +54,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/zh-cn/research/linux/suid/">
+  <body class="" data-url="/zh-cn/research/web/mitmproxy-with-self-signed-certificate/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -203,7 +203,7 @@
   
     
     <li data-nav-id="/zh-cn/research/linux/" title="Linux" class="dd-item
-        parent
+        
         
         
         ">
@@ -261,7 +261,7 @@
  
   
     
-      <li data-nav-id="/zh-cn/research/linux/suid/" title="Suid" class="dd-item active">
+      <li data-nav-id="/zh-cn/research/linux/suid/" title="Suid" class="dd-item ">
         <a href="/zh-cn/research/linux/suid/">
         Suid
         <i class="fas fa-check read-icon"></i>
@@ -566,7 +566,7 @@
   
     
     <li data-nav-id="/zh-cn/research/web/" title="Web" class="dd-item
-        
+        parent
         
         
         ">
@@ -676,7 +676,7 @@
  
   
     
-      <li data-nav-id="/zh-cn/research/web/mitmproxy-with-self-signed-certificate/" title="Mitmproxy解密自签名证书加密流量" class="dd-item ">
+      <li data-nav-id="/zh-cn/research/web/mitmproxy-with-self-signed-certificate/" title="Mitmproxy解密自签名证书加密流量" class="dd-item active">
         <a href="/zh-cn/research/web/mitmproxy-with-self-signed-certificate/">
         Mitmproxy解密自签名证书加密流量
         <i class="fas fa-check read-icon"></i>
@@ -2384,7 +2384,7 @@
                   
                     
                     
-                      <option id="zh-cn" value="https://www.ch35tnut.com/zh-cn/research/linux/suid/" selected>简体中文</option>
+                      <option id="zh-cn" value="https://www.ch35tnut.com/zh-cn/research/web/mitmproxy-with-self-signed-certificate/" selected>简体中文</option>
                     
                   
               
@@ -2469,7 +2469,7 @@
             
           
           
-            <a href='/zh-cn/'>首页</a> > <a href='/zh-cn/research/'>安全研究</a> > <a href='/zh-cn/research/linux/'>Linux</a> > Suid
+            <a href='/zh-cn/'>首页</a> > <a href='/zh-cn/research/'>安全研究</a> > <a href='/zh-cn/research/web/'>Web</a> > Mitmproxy解密自签名证书加密流量
           
         
           
@@ -2484,16 +2484,7 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li><a href="#简介">简介</a></li>
-        <li><a href="#shell中的suid细节">shell中的SUID细节</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
+<nav id="TableOfContents"></nav>
     </div>
 </div>
 
@@ -2507,7 +2498,7 @@
 
   <a class="tag-link" href="/zh-cn/tags/%E5%AE%89%E5%85%A8%E7%A0%94%E7%A9%B6">安全研究</a>
 
-  <a class="tag-link" href="/zh-cn/tags/linux">linux</a>
+  <a class="tag-link" href="/zh-cn/tags/web">web</a>
 
 </div>
 
@@ -2517,7 +2508,7 @@
           
             <h1>
               
-              Suid
+              Mitmproxy解密自签名证书加密流量
             </h1>
           
 
@@ -2529,176 +2520,48 @@
     </div>
 </div>
 
-<nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li><a href="#简介">简介</a></li>
-        <li><a href="#shell中的suid细节">shell中的SUID细节</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
-<h3 id="简介">简介</h3>
-<p>SUID全称<strong>S</strong>et owner <strong>U</strong>ser <strong>ID</strong> up on execution，是Linux给可执行文件的一个属性，设置了s位的程序在运行时其<strong>Effective UID</strong>将会设置为这个程序的所有者。比如，<code>/bin/ping</code>这个程序的所有者是0（root），它设置了s位，那么普通用户在运行ping时其<strong>Effective UID</strong>就是0，等同于拥有了root权限。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>➜  c ls -ldb <span style="color:#66d9ef">$(</span>which pkexec<span style="color:#66d9ef">)</span>
-</span></span><span style="display:flex;"><span>-rwsr-xr-x <span style="color:#ae81ff">1</span> root root <span style="color:#ae81ff">30872</span> 2023年 2月13日 /usr/bin/pkexec
-</span></span></code></pre></div><p>SUID文件的出现是为了解决一些操作只能由root权限进行，但普通权限用户也需要能通过某种方式进行调用，比如passwd，/etc/shadow只有root可写，但用户自己显然需要可以修改密码，所以passwd被设置为SUID程序，使得普通用户能通过passwd临时获取到修改shadow文件的能力。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>-rw-r----- <span style="color:#ae81ff">1</span> root shadow <span style="color:#ae81ff">1411</span> 2023年 5月10日 /etc/shadow
-</span></span><span style="display:flex;"><span>-rwsr-xr-x <span style="color:#ae81ff">1</span> root root <span style="color:#ae81ff">68248</span> 2022年11月11日 /usr/bin/passwd
-</span></span></code></pre></div><p>Linux中每个用户都有独一无二的ID，称为UserID。
-为进程定义了三个ID：</p>
-<ul>
-<li>Real UserID</li>
-<li>Effective UserID</li>
-<li>Saved UserID</li>
-</ul>
+<nav id="TableOfContents"></nav>
+<p>在挖掘某些基于CS架构软件漏洞时，其服务端可能开启了HTTP服务，所以其看似是CS架构，但实际上还是BS架构，客户端只是一个另类的浏览器。</p>
+<p>
+<img alt="" src="/images/research/web/mitmproxy-with-self-signed-certificate.zh-cn.assets/1.png" /></p>
+<p>但我们可能会想要抓取client和server的通信流量，而此时会有两点问题。</p>
 <ol>
-<li>Real UserID：对于一个进程，这个ID是启动这个进程的用户的用户ID，这个ID定义了这个进程有权访问那些文件。</li>
-<li>Effective UserID：通常这个ID和Real UserID相同，但有时会不一样，来允许非特权用户访问只能由特权用户访问的文件。
-当非特权的用户运行此文件时，euid是文件所属的用户id，ruid才是当前用户的id
-<pre tabindex="0"><code>-rwsr-xr-x 1 root root 68248 2022年11月11日 /usr/bin/passwd
-┌──(chestnut㉿chestnut)-[/root/code/c]
-└─$ passwd
-为 chestnut 更改 STRESS 密码。
-➜  c ps -eo pid,euid,ruid | grep 1692693
-1692693     0  1000
-</code></pre></li>
-<li>Saved UserID，当进程以提升权限运行时，需要做一些非特权的操作，可以通过临时切换到非特权账户来实现。
-在执行低权限工作时，将Effective UID 更改为某个较低的权限值，并将 euid 保存到Saved userID（suid），以便在任务完成时用于切换回特权帐户。</li>
+<li>client可能不会读取HTTP_PROXY和HTTPS_PROXY等系统变量，不会尝试走系统代理。</li>
+<li>client和server之间可能会有证书验证，使用自签名的证书，而不是系统内的证书。</li>
+</ol>
+<p>本文基于以上问题提出一个解决方案。</p>
+<p>Windows上有
+<a href="https://www.proxifier.com/" target="_blank">proxifier</a>可以hook软件，将软件的TCP流量强行导入到HTTP/SOCKS代理中，所以可以使用proxifier将client流量导入到我们的代理。</p>
+<p>而此处的代理可以使用mitmproxy，之前使用burpsuite尝试抓取proxifier导入过来的流量时，发现在TLS握手时server会reset TCP连接，后面使用mitmpoxy才发现是客户端使用自签名的证书，不走系统的证书，导致在TLS握手时证书不匹配，reset了连接。</p>
+<blockquote>
+<p>
+<a href="https://github.com/mitmproxy/mitmproxy/issues/4536" target="_blank">https://github.com/mitmproxy/mitmproxy/issues/4536</a></p>
+</blockquote>
+<p>这里可以导出server证书和私钥，并使用mitmproxy加载就可</p>
+<ol>
+<li>导出IIS证书</li>
 </ol>
 <blockquote>
 <p>
-<a href="https://www.geeksforgeeks.org/real-effective-and-saved-userid-in-linux/" target="_blank">https://www.geeksforgeeks.org/real-effective-and-saved-userid-in-linux/</a></p>
+<a href="https://www.xolphin.com/support/IIS_FAQ/IIS_-_Backup_Certificate_and_Private_Key_to_pfx_File" target="_blank">https://www.xolphin.com/support/IIS_FAQ/IIS_-_Backup_Certificate_and_Private_Key_to_pfx_File</a></p>
 </blockquote>
-<p>查找SUID程序</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>find / -perm -4000 -type f -exec ls -ldb <span style="color:#f92672">{}</span> <span style="color:#ae81ff">\;</span>
-</span></span><span style="display:flex;"><span>-perm -4000 查找权限为4000
-</span></span><span style="display:flex;"><span>-type f 只查找普通文件,过滤掉目录等其他类型
-</span></span><span style="display:flex;"><span>-<span style="color:#f92672">[</span>/root/code/c/suid.c
-</span></span><span style="display:flex;"><span>/root/code/c/CMakeLists.txt<span style="color:#f92672">](</span>vscode-remote://ssh-remote%2B192.168.59.211/root/code/c/suid.c<span style="color:#f92672">)</span>exec ls -ldb <span style="color:#f92672">{}</span> ; 对找到的文件执行ls -ldb命令,显示文件详细信息。 <span style="color:#f92672">{}</span>表示find找到的文件名,会逐个代入。 ;表示-exec选项命令结束。
-</span></span><span style="display:flex;"><span>; 的作用就是隔离 find 命令行和 -exec 指定的命令,避免解析错误。
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>-rwsr-xr-x <span style="color:#ae81ff">1</span> root root <span style="color:#ae81ff">30872</span> 2023年 2月13日 /usr/bin/pkexec
-</span></span><span style="display:flex;"><span>-rwsr-xr-x <span style="color:#ae81ff">1</span> root root <span style="color:#ae81ff">14888</span> 2023年 1月 3日 /usr/bin/vmware-user-suid-wrapper
-</span></span><span style="display:flex;"><span>-rwsr-xr-- <span style="color:#ae81ff">1</span> root kismet <span style="color:#ae81ff">146216</span> 2022年12月27日 /usr/bin/kismet_cap_nxp_kw41z
-</span></span><span style="display:flex;"><span>-rwsr-xr-- <span style="color:#ae81ff">1</span> root kismet <span style="color:#ae81ff">142120</span> 2022年12月27日 /usr/bin/kismet_cap_nrf_51822
-</span></span><span style="display:flex;"><span>-rwsr-xr-x <span style="color:#ae81ff">1</span> root root <span style="color:#ae81ff">59704</span> 2023年 2月13日 /usr/bin/mount
-</span></span><span style="display:flex;"><span>-rwsr-xr-- <span style="color:#ae81ff">1</span> root kismet <span style="color:#ae81ff">216392</span> 2022年12月27日 /usr/bin/kismet_cap_linux_wifi
-</span></span><span style="display:flex;"><span>-rwsr-xr-- <span style="color:#ae81ff">1</span> root kismet <span style="color:#ae81ff">142120</span> 2022年12月27日 /usr/bin/kismet_cap_ubertooth_one
-</span></span><span style="display:flex;"><span>-rwsr-xr-- <span style="color:#ae81ff">1</span> root kismet <span style="color:#ae81ff">146216</span> 2022年12月27日 /usr/bin/kismet_cap_rz_killerbee
-</span></span><span style="display:flex;"><span>-rwsr-xr-x <span style="color:#ae81ff">1</span> root root <span style="color:#ae81ff">68248</span> 2022年11月11日 /usr/bin/passwd
-</span></span><span style="display:flex;"><span>-rwsr-xr-- <span style="color:#ae81ff">1</span> root kismet <span style="color:#ae81ff">146216</span> 2022年12月27日 /usr/bin/kismet_cap_nrf_mousejack
-</span></span><span style="display:flex;"><span>-rwsr-xr-- <span style="color:#ae81ff">1</span> root kismet <span style="color:#ae81ff">142120</span> 2022年12月27日 /usr/bin/kismet_cap_nrf_52840
-</span></span><span style="display:flex;"><span>-rwsr-xr-x <span style="color:#ae81ff">1</span> root root <span style="color:#ae81ff">88496</span> 2022年11月11日 /usr/bin/gpasswd
-</span></span><span style="display:flex;"><span>-rwsr-xr-x <span style="color:#ae81ff">1</span> root root <span style="color:#ae81ff">35128</span> 2023年 2月13日 /usr/bin/umount
-</span></span><span style="display:flex;"><span>-rwsr-xr-- <span style="color:#ae81ff">1</span> root kismet <span style="color:#ae81ff">154408</span> 2022年12月27日 /usr/bin/kismet_cap_linux_bluetooth
-</span></span><span style="display:flex;"><span>-rwsr-xr-- <span style="color:#ae81ff">1</span> root kismet <span style="color:#ae81ff">146216</span> 2022年12月27日 /usr/bin/kismet_cap_ti_cc_2531
-</span></span></code></pre></div><h3 id="shell中的suid细节">shell中的SUID细节</h3>
-<p>在
-<a href="https://www.leavesongs.com/PENETRATION/linux-suid-privilege-escalation.html" target="_blank">https://www.leavesongs.com/PENETRATION/linux-suid-privilege-escalation.html</a>中提到Ubuntu对dash进行了patch。
-找到patch地址为
-<a href="https://launchpadlibrarian.net/240241543/dash_0.5.8-2.1ubuntu2.diff.gz" target="_blank">https://launchpadlibrarian.net/240241543/dash_0.5.8-2.1ubuntu2.diff.gz</a>，代码如下，当on=1时会略过权限检查，当on不为1时，会通过geteuid和getegid获取当前进程的effective user ID和effective group ID，并与通过getuid和getgid获取的real user ID和real group ID进行比较。
-如果当前进程对应的可执行文件为SUID文件且当前运行这个文件的用户不是文件属主时，会重新通过setuid和setgid将当前进程的权限设置为real ID，即运行这个可执行文件的用户的权限。
-当文件不是SUID文件时rid和eid相等，不会进入if内，或者文件是SUID文件并且运行这个文件的用户是文件属主rid和eid也会相等，不会进入if内。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#f92672">+</span>diff <span style="color:#f92672">-</span>Naurp dash<span style="color:#f92672">-</span><span style="color:#ae81ff">0.5.7</span>.ori<span style="color:#f92672">/</span>src<span style="color:#f92672">/</span>main.c dash<span style="color:#f92672">-</span><span style="color:#ae81ff">0.5.7</span><span style="color:#f92672">/</span>src<span style="color:#f92672">/</span>main.c
-</span></span><span style="display:flex;"><span><span style="color:#f92672">+---</span> dash<span style="color:#f92672">-</span><span style="color:#ae81ff">0.5.7</span>.ori<span style="color:#f92672">/</span>src<span style="color:#f92672">/</span>main.c	<span style="color:#ae81ff">2015</span><span style="color:#f92672">-</span><span style="color:#ae81ff">06</span><span style="color:#f92672">-</span><span style="color:#ae81ff">03</span> <span style="color:#ae81ff">10</span><span style="color:#f92672">:</span><span style="color:#ae81ff">45</span><span style="color:#f92672">:</span><span style="color:#ae81ff">22.766472281</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">0400</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">++++</span> dash<span style="color:#f92672">-</span><span style="color:#ae81ff">0.5.7</span><span style="color:#f92672">/</span>src<span style="color:#f92672">/</span>main.c	<span style="color:#ae81ff">2015</span><span style="color:#f92672">-</span><span style="color:#ae81ff">06</span><span style="color:#f92672">-</span><span style="color:#ae81ff">03</span> <span style="color:#ae81ff">10</span><span style="color:#f92672">:</span><span style="color:#ae81ff">58</span><span style="color:#f92672">:</span><span style="color:#ae81ff">56.484258181</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">0400</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span><span style="color:#960050;background-color:#1e0010">@@</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">97</span>,<span style="color:#ae81ff">11</span> <span style="color:#f92672">+</span><span style="color:#ae81ff">97</span>,<span style="color:#ae81ff">16</span> <span style="color:#960050;background-color:#1e0010">@@</span> <span style="color:#a6e22e">main</span>(<span style="color:#66d9ef">int</span> argc, <span style="color:#66d9ef">char</span> <span style="color:#f92672">**</span>argv)
-</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span> 	<span style="color:#66d9ef">struct</span> jmploc jmploc;
-</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span> 	<span style="color:#66d9ef">struct</span> stackmark smark;
-</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span> 	<span style="color:#66d9ef">int</span> login;
-</span></span><span style="display:flex;"><span><span style="color:#f92672">++</span>	<span style="color:#66d9ef">uid_t</span> uid;
-</span></span><span style="display:flex;"><span><span style="color:#f92672">++</span>	<span style="color:#66d9ef">gid_t</span> gid;
-</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span> <span style="color:#960050;background-color:#1e0010">#</span>ifdef __GLIBC__
-</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span> 	dash_errno <span style="color:#f92672">=</span> <span style="color:#a6e22e">__errno_location</span>();
-</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span> <span style="color:#960050;background-color:#1e0010">#</span>endif
-</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">++</span>	uid <span style="color:#f92672">=</span> <span style="color:#a6e22e">getuid</span>();
-</span></span><span style="display:flex;"><span><span style="color:#f92672">++</span>	gid <span style="color:#f92672">=</span> <span style="color:#a6e22e">getgid</span>();
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span>diff <span style="color:#f92672">-</span>Naurp dash<span style="color:#f92672">-</span><span style="color:#ae81ff">0.5.7</span>.ori<span style="color:#f92672">/</span>src<span style="color:#f92672">/</span>priv.c dash<span style="color:#f92672">-</span><span style="color:#ae81ff">0.5.7</span><span style="color:#f92672">/</span>src<span style="color:#f92672">/</span>priv.c
-</span></span><span style="display:flex;"><span><span style="color:#f92672">+---</span> dash<span style="color:#f92672">-</span><span style="color:#ae81ff">0.5.7</span>.ori<span style="color:#f92672">/</span>src<span style="color:#f92672">/</span>priv.c	<span style="color:#ae81ff">1969</span><span style="color:#f92672">-</span><span style="color:#ae81ff">12</span><span style="color:#f92672">-</span><span style="color:#ae81ff">31</span> <span style="color:#ae81ff">19</span><span style="color:#f92672">:</span><span style="color:#ae81ff">00</span><span style="color:#f92672">:</span><span style="color:#ae81ff">00.000000000</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">0500</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">++++</span> dash<span style="color:#f92672">-</span><span style="color:#ae81ff">0.5.7</span><span style="color:#f92672">/</span>src<span style="color:#f92672">/</span>priv.c	<span style="color:#ae81ff">2015</span><span style="color:#f92672">-</span><span style="color:#ae81ff">06</span><span style="color:#f92672">-</span><span style="color:#ae81ff">03</span> <span style="color:#ae81ff">11</span><span style="color:#f92672">:</span><span style="color:#ae81ff">00</span><span style="color:#f92672">:</span><span style="color:#ae81ff">31.097386153</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">0400</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span><span style="color:#960050;background-color:#1e0010">@@</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span> <span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">27</span> <span style="color:#960050;background-color:#1e0010">@@</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">++</span><span style="color:#960050;background-color:#1e0010">#</span>include <span style="color:#f92672">&lt;</span>unistd.h<span style="color:#f92672">&gt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">++</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">++</span><span style="color:#960050;background-color:#1e0010">#</span>include <span style="color:#e6db74">&#34;priv.h&#34;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">++</span><span style="color:#960050;background-color:#1e0010">#</span>include <span style="color:#e6db74">&#34;var.h&#34;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">++</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">++</span><span style="color:#66d9ef">uid_t</span> uid;
-</span></span><span style="display:flex;"><span><span style="color:#f92672">++</span><span style="color:#66d9ef">gid_t</span> gid;
-</span></span><span style="display:flex;"><span><span style="color:#f92672">++</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">++</span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setprivileged</span>(<span style="color:#66d9ef">int</span> on)
-</span></span><span style="display:flex;"><span><span style="color:#f92672">++</span>{
-</span></span><span style="display:flex;"><span><span style="color:#f92672">++</span>	<span style="color:#66d9ef">static</span> <span style="color:#66d9ef">int</span> is_privileged <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
-</span></span><span style="display:flex;"><span><span style="color:#f92672">++</span>	<span style="color:#66d9ef">if</span> (is_privileged <span style="color:#f92672">==</span> on)
-</span></span><span style="display:flex;"><span><span style="color:#f92672">++</span>		<span style="color:#66d9ef">return</span>;
-</span></span><span style="display:flex;"><span><span style="color:#f92672">++</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">++</span>	is_privileged <span style="color:#f92672">=</span> on;
-</span></span><span style="display:flex;"><span><span style="color:#f92672">++</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">++</span>	<span style="color:#75715e">/*
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">++	 * To limit bogus system(3) or popen(3) calls in setuid binaries, require
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">++	 * -p flag to work in this situation.
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">++	 */</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">++</span>	<span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>on <span style="color:#f92672">&amp;&amp;</span> (uid <span style="color:#f92672">!=</span> <span style="color:#a6e22e">geteuid</span>() <span style="color:#f92672">||</span> gid <span style="color:#f92672">!=</span> <span style="color:#a6e22e">getegid</span>())) {
-</span></span><span style="display:flex;"><span><span style="color:#f92672">++</span>		<span style="color:#a6e22e">setuid</span>(uid);
-</span></span><span style="display:flex;"><span><span style="color:#f92672">++</span>		<span style="color:#a6e22e">setgid</span>(gid);
-</span></span><span style="display:flex;"><span><span style="color:#f92672">++</span>		<span style="color:#75715e">/* PS1 might need to be changed accordingly. */</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">++</span>		<span style="color:#a6e22e">choose_ps1</span>();
-</span></span><span style="display:flex;"><span><span style="color:#f92672">++</span>	}
-</span></span><span style="display:flex;"><span><span style="color:#f92672">++</span>}
-</span></span></code></pre></div><p>那么为什么要这样实现呢？为什么如果需要继承默认的effective user ID和effective group ID需要显式的使用-p参数呢？
-假设我们有如下suid程序，并且该程序由www-data用户启动：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdlib.h&gt;</span><span style="color:#75715e">
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(<span style="color:#66d9ef">int</span> argc, <span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span>argv[]) {
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;%s</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, argv[<span style="color:#ae81ff">1</span>]);
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">system</span>(argv[<span style="color:#ae81ff">1</span>]);
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p>其中通过system函数执行用户传入的命令，system实现可以
-<a href="https://codebrowser.dev/glibc/glibc/sysdeps/posix/system.c.html" target="_blank">在这找到</a>，可以看到实际执行的是<code>/bin/sh -c command</code>，加入攻击者传入恶意命令，尝试通过该程序以root权限执行命令，最终以<code>/bin/sh -c command</code>的形式执行命令。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">#define	SHELL_PATH	&#34;/bin/sh&#34;	</span><span style="color:#75715e">/* Path of the shell.  */</span><span style="color:#75715e">
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define	SHELL_NAME	&#34;sh&#34;		</span><span style="color:#75715e">/* Name to give it.  */</span><span style="color:#75715e">
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">do_system</span> (<span style="color:#66d9ef">const</span> <span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span>line)
-</span></span><span style="display:flex;"><span>{
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">int</span> status <span style="color:#f92672">=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">int</span> ret;
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">pid_t</span> pid;
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">struct</span> sigaction sa;
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#ifndef _LIBC_REENTRANT
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">struct</span> sigaction intr, quit;
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#endif
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span> .....
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">__posix_spawnattr_init</span> (<span style="color:#f92672">&amp;</span>spawn_attr);
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">__posix_spawnattr_setsigmask</span> (<span style="color:#f92672">&amp;</span>spawn_attr, <span style="color:#f92672">&amp;</span>omask);
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">__posix_spawnattr_setsigdefault</span> (<span style="color:#f92672">&amp;</span>spawn_attr, <span style="color:#f92672">&amp;</span>reset);
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">__posix_spawnattr_setflags</span> (<span style="color:#f92672">&amp;</span>spawn_attr,
-</span></span><span style="display:flex;"><span>			      POSIX_SPAWN_SETSIGDEF <span style="color:#f92672">|</span> POSIX_SPAWN_SETSIGMASK);
-</span></span><span style="display:flex;"><span>  ret <span style="color:#f92672">=</span> <span style="color:#a6e22e">__posix_spawn</span> (<span style="color:#f92672">&amp;</span>pid, SHELL_PATH, <span style="color:#ae81ff">0</span>, <span style="color:#f92672">&amp;</span>spawn_attr,
-</span></span><span style="display:flex;"><span>		       (<span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span><span style="color:#66d9ef">const</span>[]){ (<span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span>) SHELL_NAME,
-</span></span><span style="display:flex;"><span>					(<span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span>) <span style="color:#e6db74">&#34;-c&#34;</span>,
-</span></span><span style="display:flex;"><span>					(<span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span>) line, NULL },
-</span></span><span style="display:flex;"><span>		       __environ);
-</span></span></code></pre></div><p>如果没有前面说的措施，那么攻击者可以成功以root权限执行恶意命令，但通过上面的措施，则会出现如下：因为进程的rid为www-data，eid为root，而通过system函数执行命令不能显式设置-p参数，导致在执行命令时，不能通过if判断，命令的权限会被降为www-data权限，从而一定程度上缓解了攻击。</p>
-<p>参考资料</p>
-<blockquote>
+<ol start="2">
+<li>将pfx转化为pem格式
+<code>openssl pkcs12 -in 444.pfx -out temp.pem -nodes</code></li>
+<li>mitmproxy加载证书
+<code>mitmweb --cert domain=temp.pem --ssl-insecure</code></li>
+</ol>
 <p>
-<a href="https://www.leavesongs.com/PENETRATION/linux-suid-privilege-escalation.html" target="_blank">https://www.leavesongs.com/PENETRATION/linux-suid-privilege-escalation.html</a></p>
-</blockquote>
-<p><strong>Created at 2023-12-08T10:30:07+08:00</strong></p>
+<img alt="" src="/images/research/web/mitmproxy-with-self-signed-certificate.zh-cn.assets/2.png" /></p>
 
 
 
 <div class="last_mod">
-	创建于:Friday, December 8,2023
+	创建于:Monday, May 6,2024
 </div>
 
 <div class="last_mod">
-	最后修改于: Friday, December 8,2023
+	最后修改于: Monday, May 6,2024
 </div>
 <div class="article-container"></div>
 <script src="https://utteranc.es/client.js"
@@ -2782,7 +2645,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -2797,9 +2659,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -2816,7 +2675,6 @@
             
             
                 
-                    
                     
                 
                 
@@ -2836,9 +2694,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -2990,6 +2845,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -3005,34 +2861,8 @@
             
                 
                     
-                
-                
-
-                    
-                    
-                    
-
-                    
                         
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
                         
-            
-            
-                
                     
                 
                 
@@ -3041,12 +2871,6 @@
                     
                     
 
-                    
-            
-        
-                    
-            
-        
                     
                         
             
@@ -3068,6 +2892,45 @@
             
             
                 
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 
@@ -4147,10 +4010,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/zh-cn/research/linux/malware/" title="Malware"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/zh-cn/research/web/java-deserialization/urldns/" title="JAVA URL DNS 研究"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/zh-cn/research/windows/" title="Windows" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/zh-cn/research/web/php-filter-rce/" title="PHP Filter RCE 分析" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

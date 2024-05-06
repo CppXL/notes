@@ -7,10 +7,52 @@
         <description>Recent content in 安全研究 on chestnut&#39;s blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Thu, 18 Apr 2024 23:30:41 +0800</lastBuildDate>
+        <lastBuildDate>Mon, 06 May 2024 19:38:48 +0800</lastBuildDate>
     
         <atom:link href="https://www.ch35tnut.com/zh-cn/tags/%E5%AE%89%E5%85%A8%E7%A0%94%E7%A9%B6/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+<title>Mitmproxy解密自签名证书加密流量</title>
+<link>https://www.ch35tnut.com/zh-cn/research/web/mitmproxy-with-self-signed-certificate/</link>
+<pubDate>Mon, 06 May 2024 19:38:48 +0800</pubDate>
+      
+      <guid>https://www.ch35tnut.com/zh-cn/research/web/mitmproxy-with-self-signed-certificate/</guid>
+<description>&lt;p&gt;在挖掘某些基于CS架构软件漏洞时，其服务端可能开启了HTTP服务，所以其看似是CS架构，但实际上还是BS架构，客户端只是一个另类的浏览器。&lt;/p&gt;
+&lt;p&gt;
+&lt;img alt=&#34;&#34; src=&#34;https://www.ch35tnut.com/images/research/web/mitmproxy-with-self-signed-certificate.zh-cn.assets/1.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;但我们可能会想要抓取client和server的通信流量，而此时会有两点问题。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;client可能不会读取HTTP_PROXY和HTTPS_PROXY等系统变量，不会尝试走系统代理。&lt;/li&gt;
+&lt;li&gt;client和server之间可能会有证书验证，使用自签名的证书，而不是系统内的证书。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;本文基于以上问题提出一个解决方案。&lt;/p&gt;
+&lt;p&gt;Windows上有
+&lt;a href=&#34;https://www.proxifier.com/&#34; target=&#34;_blank&#34;&gt;proxifier&lt;/a&gt;可以hook软件，将软件的TCP流量强行导入到HTTP/SOCKS代理中，所以可以使用proxifier将client流量导入到我们的代理。&lt;/p&gt;
+&lt;p&gt;而此处的代理可以使用mitmproxy，之前使用burpsuite尝试抓取proxifier导入过来的流量时，发现在TLS握手时server会reset TCP连接，后面使用mitmpoxy才发现是客户端使用自签名的证书，不走系统的证书，导致在TLS握手时证书不匹配，reset了连接。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://github.com/mitmproxy/mitmproxy/issues/4536&#34; target=&#34;_blank&#34;&gt;https://github.com/mitmproxy/mitmproxy/issues/4536&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这里可以导出server证书和私钥，并使用mitmproxy加载就可&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;导出IIS证书&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://www.xolphin.com/support/IIS_FAQ/IIS_-_Backup_Certificate_and_Private_Key_to_pfx_File&#34; target=&#34;_blank&#34;&gt;https://www.xolphin.com/support/IIS_FAQ/IIS_-_Backup_Certificate_and_Private_Key_to_pfx_File&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;将pfx转化为pem格式
+&lt;code&gt;openssl pkcs12 -in 444.pfx -out temp.pem -nodes&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;mitmproxy加载证书
+&lt;code&gt;mitmweb --cert domain=temp.pem --ssl-insecure&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+&lt;img alt=&#34;&#34; src=&#34;https://www.ch35tnut.com/images/research/web/mitmproxy-with-self-signed-certificate.zh-cn.assets/2.png&#34; /&gt;&lt;/p&gt;
+</description>
+
+</item>
     
     <item>
 <title>Part 2 Backdoor</title>
