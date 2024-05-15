@@ -143,10 +143,11 @@
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style=&#34;text-align:center&#34;&gt;40&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;
+&lt;a href=&#34;https://www.ch35tnut.com/zh-cn/vulnerability/ghsl-2024-053-github-actions-expr-injection/&#34;&gt;GHSL-2024-053 GitHub Actions 表达式注入漏洞&lt;/a&gt;&lt;/td&gt;
 &lt;td style=&#34;text-align:center&#34;&gt;&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;命令执行&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;✓&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style=&#34;text-align:center&#34;&gt;39&lt;/td&gt;
