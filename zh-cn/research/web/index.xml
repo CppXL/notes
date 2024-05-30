@@ -13,19 +13,27 @@
     
     
     <item>
-<title>Java Deserialization</title>
-<link>https://www.ch35tnut.com/zh-cn/research/web/java-deserialization/</link>
-<pubDate>Mon, 08 Jan 2024 16:54:25 +0800</pubDate>
+<title>Java</title>
+<link>https://www.ch35tnut.com/zh-cn/research/web/java/</link>
+<pubDate>Sat, 18 May 2024 00:40:38 +0800</pubDate>
       
-      <guid>https://www.ch35tnut.com/zh-cn/research/web/java-deserialization/</guid>
-<description>&lt;h3 id=&#34;java反序列化&#34;&gt;java反序列化&lt;/h3&gt;
-&lt;p&gt;java 反序列化研究&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;a href=&#34;https://www.ch35tnut.com/zh-cn/research/web/java-deserialization/urldns/&#34;&gt;JAVA URL DNS 研究&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;a href=&#34;https://www.ch35tnut.com/zh-cn/research/web/java-deserialization/commonsbeanutils1-chain/&#34;&gt;CommonsBeanutils1 链研究&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+      <guid>https://www.ch35tnut.com/zh-cn/research/web/java/</guid>
+<description>&lt;h3 id=&#34;chapter-x&#34;&gt;Chapter X&lt;/h3&gt;
+&lt;h1 id=&#34;some-chapter-title&#34;&gt;Some Chapter title&lt;/h1&gt;
+&lt;p&gt;Lorem Ipsum.&lt;/p&gt;
+</description>
+
+</item>
+    
+    <item>
+<title>Dotnet</title>
+<link>https://www.ch35tnut.com/zh-cn/research/web/dotnet/</link>
+<pubDate>Sat, 18 May 2024 00:39:53 +0800</pubDate>
+      
+      <guid>https://www.ch35tnut.com/zh-cn/research/web/dotnet/</guid>
+<description>&lt;h3 id=&#34;dotnet&#34;&gt;dotNet&lt;/h3&gt;
+&lt;p&gt;-
+&lt;a href=&#34;https://www.ch35tnut.com/zh-cn/research/web/dotnet/deserialization/&#34;&gt;反序列化&lt;/a&gt;&lt;/p&gt;
 </description>
 
 </item>

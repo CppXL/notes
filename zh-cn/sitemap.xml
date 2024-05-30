@@ -2,6 +2,12 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://www.ch35tnut.com/zh-cn/research/web/java/</loc>
+    <lastmod>2024-05-28T23:46:19+08:00</lastmod>
+  </url><url>
+    <loc>https://www.ch35tnut.com/zh-cn/research/web/dotnet/</loc>
+    <lastmod>2024-05-31T02:16:22+08:00</lastmod>
+  </url><url>
     <loc>https://www.ch35tnut.com/zh-cn/vulnerability/cve-2024-3094-what-can-we-learn-from-xz-backdoor/</loc>
     <lastmod>2024-04-19T00:00:39+08:00</lastmod>
   </url><url>
@@ -14,8 +20,8 @@
     <loc>https://www.ch35tnut.com/zh-cn/research/iot/</loc>
     <lastmod>2024-01-08T18:27:10+08:00</lastmod>
   </url><url>
-    <loc>https://www.ch35tnut.com/zh-cn/research/web/java-deserialization/</loc>
-    <lastmod>2024-01-12T17:06:57+08:00</lastmod>
+    <loc>https://www.ch35tnut.com/zh-cn/research/web/java/java-deserialization/</loc>
+    <lastmod>2024-05-28T23:46:19+08:00</lastmod>
   </url><url>
     <loc>https://www.ch35tnut.com/zh-cn/misc/encoding/</loc>
     <lastmod>2024-01-03T12:36:31+08:00</lastmod>
@@ -140,7 +146,7 @@
                 />
   </url><url>
     <loc>https://www.ch35tnut.com/zh-cn/others/</loc>
-    <lastmod>2024-01-08T18:27:10+08:00</lastmod>
+    <lastmod>2024-05-31T02:16:22+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -152,11 +158,17 @@
                 href="https://www.ch35tnut.com/zh-cn/others/"
                 />
   </url><url>
+    <loc>https://www.ch35tnut.com/zh-cn/others/rambling-about-ulnerabilities/</loc>
+    <lastmod>2024-05-31T02:16:22+08:00</lastmod>
+  </url><url>
+    <loc>https://www.ch35tnut.com/zh-cn/research/web/dotnet/deserialization/</loc>
+    <lastmod>2024-05-31T02:16:22+08:00</lastmod>
+  </url><url>
     <loc>https://www.ch35tnut.com/zh-cn/vulnerability/ghsl-2024-053-github-actions-expr-injection/</loc>
     <lastmod>2024-05-16T01:00:38+08:00</lastmod>
   </url><url>
     <loc>https://www.ch35tnut.com/zh-cn/tags/</loc>
-    <lastmod>2024-05-30T04:50:58+00:00</lastmod>
+    <lastmod>2024-05-30T18:16:48+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -169,7 +181,7 @@
                 />
   </url><url>
     <loc>https://www.ch35tnut.com/zh-cn/tags/%E6%BC%8F%E6%B4%9E%E5%88%86%E6%9E%90/</loc>
-    <lastmod>2024-05-30T04:50:58+00:00</lastmod>
+    <lastmod>2024-05-30T18:16:48+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -188,7 +200,7 @@
     <lastmod>2024-05-06T20:04:16+08:00</lastmod>
   </url><url>
     <loc>https://www.ch35tnut.com/zh-cn/tags/%E5%AE%89%E5%85%A8%E7%A0%94%E7%A9%B6/</loc>
-    <lastmod>2024-05-06T20:04:16+08:00</lastmod>
+    <lastmod>2024-05-28T23:46:19+08:00</lastmod>
   </url><url>
     <loc>https://www.ch35tnut.com/zh-cn/vulnerability/cve-2024-3094-what-can-we-learn-from-xz-backdoor/part-2-backdoor/</loc>
     <lastmod>2024-04-20T02:58:27+08:00</lastmod>
@@ -200,7 +212,7 @@
     <lastmod>2024-04-07T01:23:37+08:00</lastmod>
   </url><url>
     <loc>https://www.ch35tnut.com/zh-cn/dailylife/%E5%90%90%E6%A7%BD/</loc>
-    <lastmod>2024-05-30T04:50:58+00:00</lastmod>
+    <lastmod>2024-05-30T18:16:48+00:00</lastmod>
   </url><url>
     <loc>https://www.ch35tnut.com/zh-cn/misc/tools/citrix-update-monitor/</loc>
     <lastmod>2024-01-19T11:09:16+08:00</lastmod>
@@ -211,26 +223,26 @@
     <loc>https://www.ch35tnut.com/zh-cn/vulnerability/cve-2023-7028-gitlab-account-takeover/</loc>
     <lastmod>2024-01-15T09:46:55+08:00</lastmod>
   </url><url>
-    <loc>https://www.ch35tnut.com/zh-cn/research/web/java-deserialization/commonsbeanutils1-chain/</loc>
-    <lastmod>2024-01-12T17:03:07+08:00</lastmod>
+    <loc>https://www.ch35tnut.com/zh-cn/research/web/java/java-deserialization/commonsbeanutils1-chain/</loc>
+    <lastmod>2024-05-28T23:46:19+08:00</lastmod>
   </url><url>
     <loc>https://www.ch35tnut.com/zh-cn/tags/%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/</loc>
-    <lastmod>2024-01-12T17:03:07+08:00</lastmod>
+    <lastmod>2024-05-28T23:46:19+08:00</lastmod>
   </url><url>
     <loc>https://www.ch35tnut.com/zh-cn/tags/2024-%E5%B9%B4%E5%BA%A6%E8%AE%A1%E5%88%92/</loc>
-    <lastmod>2024-05-30T04:50:58+00:00</lastmod>
+    <lastmod>2024-05-30T18:16:48+00:00</lastmod>
   </url><url>
     <loc>https://www.ch35tnut.com/zh-cn/dailylife/movies/2024-%E6%BD%9C%E8%A1%8C/</loc>
-    <lastmod>2024-05-30T04:50:58+00:00</lastmod>
+    <lastmod>2024-05-30T18:16:48+00:00</lastmod>
   </url><url>
     <loc>https://www.ch35tnut.com/zh-cn/tags/%E7%94%B5%E5%BD%B1/</loc>
-    <lastmod>2024-05-30T04:50:58+00:00</lastmod>
+    <lastmod>2024-05-30T18:16:48+00:00</lastmod>
   </url><url>
     <loc>https://www.ch35tnut.com/zh-cn/vulnerability/cve-2016-4437-shiro-550-rce/</loc>
     <lastmod>2024-01-12T17:06:57+08:00</lastmod>
   </url><url>
-    <loc>https://www.ch35tnut.com/zh-cn/research/web/java-deserialization/urldns/</loc>
-    <lastmod>2024-01-08T17:17:51+08:00</lastmod>
+    <loc>https://www.ch35tnut.com/zh-cn/research/web/java/java-deserialization/urldns/</loc>
+    <lastmod>2024-05-28T23:46:19+08:00</lastmod>
   </url><url>
     <loc>https://www.ch35tnut.com/zh-cn/dailylife/2023-review-and-2024-outlook/</loc>
     <lastmod>2024-01-14T02:19:31+08:00</lastmod>
@@ -299,7 +311,7 @@
     <lastmod>2023-10-08T09:53:32+08:00</lastmod>
   </url><url>
     <loc>https://www.ch35tnut.com/zh-cn/vulnerability/%E7%91%9E%E5%8F%8B%E5%A4%A9%E7%BF%BC-rce/</loc>
-    <lastmod>2024-05-30T04:50:58+00:00</lastmod>
+    <lastmod>2024-05-30T18:16:48+00:00</lastmod>
   </url><url>
     <loc>https://www.ch35tnut.com/zh-cn/vulnerability/cve-2023-36874-windows-error-reporting-service-eop/</loc>
     <lastmod>2023-10-08T09:53:32+08:00</lastmod>

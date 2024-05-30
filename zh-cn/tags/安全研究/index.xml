@@ -690,10 +690,10 @@
     
     <item>
 <title>CommonsBeanutils1 Chain</title>
-<link>https://www.ch35tnut.com/zh-cn/research/web/java-deserialization/commonsbeanutils1-chain/</link>
+<link>https://www.ch35tnut.com/zh-cn/research/web/java/java-deserialization/commonsbeanutils1-chain/</link>
 <pubDate>Fri, 12 Jan 2024 14:32:08 +0800</pubDate>
       
-      <guid>https://www.ch35tnut.com/zh-cn/research/web/java-deserialization/commonsbeanutils1-chain/</guid>
+      <guid>https://www.ch35tnut.com/zh-cn/research/web/java/java-deserialization/commonsbeanutils1-chain/</guid>
 <description>&lt;h3 id=&#34;概述&#34;&gt;概述&lt;/h3&gt;
 &lt;p&gt;在ysoserial中实现了&lt;code&gt;CommonsBeanutils1&lt;/code&gt;反序列化链，可以利用这个链执行代码。&lt;/p&gt;
 &lt;h3 id=&#34;细节&#34;&gt;细节&lt;/h3&gt;
@@ -749,7 +749,7 @@
 &lt;p&gt;&lt;strong&gt;根因分析&lt;/strong&gt;
 根据前面调试知道，&lt;code&gt;CommonsBeanutils1&lt;/code&gt;序列化&lt;code&gt;PriorityQueue&lt;/code&gt;对象，其中&lt;code&gt;comparator&lt;/code&gt;指定为&lt;code&gt;BeanComparator&lt;/code&gt;，&lt;code&gt;PriorityQueue&lt;/code&gt;内存了两个&lt;code&gt;TemplatesImpl&lt;/code&gt;对象。&lt;/p&gt;
 &lt;p&gt;使用
-&lt;a href=&#34;https://www.ch35tnut.com/zh-cn/vulnerability/cve-2016-4437-shiro-550-rce/&#34;&gt;shiro 550&lt;/a&gt;环境，发送payload，在调试器中可以看到，首先反序列化&lt;code&gt;PriorityQueue&lt;/code&gt;对象
+&lt;a href=&#34;https://www.ch35tnut.com/zh-cn/vulnerability/&#34;&gt;shiro 550&lt;/a&gt;环境，发送payload，在调试器中可以看到，首先反序列化&lt;code&gt;PriorityQueue&lt;/code&gt;对象
 
 &lt;img alt=&#34;&#34; src=&#34;https://www.ch35tnut.com/images/research/web/java-deserialization/CommonsBeanutils1-chain.zh-cn.assets/2.png&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;在readObject断点，可以看到尝试反序列化&lt;code&gt;comparator&lt;/code&gt;，这里是&lt;code&gt;BeanComparator&lt;/code&gt;，并递归反序列化&lt;code&gt;TemplatesImpl&lt;/code&gt;
@@ -1026,10 +1026,10 @@
     
     <item>
 <title>JAVA URL DNS 研究</title>
-<link>https://www.ch35tnut.com/zh-cn/research/web/java-deserialization/urldns/</link>
+<link>https://www.ch35tnut.com/zh-cn/research/web/java/java-deserialization/urldns/</link>
 <pubDate>Mon, 08 Jan 2024 16:57:37 +0800</pubDate>
       
-      <guid>https://www.ch35tnut.com/zh-cn/research/web/java-deserialization/urldns/</guid>
+      <guid>https://www.ch35tnut.com/zh-cn/research/web/java/java-deserialization/urldns/</guid>
 <description>&lt;p&gt;&lt;strong&gt;前言&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;初步入门java反序列化学习，做一个学习记录，水一篇文章。如果有问题可以邮件：got_
 &lt;a href=&#34;mailto:whipper.0p@icloud.com&#34;&gt;whipper.0p@icloud.com&lt;/a&gt;&lt;/p&gt;
