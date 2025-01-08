@@ -27,33 +27,148 @@
 &lt;a href=&#34;https://github.com/gmh5225/EvilSln/blob/54f54506f1cba57ed9fec5cf0698994821270b9d/README.md#L168&#34; target=&#34;_blank&#34;&gt;文章&lt;/a&gt;披露的Microsoft.Visual.dll，在其内找到如下代码，即在OnLoadOptions方法中会调用VsToolboxService.LoadOptions并把数据作为stream参数传进去&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-csharp&#34; data-lang=&#34;csharp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Microsoft.VisualStudio.VSCorePackage  &lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Token: 0x06000108 RID: 264 RVA: 0x00003C5C File Offset: 0x00001E5C  &lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;protected&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;override&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; OnLoadOptions(&lt;span style=&#34;color:#66d9ef&#34;&gt;string&lt;/span&gt; name, Stream stream)  
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{    &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; (name.Equals(&lt;span style=&#34;color:#66d9ef&#34;&gt;typeof&lt;/span&gt;(VsToolboxService).Name))    {        VsToolboxService vsToolboxService = &lt;span style=&#34;color:#66d9ef&#34;&gt;this&lt;/span&gt;.GetService(&lt;span style=&#34;color:#66d9ef&#34;&gt;typeof&lt;/span&gt;(IToolboxService)) &lt;span style=&#34;color:#66d9ef&#34;&gt;as&lt;/span&gt; VsToolboxService;        &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; (vsToolboxService != &lt;span style=&#34;color:#66d9ef&#34;&gt;null&lt;/span&gt;)        {            vsToolboxService.LoadOptions(stream);        }    }  
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;protected&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;override&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; OnLoadOptions(&lt;span style=&#34;color:#66d9ef&#34;&gt;string&lt;/span&gt; name, Stream stream)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; (name.Equals(&lt;span style=&#34;color:#66d9ef&#34;&gt;typeof&lt;/span&gt;(VsToolboxService).Name))
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		VsToolboxService vsToolboxService = &lt;span style=&#34;color:#66d9ef&#34;&gt;this&lt;/span&gt;.GetService(&lt;span style=&#34;color:#66d9ef&#34;&gt;typeof&lt;/span&gt;(IToolboxService)) &lt;span style=&#34;color:#66d9ef&#34;&gt;as&lt;/span&gt; VsToolboxService;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; (vsToolboxService != &lt;span style=&#34;color:#66d9ef&#34;&gt;null&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			vsToolboxService.LoadOptions(stream);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	}
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Microsoft.VisualStudio.Toolbox.VsToolboxService  &lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Token: 0x06000289 RID: 649 RVA: 0x0000B23C File Offset: 0x0000943C  &lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;internal&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; LoadOptions(Stream stream)  
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{    BinaryReader binaryReader = &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; BinaryReader(stream);    BinaryFormatter binaryFormatter = &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; BinaryFormatter();    &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; num = binaryReader.ReadInt32();    &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; (&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; i = &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;; i &amp;lt; num; i++)    {        &lt;span style=&#34;color:#66d9ef&#34;&gt;string&lt;/span&gt; category = binaryReader.ReadString();        &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; num2 = binaryReader.ReadInt32();        &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; (&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; j = &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;; j &amp;lt; num2; j++)        {            &lt;span style=&#34;color:#66d9ef&#34;&gt;string&lt;/span&gt; text = &lt;span style=&#34;color:#66d9ef&#34;&gt;this&lt;/span&gt;.Links.Read(stream);            VsToolboxService.ToolboxItemContainer toolboxItemContainer = (VsToolboxService.ToolboxItemContainer)binaryFormatter.Deserialize(stream);            &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; (text != &lt;span style=&#34;color:#66d9ef&#34;&gt;null&lt;/span&gt; &amp;amp;&amp;amp; File.Exists(text))            {                toolboxItemContainer.LinkFile = text;                &lt;span style=&#34;color:#66d9ef&#34;&gt;this&lt;/span&gt;.Links.TrackLink(text);                &lt;span style=&#34;color:#66d9ef&#34;&gt;this&lt;/span&gt;.Items.GetFilteredList(category).Add(toolboxItemContainer);            }        }    }  
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		&lt;span style=&#34;color:#66d9ef&#34;&gt;internal&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; LoadOptions(Stream stream)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			BinaryReader binaryReader = &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; BinaryReader(stream);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			BinaryFormatter binaryFormatter = &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; BinaryFormatter();
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; num = binaryReader.ReadInt32();
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; (&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; i = &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;; i &amp;lt; num; i++)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;				&lt;span style=&#34;color:#66d9ef&#34;&gt;string&lt;/span&gt; category = binaryReader.ReadString();
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;				&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; num2 = binaryReader.ReadInt32();
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;				&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; (&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; j = &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;; j &amp;lt; num2; j++)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;				{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;					&lt;span style=&#34;color:#66d9ef&#34;&gt;string&lt;/span&gt; text = &lt;span style=&#34;color:#66d9ef&#34;&gt;this&lt;/span&gt;.Links.Read(stream);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;					VsToolboxService.ToolboxItemContainer toolboxItemContainer = (VsToolboxService.ToolboxItemContainer)binaryFormatter.Deserialize(stream);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;					&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; (text != &lt;span style=&#34;color:#66d9ef&#34;&gt;null&lt;/span&gt; &amp;amp;&amp;amp; File.Exists(text))
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;					{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;						toolboxItemContainer.LinkFile = text;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;						&lt;span style=&#34;color:#66d9ef&#34;&gt;this&lt;/span&gt;.Links.TrackLink(text);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;						&lt;span style=&#34;color:#66d9ef&#34;&gt;this&lt;/span&gt;.Items.GetFilteredList(category).Add(toolboxItemContainer);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;					}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;				}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		}
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;很容易看出里面通过binaryFormatter.Deserialize直接反序列化了相关数据，这就是很经典的反序列化执行代码。&lt;/p&gt;
 &lt;h3 id=&#34;如何制作恶意suo&#34;&gt;如何制作恶意.suo&lt;/h3&gt;
 &lt;p&gt;在Microsoft.VisualStudio.VSCorePackage类中存在OnSaveOptions，调用SaveOptions保存序列化数据，而CompoundFile可以通过OpenMCDF处理，或者直接把现有的.suo里面的序列化数据进行替换也可。&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-csgarp&#34; data-lang=&#34;csgarp&#34;&gt;protected override void OnSaveOptions(string name, Stream stream)  
-{    if (name.Equals(typeof(VsToolboxService).Name))    {        VsToolboxService vsToolboxService = this.GetService(typeof(IToolboxService)) as VsToolboxService;        if (vsToolboxService != null)        {            vsToolboxService.SaveOptions(stream);        }    }  
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-csgarp&#34; data-lang=&#34;csgarp&#34;&gt;protected override void OnSaveOptions(string name, Stream stream)
+{
+	if (name.Equals(typeof(VsToolboxService).Name))
+	{
+		VsToolboxService vsToolboxService = this.GetService(typeof(IToolboxService)) as VsToolboxService;
+		if (vsToolboxService != null)
+		{
+			vsToolboxService.SaveOptions(stream);
+		}
+	}
 }
-
-        internal void SaveOptions(Stream stream)        {            try            {                IEnumToolboxTabs enumToolboxTabs = null;                long position = stream.Position;                int num = 0;                int num2 = 0;                IVsToolbox vsToolbox = this.VsToolbox;                if (vsToolbox != null)                {                    BinaryWriter binaryWriter = new BinaryWriter(stream);                    BinaryFormatter binaryFormatter = new BinaryFormatter();                    binaryWriter.Write(0);                    string[] array = new string[1];                    if (this._links != null &amp;amp;&amp;amp; this._links.ContainsLinks)                    {                        NativeMethods.ThrowOnFailure(vsToolbox.EnumTabs(ref enumToolboxTabs));                        try                        {                            uint num3;                            NativeMethods.ThrowOnFailure(enumToolboxTabs.Next(1U, array, ref num3));                            long position3;                            while (num3 == 1U)                            {                                string text = array[0];                                num++;                                binaryWriter.Write(text);                                IEnumToolboxItems enumToolboxItems;                                NativeMethods.ThrowOnFailure(vsToolbox.EnumItems(text, ref enumToolboxItems));                                long position2 = stream.Position;                                binaryWriter.Write(0);                                try                                {                                    IDataObject[] array2 = new IDataObject[1];                                    uint num4;                                    NativeMethods.ThrowOnFailure(enumToolboxItems.Next(1U, array2, ref num4));                                    while (num4 == 1U)                                    {                                        IDataObject dataObject = array2[0];                                        VsToolboxService.ToolboxDataObject toolboxDataObject = dataObject as VsToolboxService.ToolboxDataObject;                                        if (toolboxDataObject != null)                                        {                                            VsToolboxService.ToolboxItemContainer toolboxItemContainer = toolboxDataObject.ToolboxItemContainer;                                            string linkFile = toolboxItemContainer.LinkFile;                                            if (linkFile != null &amp;amp;&amp;amp; this.Links.Write(linkFile, stream))                                            {                                                binaryFormatter.Serialize(stream, toolboxItemContainer);                                                num2++;                                            }                                        }                                        num4 = 0U;                                        NativeMethods.ThrowOnFailure(enumToolboxItems.Next(1U, array2, ref num4));                                    }                                    position3 = stream.Position;                                    stream.Position = position2;                                    binaryWriter.Write(num2);                                    num2 = 0;                                    stream.Position = position3;                                }                                catch                                {                                }                                enumToolboxItems = null;                                num3 = 0U;                                NativeMethods.ThrowOnFailure(enumToolboxTabs.Next(1U, array, ref num3));                            }                            position3 = stream.Position;                            stream.Position = position;                            binaryWriter.Write(num);                            stream.Position = position3;                        }                        catch                        {                        }                    }                    binaryWriter.Flush();                }            }            catch            {            }        }
+		internal void SaveOptions(Stream stream)
+		{
+			try
+			{
+				IEnumToolboxTabs enumToolboxTabs = null;
+				long position = stream.Position;
+				int num = 0;
+				int num2 = 0;
+				IVsToolbox vsToolbox = this.VsToolbox;
+				if (vsToolbox != null)
+				{
+					BinaryWriter binaryWriter = new BinaryWriter(stream);
+					BinaryFormatter binaryFormatter = new BinaryFormatter();
+					binaryWriter.Write(0);
+					string[] array = new string[1];
+					if (this._links != null &amp;amp;&amp;amp; this._links.ContainsLinks)
+					{
+						NativeMethods.ThrowOnFailure(vsToolbox.EnumTabs(ref enumToolboxTabs));
+						try
+						{
+							uint num3;
+							NativeMethods.ThrowOnFailure(enumToolboxTabs.Next(1U, array, ref num3));
+							long position3;
+							while (num3 == 1U)
+							{
+								string text = array[0];
+								num++;
+								binaryWriter.Write(text);
+								IEnumToolboxItems enumToolboxItems;
+								NativeMethods.ThrowOnFailure(vsToolbox.EnumItems(text, ref enumToolboxItems));
+								long position2 = stream.Position;
+								binaryWriter.Write(0);
+								try
+								{
+									IDataObject[] array2 = new IDataObject[1];
+									uint num4;
+									NativeMethods.ThrowOnFailure(enumToolboxItems.Next(1U, array2, ref num4));
+									while (num4 == 1U)
+									{
+										IDataObject dataObject = array2[0];
+										VsToolboxService.ToolboxDataObject toolboxDataObject = dataObject as VsToolboxService.ToolboxDataObject;
+										if (toolboxDataObject != null)
+										{
+											VsToolboxService.ToolboxItemContainer toolboxItemContainer = toolboxDataObject.ToolboxItemContainer;
+											string linkFile = toolboxItemContainer.LinkFile;
+											if (linkFile != null &amp;amp;&amp;amp; this.Links.Write(linkFile, stream))
+											{
+												binaryFormatter.Serialize(stream, toolboxItemContainer);
+												num2++;
+											}
+										}
+										num4 = 0U;
+										NativeMethods.ThrowOnFailure(enumToolboxItems.Next(1U, array2, ref num4));
+									}
+									position3 = stream.Position;
+									stream.Position = position2;
+									binaryWriter.Write(num2);
+									num2 = 0;
+									stream.Position = position3;
+								}
+								catch
+								{
+								}
+								enumToolboxItems = null;
+								num3 = 0U;
+								NativeMethods.ThrowOnFailure(enumToolboxTabs.Next(1U, array, ref num3));
+							}
+							position3 = stream.Position;
+							stream.Position = position;
+							binaryWriter.Write(num);
+							stream.Position = position3;
+						}
+						catch
+						{
+						}
+					}
+					binaryWriter.Flush();
+				}
+			}
+			catch
+			{
+			}
+		}
 &lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;其他&#34;&gt;其他&lt;/h3&gt;
 &lt;p&gt;本文无意对APT样本进行分析，dump出样本，需要的可在https://github.com/Chestnuts4/APT_simple/blob/main/Ocean_Lotus/mal.dll下载&lt;/p&gt;
 &lt;h3 id=&#34;参考&#34;&gt;参考&lt;/h3&gt;
 &lt;blockquote&gt;
 &lt;p&gt;
-&lt;a href=&#34;https://crackme.net/articles/evil_sln/&#34; target=&#34;_blank&#34;&gt;sln任意代码执行的几种方式（evilsln）&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;
-&lt;a href=&#34;https://learn.microsoft.com/en-us/visualstudio/extensibility/internals/solution-user-options-dot-suo-file?view=vs-2022&#34; target=&#34;_blank&#34;&gt;# Solution User Options (.suo) File&lt;/a&gt;\&lt;/p&gt;
-&lt;p&gt;
+&lt;a href=&#34;https://crackme.net/articles/evil_sln/&#34; target=&#34;_blank&#34;&gt;sln任意代码执行的几种方式（evilsln）&lt;/a&gt;
+
+&lt;a href=&#34;https://learn.microsoft.com/en-us/visualstudio/extensibility/internals/solution-user-options-dot-suo-file?view=vs-2022&#34; target=&#34;_blank&#34;&gt;# Solution User Options (.suo) File&lt;/a&gt;
+
 &lt;a href=&#34;https://github.com/gmh5225/EvilSln&#34; target=&#34;_blank&#34;&gt;EvilSln&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 </description>
