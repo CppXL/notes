@@ -3,25 +3,42 @@
     xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>生活随笔 on chestnut&#39;s blog</title>
-        <link>https://www.ch35tnut.com/zh-cn/dailylife/</link>
+        <link>https://www.ch35tnut.com/zh-cn/life/</link>
         <description>Recent content in 生活随笔 on chestnut&#39;s blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <lastBuildDate>Mon, 05 Sep 2022 12:14:06 +0800</lastBuildDate>
     
-        <atom:link href="https://www.ch35tnut.com/zh-cn/dailylife/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://www.ch35tnut.com/zh-cn/life/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+<title>Travel</title>
+<link>https://www.ch35tnut.com/zh-cn/life/travel/</link>
+<pubDate>Thu, 09 Jan 2025 19:38:09 +0800</pubDate>
+      
+      <guid>https://www.ch35tnut.com/zh-cn/life/travel/</guid>
+<description>&lt;h3 id=&#34;旅游&#34;&gt;旅游&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://www.ch35tnut.com/zh-cn/life/travel/jp/&#34;&gt;日本&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://www.ch35tnut.com/zh-cn/life/travel/hk/&#34;&gt;香港-澳门&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+
+</item>
+    
+    <item>
 <title>Movies</title>
-<link>https://www.ch35tnut.com/zh-cn/dailylife/movies/</link>
+<link>https://www.ch35tnut.com/zh-cn/life/movies/</link>
 <pubDate>Mon, 15 Jan 2024 19:34:52 +0800</pubDate>
       
-      <guid>https://www.ch35tnut.com/zh-cn/dailylife/movies/</guid>
+      <guid>https://www.ch35tnut.com/zh-cn/life/movies/</guid>
 <description>&lt;h3 id=&#34;电影&#34;&gt;电影&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;a href=&#34;https://www.ch35tnut.com/zh-cn/dailylife/movies/2024-%E6%BD%9C%E8%A1%8C/&#34;&gt;潜行&lt;/a&gt;&lt;/li&gt;
+&lt;a href=&#34;https://www.ch35tnut.com/zh-cn/life/movies/2024-%E6%BD%9C%E8%A1%8C/&#34;&gt;潜行&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
 
@@ -29,10 +46,10 @@
     
     <item>
 <title>双城之战二三事</title>
-<link>https://www.ch35tnut.com/zh-cn/dailylife/arcane-season-2/</link>
+<link>https://www.ch35tnut.com/zh-cn/life/arcane-season-2/</link>
 <pubDate>Wed, 20 Nov 2024 22:59:27 +0800</pubDate>
       
-      <guid>https://www.ch35tnut.com/zh-cn/dailylife/arcane-season-2/</guid>
+      <guid>https://www.ch35tnut.com/zh-cn/life/arcane-season-2/</guid>
 <description>&lt;h3 id=&#34;序&#34;&gt;序&lt;/h3&gt;
 &lt;p&gt;有一段时间没有提笔动字写博客了，细细算来已有半年，其实也不是不想动笔，只是提笔似乎也不知道写啥，敲到一半又停笔，似乎有一种神秘力量在组织阻止着我，距离上次写博客已经半年时间了，且就写一篇普通的博客恢复更新状态吧。&lt;/p&gt;
 &lt;p&gt;
@@ -139,21 +156,24 @@
     
     <item>
 <title>吐槽</title>
-<link>https://www.ch35tnut.com/zh-cn/dailylife/%E5%90%90%E6%A7%BD/</link>
+<link>https://www.ch35tnut.com/zh-cn/life/%E5%90%90%E6%A7%BD/</link>
 <pubDate>Mon, 22 Jan 2024 18:23:53 +0800</pubDate>
       
-      <guid>https://www.ch35tnut.com/zh-cn/dailylife/%E5%90%90%E6%A7%BD/</guid>
-<description>&lt;p&gt;&lt;strong&gt;Created at 2024-01-22T18:23:53+08:00&lt;/strong&gt;&lt;/p&gt;
+      <guid>https://www.ch35tnut.com/zh-cn/life/%E5%90%90%E6%A7%BD/</guid>
+<description>&lt;h4 id=&#34;大数据杀熟&#34;&gt;大数据杀熟&lt;/h4&gt;
+&lt;p&gt;昨天用小象超市打算买水还有水果，进去一看没有一张优惠券，我打开了支付页面但没有支付，打算等到家再支付。回家之后就忘记了，打开一看订单取消了，我就再次添加购物车，结算的时候发现美团给我发了一张50-10的优惠券。&lt;/p&gt;
+&lt;p&gt;2025.1.9 于杭州&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Created at 2024-01-22T18:23:53+08:00&lt;/strong&gt;&lt;/p&gt;
 </description>
 
 </item>
     
     <item>
 <title>2023年总结和2024年展望</title>
-<link>https://www.ch35tnut.com/zh-cn/dailylife/2023-review-and-2024-outlook/</link>
+<link>https://www.ch35tnut.com/zh-cn/life/2023-review-and-2024-outlook/</link>
 <pubDate>Sun, 31 Dec 2023 18:54:35 +0800</pubDate>
       
-      <guid>https://www.ch35tnut.com/zh-cn/dailylife/2023-review-and-2024-outlook/</guid>
+      <guid>https://www.ch35tnut.com/zh-cn/life/2023-review-and-2024-outlook/</guid>
 <description>&lt;h3 id=&#34;前言&#34;&gt;前言&lt;/h3&gt;
 &lt;p&gt;众所周知，时间在计算机内的表现形式只是一个时间戳，现实世界从2023-12-31 23:59到2024-01-01 00:00也只是在时间戳上增加了60000个毫秒。
 从生理角度讲，跨年身体上也并不会出现太大的变化，所以即使新年定下了目标，更有可能的是2023年是怎么样2024年还是怎么样。&lt;/p&gt;

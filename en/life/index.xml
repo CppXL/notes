@@ -3,13 +3,13 @@
     xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>lifetime on chestnut&#39;s blog</title>
-        <link>https://www.ch35tnut.com/en/dailylife/</link>
+        <link>https://www.ch35tnut.com/en/life/</link>
         <description>Recent content in lifetime on chestnut&#39;s blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <lastBuildDate>Mon, 05 Sep 2022 12:14:06 +0800</lastBuildDate>
     
-        <atom:link href="https://www.ch35tnut.com/en/dailylife/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://www.ch35tnut.com/en/life/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>
