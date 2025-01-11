@@ -228,7 +228,7 @@
 	"title": "首页",
 	"tags": [],
 	"description": "",
-	"content": "学习记录 记录一些平时学习和生活的日常。\n生活 安全研究 漏洞分析 杂项 其他 时间线\n07-02至07-03\r| 191 days ago\rCVE-2024-6387 OpenSSH RCE\nCVE-2024-6387 OpenSSH RCE 2024\r05-16至05-16\r| 238 days ago\rGHSL-2024-053 GitHub Actions 表达式注入漏洞\nGHSL-2024-053 GitHub Actions 表达式注入漏洞 2024\r05-06至05-06\r| 248 days ago\rmitmproxy 使用\nmitmproxy 自签名证书流量解密 2024\r04-01至04-18\r17 days | 283 days ago\rxz backdoor 脚本部分分析\nCVE-2024-3094 xz backdoor脚本部分分析 2024\r03-05至03-06\r1 day | 310 days ago\rivanti connect secure RCE 分析\nCVE-2023-46805\u0026amp;CVE-2024-21887 ivanti rce 分析 2024\r01-12至01-13\r1 day | 363 days ago\rGitLab 账户接管漏洞分析\nCVE-2023-7028 GitLab Account Takeover 分析 2024\r01-05至01-08\r3 days | 370 days ago\r研究了一下JAVA的URL DNS原理。\nJAVA URL DNS研究 2024\r12-29至12-29\r| 377 days ago\r填坑\nwindows CLFS 权限提升漏洞 CVE-2022-37969 windows CLFS 权限提升漏洞 CVE-2023-28252 Wordpress Backup Migration plugin RCE 2023\r12-05至12-06\r1 day | 401 days ago\r分析了CVE-2021-4034 polkit 权限提升漏洞，填坑。\npolkit 权限提升漏洞 2023\r11-30至12-01\r1 day | 406 days ago\r分析了CVE-2023-17530 Apache Struts OGNL 远程代码执行漏洞\nApache Struts OGNL 远程代码执行漏洞 2023\r11-20至11-25\r5 days | 416 days ago\r分析了在野利用的 CVE-2023-36036 Windows Cloud Files Mini Filter Driver 权限提升漏洞\nWindows Cloud Files Mini Filter Driver 权限提升漏洞 2023\r10-31至11-01\r1 day | 436 days ago\r分析了在野利用的wordpad 信息泄露漏洞\nwordpad 信息泄露漏洞 2023\r10-19至10-25\r6 days | 448 days ago\r分析了两个漏洞\nCitrix 信息泄露漏洞 squid 拒绝服务漏洞 2023\r10-14至10-15\r1 day | 453 days ago\r复现分析了curl 堆溢出漏洞\ncurl堆溢出漏洞 2023\r10-12至10-13\r1 day | 455 days ago\r复现分析了http2 快速重置攻击\nhttp rapid reset ddos attack 2023\r09-19至09-19\r| 478 days ago\r把之前写的文章整理到了博客\nwindows 错误报告服务权限提升漏洞 winrar 代码执行漏洞 2023\r09-14至09-18\r4 days | 483 days ago\r分析了以下9月补丁日的CVE-2023-38148, 分析文章：\nwindows ics rce 2023\r07-24至07-27\r3 days | 535 days ago\r前几天搭建Citrix ADC环境，实在是太难搭了，最后还是选择从公网找了个环境打了一下payload，diff了以下补丁，写了一个分析，可惜不能本地调试，看起来写exp应该挺简单的。分析见\ncitrix adc rce 更新：搭建了调试环境，调试了一下，更新在原链接 2023\r09-13至09-16\r3 days | 849 days ago\r这周再写一个基于rust的loader，写了一半发现加载的dll太多了，再想办法用动态加载的方式加载dll，感觉用rust做有点难。 用rust的内联汇编获取到了kernel32.dll和ntdll.dll的基址，还要继续完善。\n2022\r09-10至09-12\r2 days | 852 days ago\r中秋节，在家摸了几天🐟，啥都没干\n2022\r09-05至09-09\r4 days | 857 days ago\r这周编译了wireshark 1.8.5，通过diff1.8.5和1.8.6的源码找出1.8.5里面的漏洞，见\nwireshark 1.8.5代码审计 2022\r09-03至09-04\r1 day | 859 days ago\r这两天，给hugo主题增加了timeline的shortcode，见\n增加timeline功能 2022\r08-29至09-02\r4 days | 864 days ago\r周内看了一个几百行的代码，见\rnews_server审计\n2022\r黑客精神：Open, Share, Free\n"
+	"content": "学习记录 记录一些平时学习和生活的日常。\n生活 安全研究 漏洞分析 杂项 其他 时间线\n07-02至07-03\r| 193 days ago\rCVE-2024-6387 OpenSSH RCE\nCVE-2024-6387 OpenSSH RCE 2024\r05-16至05-16\r| 240 days ago\rGHSL-2024-053 GitHub Actions 表达式注入漏洞\nGHSL-2024-053 GitHub Actions 表达式注入漏洞 2024\r05-06至05-06\r| 250 days ago\rmitmproxy 使用\nmitmproxy 自签名证书流量解密 2024\r04-01至04-18\r17 days | 285 days ago\rxz backdoor 脚本部分分析\nCVE-2024-3094 xz backdoor脚本部分分析 2024\r03-05至03-06\r1 day | 312 days ago\rivanti connect secure RCE 分析\nCVE-2023-46805\u0026amp;CVE-2024-21887 ivanti rce 分析 2024\r01-12至01-13\r1 day | 365 days ago\rGitLab 账户接管漏洞分析\nCVE-2023-7028 GitLab Account Takeover 分析 2024\r01-05至01-08\r3 days | 372 days ago\r研究了一下JAVA的URL DNS原理。\nJAVA URL DNS研究 2024\r12-29至12-29\r| 379 days ago\r填坑\nwindows CLFS 权限提升漏洞 CVE-2022-37969 windows CLFS 权限提升漏洞 CVE-2023-28252 Wordpress Backup Migration plugin RCE 2023\r12-05至12-06\r1 day | 403 days ago\r分析了CVE-2021-4034 polkit 权限提升漏洞，填坑。\npolkit 权限提升漏洞 2023\r11-30至12-01\r1 day | 408 days ago\r分析了CVE-2023-17530 Apache Struts OGNL 远程代码执行漏洞\nApache Struts OGNL 远程代码执行漏洞 2023\r11-20至11-25\r5 days | 418 days ago\r分析了在野利用的 CVE-2023-36036 Windows Cloud Files Mini Filter Driver 权限提升漏洞\nWindows Cloud Files Mini Filter Driver 权限提升漏洞 2023\r10-31至11-01\r1 day | 438 days ago\r分析了在野利用的wordpad 信息泄露漏洞\nwordpad 信息泄露漏洞 2023\r10-19至10-25\r6 days | 450 days ago\r分析了两个漏洞\nCitrix 信息泄露漏洞 squid 拒绝服务漏洞 2023\r10-14至10-15\r1 day | 455 days ago\r复现分析了curl 堆溢出漏洞\ncurl堆溢出漏洞 2023\r10-12至10-13\r1 day | 457 days ago\r复现分析了http2 快速重置攻击\nhttp rapid reset ddos attack 2023\r09-19至09-19\r| 480 days ago\r把之前写的文章整理到了博客\nwindows 错误报告服务权限提升漏洞 winrar 代码执行漏洞 2023\r09-14至09-18\r4 days | 485 days ago\r分析了以下9月补丁日的CVE-2023-38148, 分析文章：\nwindows ics rce 2023\r07-24至07-27\r3 days | 537 days ago\r前几天搭建Citrix ADC环境，实在是太难搭了，最后还是选择从公网找了个环境打了一下payload，diff了以下补丁，写了一个分析，可惜不能本地调试，看起来写exp应该挺简单的。分析见\ncitrix adc rce 更新：搭建了调试环境，调试了一下，更新在原链接 2023\r09-13至09-16\r3 days | 851 days ago\r这周再写一个基于rust的loader，写了一半发现加载的dll太多了，再想办法用动态加载的方式加载dll，感觉用rust做有点难。 用rust的内联汇编获取到了kernel32.dll和ntdll.dll的基址，还要继续完善。\n2022\r09-10至09-12\r2 days | 854 days ago\r中秋节，在家摸了几天🐟，啥都没干\n2022\r09-05至09-09\r4 days | 859 days ago\r这周编译了wireshark 1.8.5，通过diff1.8.5和1.8.6的源码找出1.8.5里面的漏洞，见\nwireshark 1.8.5代码审计 2022\r09-03至09-04\r1 day | 861 days ago\r这两天，给hugo主题增加了timeline的shortcode，见\n增加timeline功能 2022\r08-29至09-02\r4 days | 866 days ago\r周内看了一个几百行的代码，见\rnews_server审计\n2022\r黑客精神：Open, Share, Free\n"
 },
 {
 	"uri": "https://www.ch35tnut.com/zh-cn/life/",
@@ -254,6 +254,20 @@
 {
 	"uri": "https://www.ch35tnut.com/zh-cn/tags/",
 	"title": "Tags",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://www.ch35tnut.com/zh-cn/others/shuffle/",
+	"title": "时代的痕迹",
+	"tags": ["杂谈"],
+	"description": "",
+	"content": "本来想取名时代的眼泪，一想似乎也够不着那么高大上的立意，于是改名为时代的痕迹，或者说青春的痕迹。\n偶然刷到网络上某博主跳曳步舞（aka鬼步舞）的视频，激起了读书时候的回忆。\n大约在高二，我们学校是三人一起做，当时我的同桌两个都会跳这个舞，当时我们还叫它鬼步舞。属于非常小众的一个舞蹈，分为AUS、MAS等等几个流派。\n当时练了一段时间，我同学让我去曳舞天下里面看视频，后面由于跳得不好遂放弃。\n到了大学也有曳舞社团，加进去之后练了一段时间也不咋地，也不敢跳给别人看。中间还定做了几套衣服，在临近大学毕业的时候拍了几套照片，发在QQ空间。\n到了2025年，距离高中时代已经快十年了，这十年整个世界变化如此之大，再回首满是回忆。\n昨天本来想去曳舞天下网站看一下，谷歌搜索居然搜不出来，后面才发现原来的网址shuffle.net.cn已经被灰产注册，成了盗版影视站。\n我本来以为这个小众到不能再小众的舞种已经消失在时代的洪流里，结果在B站还看到去年还是前年在广州举办的比赛，整个也就几十个人。\n通过互联网档案馆，才知道这个网站留在互联网最后的痕迹是在2023年，十年过去可能站长也从非主流少年成长为父亲了吧。而我也从少年成为社畜。\n希望我十年后不会“死去”\n"
+},
+{
+	"uri": "https://www.ch35tnut.com/zh-cn/tags/%E6%9D%82%E8%B0%88/",
+	"title": "杂谈",
 	"tags": [],
 	"description": "",
 	"content": ""
